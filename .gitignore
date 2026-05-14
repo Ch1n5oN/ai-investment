@@ -19,7 +19,10 @@ output/
 # Lock files with local paths
 skills-lock.json
 
-# Claude/Agents local config
-.claude/
+# Claude local config (except skills)
+.claude/settings.json
 .agents/
 .trae/
+
+# But track skills
+!.claude/skills/
