@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+venv/
+.env
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local data files (large scraped data)
+output/
+
+# Lock files with local paths
+skills-lock.json
+
+# Claude/Agents local config
+.claude/
+.agents/
+.trae/
