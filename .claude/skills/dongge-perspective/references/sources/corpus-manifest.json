@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-16T14:29:22.533Z",
+  "subject": {
+    "name": "真的不懂真的不会",
+    "xueqiu_user_id": "8469219487",
+    "profile_url": "https://xueqiu.com/u/8469219487"
+  },
+  "claims": {
+    "timeline_posts": 125,
+    "cutoff_date": "2026-05-12"
+  },
+  "segments": [
+    {
+      "path": "references/research/11-latest-posts-2026-05-12.json",
+      "origin": "Xueqiu incremental acquisition through 2026-05-12",
+      "kind": "timeline",
+      "stage": "canonical",
+      "contract": "normalized_v1",
+      "records": 125,
+      "unique_ids": 125,
+      "min_date": "2026-04-01",
+      "max_date": "2026-05-12",
+      "sha256": "474cd7f0e591d6a33a188dc1efbe108493af59b89c057b7b7d13ffa1252d743e"
+    }
+  ],
+  "archived_raw_arrays": [
+    {
+      "path": "references/research/07-latest-posts-2026-04-28.json",
+      "kind": "raw_timeline_snapshot",
+      "disposition": "superseded_raw_snapshot",
+      "counted_in_claims": false,
+      "reason": "The later 125-post canonical segment contains all 50 IDs; this raw acquisition snapshot is retained only for historical research references.",
+      "records": 50,
+      "unique_ids": 50,
+      "overlap_with_canonical": 50,
+      "sha256": "5434097265259e7662465a9674bc7fa2889c4225ee1427c70a6d040dc8ab7799"
+    }
+  ],
+  "limitations": [
+    "The 50-post April capture is a raw historical snapshot fully contained by the later 125-post canonical segment and is excluded from claims.",
+    "The raw snapshot retains acquisition-only nested fields; only the canonical segment is valid normalized_v1 corpus data.",
+    "Public posts do not prove complete positions, returns, or off-platform actions."
+  ]
+}

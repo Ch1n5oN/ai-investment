@@ -1,7 +1,9 @@
 [
   {
-    "id": 388466427,
-    "created_at": "2026-05-12 14:40:08",
+    "schema_version": 1,
+    "id": "388466427",
+    "created_at_raw": "2026-05-12 14:40:08",
+    "created_at": "2026-05-12T14:40:08+08:00",
     "title": "",
     "text": "今天减仓还算及时<br/>目前总共6成，4成在券商避险<br/>明天早盘竞价应该没我多大的事吧<br/>可以睡个懒觉",
     "clean_text": "今天减仓还算及时\n目前总共6成，4成在券商避险\n明天早盘竞价应该没我多大的事吧\n可以睡个懒觉",
@@ -9,11 +11,14 @@
     "reply_count": 57,
     "like_count": 146,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388341460,
-    "created_at": "2026-05-12 03:33:23",
+    "schema_version": 1,
+    "id": "388341460",
+    "created_at_raw": "2026-05-12 03:33:23",
+    "created_at": "2026-05-12T03:33:23+08:00",
     "title": "",
     "text": "那么此时此刻，有小伙伴要问了，<br/>为啥炒股的区别会这么大？<br/>既然你诚心诚意地问了，那我就大发慈悲地告诉你，<br/>我，玩的是破解版。<img src=\"//assets.imedao.com/ugc/images/face/emoji_78_awkward.png?v=1\" title=\"[尴尬]\" alt=\"[尴尬]\" height=\"24\" />",
     "clean_text": "那么此时此刻，有小伙伴要问了，\n为啥炒股的区别会这么大？\n既然你诚心诚意地问了，那我就大发慈悲地告诉你，\n我，玩的是破解版。",
@@ -21,11 +26,14 @@
     "reply_count": 204,
     "like_count": 400,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388326840,
-    "created_at": "2026-05-12 02:48:51",
+    "schema_version": 1,
+    "id": "388326840",
+    "created_at_raw": "2026-05-12 02:48:51",
+    "created_at": "2026-05-12T02:48:51+08:00",
     "title": "",
     "text": "别看科创大屁股拉的欢<br/>万一来个跳水<br/>怕不是要亏更多",
     "clean_text": "别看科创大屁股拉的欢\n万一来个跳水\n怕不是要亏更多",
@@ -33,11 +41,14 @@
     "reply_count": 135,
     "like_count": 291,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388308346,
-    "created_at": "2026-05-12 02:02:35",
+    "schema_version": 1,
+    "id": "388308346",
+    "created_at_raw": "2026-05-12 02:02:35",
+    "created_at": "2026-05-12T02:02:35+08:00",
     "title": "",
     "text": "收摊，今天还是有明显的兑现盘的，远离热闹的人群，我一个人静静<br/>6成仓<br/>前者加仓正T<br/>后者新开尝鲜<br/>今天扛着新股跟软件的下跌，这个回撤能接受，挺满意",
     "clean_text": "收摊，今天还是有明显的兑现盘的，远离热闹的人群，我一个人静静\n6成仓\n前者加仓正T\n后者新开尝鲜\n今天扛着新股跟软件的下跌，这个回撤能接受，挺满意",
@@ -45,11 +56,14 @@
     "reply_count": 49,
     "like_count": 233,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388305553,
-    "created_at": "2026-05-12 01:56:35",
+    "schema_version": 1,
+    "id": "388305553",
+    "created_at_raw": "2026-05-12 01:56:35",
+    "created_at": "2026-05-12T01:56:35+08:00",
     "title": "",
     "text": "两个新股都是+15%以上止盈，结果还算满意<br/>卓易开盘破5日就分批止损了，替你们尝了下软件，每天都是新鲜的",
     "clean_text": "两个新股都是+15%以上止盈，结果还算满意\n卓易开盘破5日就分批止损了，替你们尝了下软件，每天都是新鲜的",
@@ -57,11 +71,14 @@
     "reply_count": 34,
     "like_count": 188,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388224419,
-    "created_at": "2026-05-11 11:42:00",
+    "schema_version": 1,
+    "id": "388224419",
+    "created_at_raw": "2026-05-11 11:42:00",
+    "created_at": "2026-05-11T11:42:00+08:00",
     "title": "",
     "text": "亏不亏钱不重要<br/>关键那些涨上了天的核心股能不能跌一跌<br/>哪怕只是那么1-2-3天<br/>我好找个由头安慰安慰商K小姐姐<br/>现在她们看我的持仓感觉像是在看小丑🤡",
     "clean_text": "亏不亏钱不重要\n关键那些涨上了天的核心股能不能跌一跌\n哪怕只是那么1-2-3天\n我好找个由头安慰安慰商K小姐姐\n现在她们看我的持仓感觉像是在看小丑🤡",
@@ -69,11 +86,14 @@
     "reply_count": 170,
     "like_count": 357,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388200118,
-    "created_at": "2026-05-11 09:04:47",
+    "schema_version": 1,
+    "id": "388200118",
+    "created_at_raw": "2026-05-11 09:04:47",
+    "created_at": "2026-05-11T09:04:47+08:00",
     "title": "",
     "text": "春光是金开自带的假机构<br/>虽然C1跟大普微一模一样，但是C3-C5大普微是跌的。大普微的牛逼在于蹭上了存储跟业绩爆炸<br/>所以还是有区别的<br/>利好也只是利好在车上的有先手的，至于吹的什么中际供应商，假的。吹的什么光模块磁芯，假的。他唯一能看的也就是一个磁粉的国产替代而已，情绪大于逻辑<br/>波导那个席位有重叠部分在里面，巧合而已，我既没在竞价砸，也没在后面板砸，3成仓两天也就赚了3个多点",
     "clean_text": "春光是金开自带的假机构\n虽然C1跟大普微一模一样，但是C3-C5大普微是跌的。大普微的牛逼在于蹭上了存储跟业绩爆炸\n所以还是有区别的\n利好也只是利好在车上的有先手的，至于吹的什么中际供应商，假的。吹的什么光模块磁芯，假的。他唯一能看的也就是一个磁粉的国产替代而已，情绪大于逻辑\n波导那个席位有重叠部分在里面，巧合而已，我既没在竞价砸，也没在后面板砸，3成仓两天也就赚了3个多点",
@@ -81,11 +101,14 @@
     "reply_count": 83,
     "like_count": 302,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388185571,
-    "created_at": "2026-05-11 07:53:15",
+    "schema_version": 1,
+    "id": "388185571",
+    "created_at_raw": "2026-05-11 07:53:15",
+    "created_at": "2026-05-11T07:53:15+08:00",
     "title": "",
     "text": "10不如20，更别说手里重仓的还是个5cm。中线这个月4个交易日很满意了。<br/>短线一天干了上周三天的80%，这个月任务也算完成了，还超了那么一丢丢。<br/>这礼拜还有四天，佛系一下，下周开始到月末事情比较多，约了几家要去调研下。",
     "clean_text": "10不如20，更别说手里重仓的还是个5cm。中线这个月4个交易日很满意了。\n短线一天干了上周三天的80%，这个月任务也算完成了，还超了那么一丢丢。\n这礼拜还有四天，佛系一下，下周开始到月末事情比较多，约了几家要去调研下。",
@@ -93,11 +116,14 @@
     "reply_count": 176,
     "like_count": 356,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388109979,
-    "created_at": "2026-05-11 02:54:29",
+    "schema_version": 1,
+    "id": "388109979",
+    "created_at_raw": "2026-05-11 02:54:29",
+    "created_at": "2026-05-11T02:54:29+08:00",
     "title": "",
     "text": "我鸟呢？？？<br/>我鸟没了！！！",
     "clean_text": "我鸟呢？？？\n我鸟没了！！！",
@@ -105,11 +131,14 @@
     "reply_count": 121,
     "like_count": 277,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388099368,
-    "created_at": "2026-05-11 02:26:24",
+    "schema_version": 1,
+    "id": "388099368",
+    "created_at_raw": "2026-05-11 02:26:24",
+    "created_at": "2026-05-11T02:26:24+08:00",
     "title": "",
     "text": "帖子，就单纯记录我自己的交易而已<br/>说白了，就是喜欢叨逼叨两句，毕竟职业炒股人的社交圈都很窄，总要有个说话的地方<br/>我写你看，我说你听，你问我答而已<br/>隔夜留了4层，确实是为新股做准备的，开这么高也没多大意思了，娱乐仓两个平铺一下，就当参与过了<br/>其他的要么是计划里的，要么是临时起意的<br/>7成收摊了，最不喜欢的就是高开，而且还高开这么多，直接加大操作难度",
     "clean_text": "帖子，就单纯记录我自己的交易而已\n说白了，就是喜欢叨逼叨两句，毕竟职业炒股人的社交圈都很窄，总要有个说话的地方\n我写你看，我说你听，你问我答而已\n隔夜留了4层，确实是为新股做准备的，开这么高也没多大意思了，娱乐仓两个平铺一下，就当参与过了\n其他的要么是计划里的，要么是临时起意的\n7成收摊了，最不喜欢的就是高开，而且还高开这么多，直接加大操作难度",
@@ -117,11 +146,14 @@
     "reply_count": 115,
     "like_count": 353,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388094878,
-    "created_at": "2026-05-11 02:15:11",
+    "schema_version": 1,
+    "id": "388094878",
+    "created_at_raw": "2026-05-11 02:15:11",
+    "created_at": "2026-05-11T02:15:11+08:00",
     "title": "",
     "text": "另一个计划切的Ai，但是高开低走给了回踩<br/>我以为你们周五吃了满嘴屎的软件，一个周末怎么也要消化了吧<br/>怎么周一还有这么大的后劲，还在拉稀<img src=\"//assets.imedao.com/ugc/images/face/emoji_23_blood.png?v=1\" title=\"[吐血]\" alt=\"[吐血]\" height=\"24\" />",
     "clean_text": "另一个计划切的Ai，但是高开低走给了回踩\n我以为你们周五吃了满嘴屎的软件，一个周末怎么也要消化了吧\n怎么周一还有这么大的后劲，还在拉稀",
@@ -129,11 +161,14 @@
     "reply_count": 40,
     "like_count": 220,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388094361,
-    "created_at": "2026-05-11 02:13:56",
+    "schema_version": 1,
+    "id": "388094361",
+    "created_at_raw": "2026-05-11 02:13:56",
+    "created_at": "2026-05-11T02:13:56+08:00",
     "title": "",
     "text": "计划电科切西测，预估电科+9+10开，竞价清完低吸高开回踩的西测，毕竟存储➕航天<br/>结果两个剧本是都是+3开，那就没有理由切换了，等电科冲到+9清完，西测开盘也没回踩，最后成了冲高后的回踩，都快破位了<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19e14cff930339073fcbe949.jpeg!custom.jpg\" />",
     "clean_text": "计划电科切西测，预估电科+9+10开，竞价清完低吸高开回踩的西测，毕竟存储➕航天\n结果两个剧本是都是+3开，那就没有理由切换了，等电科冲到+9清完，西测开盘也没回踩，最后成了冲高后的回踩，都快破位了",
@@ -141,11 +176,14 @@
     "reply_count": 40,
     "like_count": 178,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388085171,
-    "created_at": "2026-05-11 01:51:47",
+    "schema_version": 1,
+    "id": "388085171",
+    "created_at_raw": "2026-05-11 01:51:47",
+    "created_at": "2026-05-11T01:51:47+08:00",
     "title": "",
     "text": "早上简直卡无语了<br/>电科+7+9清完<br/>理奇+5+6清完<br/>波导竞价后直接卡单，最后均价+1清完，无语",
     "clean_text": "早上简直卡无语了\n电科+7+9清完\n理奇+5+6清完\n波导竞价后直接卡单，最后均价+1清完，无语",
@@ -153,11 +191,14 @@
     "reply_count": 88,
     "like_count": 232,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 388025259,
-    "created_at": "2026-05-10 08:46:41",
+    "schema_version": 1,
+    "id": "388025259",
+    "created_at_raw": "2026-05-10 08:46:41",
+    "created_at": "2026-05-10T08:46:41+08:00",
     "title": "",
     "text": "花花世界，复盘看的越详细，感觉哪里都有机会可以参与，无语了<br/>隔夜只空了4成仓，周一早盘要头脑风暴各种仓位计算做切换了，还要面临高开后的上车是福还是祸，希望量化爹温柔点当个人<br/>3成波导，周一不是一字或者秒板都是弱，要么继续涨停格局要么秒清<br/>2成电科，竞价或者开盘给太多的话可能也会秒清切换另一个多属性的航天，前提有性价比的位置，量化不爆头<br/>1成理奇，要么迅速跌破止损位，不然卖点会后置看下周一整体次新情绪再做S处理<br/>空的4成仓既要切航天，又想切Ai，还想看下周一两个新股有没有开的低，或者开的有预期差的价格<br/>充值是不可能充的了，只能考验脑力跟手速了",
     "clean_text": "花花世界，复盘看的越详细，感觉哪里都有机会可以参与，无语了\n隔夜只空了4成仓，周一早盘要头脑风暴各种仓位计算做切换了，还要面临高开后的上车是福还是祸，希望量化爹温柔点当个人\n3成波导，周一不是一字或者秒板都是弱，要么继续涨停格局要么秒清\n2成电科，竞价或者开盘给太多的话可能也会秒清切换另一个多属性的航天，前提有性价比的位置，量化不爆头\n1成理奇，要么迅速跌破止损位，不然卖点会后置看下周一整体次新情绪再做S处理\n空的4成仓既要切航天，又想切Ai，还想看下周一两个新股有没有开的低，或者开的有预期差的价格\n充值是不可能充的了，只能考验脑力跟手速了",
@@ -165,11 +206,14 @@
     "reply_count": 233,
     "like_count": 407,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387999574,
-    "created_at": "2026-05-10 01:48:58",
+    "schema_version": 1,
+    "id": "387999574",
+    "created_at_raw": "2026-05-10 01:48:58",
+    "created_at": "2026-05-10T01:48:58+08:00",
     "title": "",
     "text": "指数5日没破，就正常还是继续做多的窗口期<br/>无非就是你选择参与什么题材，里面选择什么股，选择怎么格局又或者怎么轮动切换<br/>节后最强的是次新，存储，光，半导体，pcb，航天，机器人<br/>次新属于加分项，所以存储的大普微，光的联讯，半导体的盛合，pcb的红板，航天的电科，机器人的三瑞都是跑赢板块大多数股<br/>但要明白，题材走调整，那么次新也会是减分项，比如周五的理奇<br/>周五持仓3个，6成仓，3-2-1的配置，不出意外的话给卖点都会切换，正常会切换到Ai去",
     "clean_text": "指数5日没破，就正常还是继续做多的窗口期\n无非就是你选择参与什么题材，里面选择什么股，选择怎么格局又或者怎么轮动切换\n节后最强的是次新，存储，光，半导体，pcb，航天，机器人\n次新属于加分项，所以存储的大普微，光的联讯，半导体的盛合，pcb的红板，航天的电科，机器人的三瑞都是跑赢板块大多数股\n但要明白，题材走调整，那么次新也会是减分项，比如周五的理奇\n周五持仓3个，6成仓，3-2-1的配置，不出意外的话给卖点都会切换，正常会切换到Ai去",
@@ -177,11 +221,14 @@
     "reply_count": 192,
     "like_count": 400,
     "retweet_count": 2,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387913604,
-    "created_at": "2026-05-09 01:28:53",
+    "schema_version": 1,
+    "id": "387913604",
+    "created_at_raw": "2026-05-09 01:28:53",
+    "created_at": "2026-05-09T01:28:53+08:00",
     "title": "",
     "text": "我在等<br/>在等一轮属于中国自己的牛市<br/>不看美国<br/>不靠映射<br/>比从19年绝境中起来的<br/>更辉煌<br/>更璀璨<br/>然后把接力棒交给下一代<br/>自己浪迹天涯",
     "clean_text": "我在等\n在等一轮属于中国自己的牛市\n不看美国\n不靠映射\n比从19年绝境中起来的\n更辉煌\n更璀璨\n然后把接力棒交给下一代\n自己浪迹天涯",
@@ -189,11 +236,14 @@
     "reply_count": 303,
     "like_count": 639,
     "retweet_count": 3,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387872770,
-    "created_at": "2026-05-08 14:08:56",
+    "schema_version": 1,
+    "id": "387872770",
+    "created_at_raw": "2026-05-08 14:08:56",
+    "created_at": "2026-05-08T14:08:56+08:00",
     "title": "",
     "text": "卫星bird，芯片bird<br/>礼拜一能不能躺一下<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19e07ead00930cb13fc49c1f.jpeg!custom.jpg\" />",
     "clean_text": "卫星bird，芯片bird\n礼拜一能不能躺一下",
@@ -201,11 +251,14 @@
     "reply_count": 212,
     "like_count": 309,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387801187,
-    "created_at": "2026-05-08 06:59:39",
+    "schema_version": 1,
+    "id": "387801187",
+    "created_at_raw": "2026-05-08 06:59:39",
+    "created_at": "2026-05-08T06:59:39+08:00",
     "title": "",
     "text": "Mr Rich，希望周一有好运<br/>6成过周末，还算完美的一天<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19e06627c2930b3c3fcd1784.jpeg!custom.jpg\" />",
     "clean_text": "Mr Rich，希望周一有好运\n6成过周末，还算完美的一天",
@@ -213,11 +266,14 @@
     "reply_count": 131,
     "like_count": 244,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387795523,
-    "created_at": "2026-05-08 06:39:01",
+    "schema_version": 1,
+    "id": "387795523",
+    "created_at_raw": "2026-05-08 06:39:01",
+    "created_at": "2026-05-08T06:39:01+08:00",
     "title": "",
     "text": "今天卖飞100块一股<img src=\"//assets.imedao.com/ugc/images/face/emoji_23_blood.png?v=1\" title=\"[吐血]\" alt=\"[吐血]\" height=\"24\" />",
     "clean_text": "今天卖飞100块一股",
@@ -225,11 +281,14 @@
     "reply_count": 67,
     "like_count": 210,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387788181,
-    "created_at": "2026-05-08 06:11:36",
+    "schema_version": 1,
+    "id": "387788181",
+    "created_at_raw": "2026-05-08 06:11:36",
+    "created_at": "2026-05-08T06:11:36+08:00",
     "title": "",
     "text": "航天里面的量化还是脏<br/>一露头就爆头<br/>除非这个题材回强主线<br/>不然都是损耗",
     "clean_text": "航天里面的量化还是脏\n一露头就爆头\n除非这个题材回强主线\n不然都是损耗",
@@ -237,11 +296,14 @@
     "reply_count": 52,
     "like_count": 290,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387764631,
-    "created_at": "2026-05-08 04:06:53",
+    "schema_version": 1,
+    "id": "387764631",
+    "created_at_raw": "2026-05-08 04:06:53",
+    "created_at": "2026-05-08T04:06:53+08:00",
     "title": "",
     "text": "好均匀的每天3%<br/>好熟悉的每天开盘都是水下，割了切换才能涨<br/>礼拜一开盘估计又要水下<br/>那我去买个当天大跌的，你次日总不能收割我了吧<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" /><br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19e05c20633306de3fad4372.jpeg!custom.jpg\" />",
     "clean_text": "好均匀的每天3%\n好熟悉的每天开盘都是水下，割了切换才能涨\n礼拜一开盘估计又要水下\n那我去买个当天大跌的，你次日总不能收割我了吧",
@@ -249,11 +311,14 @@
     "reply_count": 144,
     "like_count": 315,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387733802,
-    "created_at": "2026-05-08 02:21:41",
+    "schema_version": 1,
+    "id": "387733802",
+    "created_at_raw": "2026-05-08 02:21:41",
+    "created_at": "2026-05-08T02:21:41+08:00",
     "title": "",
     "text": "第一天金融人<br/>第二天光之子<br/>第三天航天员<br/>目前半仓，尾盘看有没有漏水的骨骼惊奇的次新，可能换新娘也可能买回5日先手的联讯<br/>下午看心情<br/>提前周末愉快<br/>母亲节快乐",
     "clean_text": "第一天金融人\n第二天光之子\n第三天航天员\n目前半仓，尾盘看有没有漏水的骨骼惊奇的次新，可能换新娘也可能买回5日先手的联讯\n下午看心情\n提前周末愉快\n母亲节快乐",
@@ -261,11 +326,14 @@
     "reply_count": 151,
     "like_count": 281,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387718680,
-    "created_at": "2026-05-08 01:46:24",
+    "schema_version": 1,
+    "id": "387718680",
+    "created_at_raw": "2026-05-08 01:46:24",
+    "created_at": "2026-05-08T01:46:24+08:00",
     "title": "",
     "text": "前天+10的长江昨天-4割<br/>昨天+10的联讯今天-4割<br/>周一割什么<img src=\"//assets.imedao.com/ugc/images/face/emoji_23_blood.png?v=1\" title=\"[吐血]\" alt=\"[吐血]\" height=\"24\" />",
     "clean_text": "前天+10的长江昨天-4割\n昨天+10的联讯今天-4割\n周一割什么",
@@ -273,11 +341,14 @@
     "reply_count": 58,
     "like_count": 191,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387718028,
-    "created_at": "2026-05-08 01:45:03",
+    "schema_version": 1,
+    "id": "387718028",
+    "created_at_raw": "2026-05-08 01:45:03",
+    "created_at": "2026-05-08T01:45:03+08:00",
     "title": "",
     "text": "割完<img src=\"//assets.imedao.com/ugc/images/face/emoji_09_cry.png?v=1\" title=\"[哭泣]\" alt=\"[哭泣]\" height=\"24\" />",
     "clean_text": "割完",
@@ -285,11 +356,14 @@
     "reply_count": 27,
     "like_count": 140,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387701859,
-    "created_at": "2026-05-08 00:46:49",
+    "schema_version": 1,
+    "id": "387701859",
+    "created_at_raw": "2026-05-08 00:46:49",
+    "created_at": "2026-05-08T00:46:49+08:00",
     "title": "",
     "text": "一晃两天就周五了<br/>再晃几天五月就结束了<br/>大盘大涨两天，尤其是持续逼空的方向<br/>没有先手的情况，实在忍不住想买，也要买点后置<br/>我不会满仓过周末，该调调，该减减",
     "clean_text": "一晃两天就周五了\n再晃几天五月就结束了\n大盘大涨两天，尤其是持续逼空的方向\n没有先手的情况，实在忍不住想买，也要买点后置\n我不会满仓过周末，该调调，该减减",
@@ -297,11 +371,14 @@
     "reply_count": 84,
     "like_count": 358,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387639855,
-    "created_at": "2026-05-07 11:23:39",
+    "schema_version": 1,
+    "id": "387639855",
+    "created_at_raw": "2026-05-07 11:23:39",
+    "created_at": "2026-05-07T11:23:39+08:00",
     "title": "",
     "text": "回看了一下3月下旬一开始平铺布局的航天<br/>信维+57<br/>超捷+32<br/>电科+15<br/>铖昌+50<br/>最后只留下加仓重仓的cc跟cj<br/>虽然比不上什么西部，什么巨力，什么神剑，什么顺灏，但从中线配置角度出发，赚看的懂的钱，拿格局得住的股，我觉得还算完美了",
     "clean_text": "回看了一下3月下旬一开始平铺布局的航天\n信维+57\n超捷+32\n电科+15\n铖昌+50\n最后只留下加仓重仓的cc跟cj\n虽然比不上什么西部，什么巨力，什么神剑，什么顺灏，但从中线配置角度出发，赚看的懂的钱，拿格局得住的股，我觉得还算完美了",
@@ -309,11 +386,14 @@
     "reply_count": 217,
     "like_count": 467,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387594101,
-    "created_at": "2026-05-07 07:12:22",
+    "schema_version": 1,
+    "id": "387594101",
+    "created_at_raw": "2026-05-07 07:12:22",
+    "created_at": "2026-05-07T07:12:22+08:00",
     "title": "",
     "text": "原来过几天是母亲节了<br/>感恩光之母<img src=\"//assets.imedao.com/ugc/images/face/emoji_38_flower.png?v=1\" title=\"[献花花]\" alt=\"[献花花]\" height=\"24\" />",
     "clean_text": "原来过几天是母亲节了\n感恩光之母",
@@ -321,11 +401,14 @@
     "reply_count": 67,
     "like_count": 372,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387557943,
-    "created_at": "2026-05-07 04:55:53",
+    "schema_version": 1,
+    "id": "387557943",
+    "created_at_raw": "2026-05-07 04:55:53",
+    "created_at": "2026-05-07T04:55:53+08:00",
     "title": "",
     "text": "炒股就跟恋爱一样<br/>最可怕的不是那么多优质，没有一个绕着你转<br/>而是你身边的那个，频繁撩骚暧昧，却没人搭理<br/>就这么一个极品，烂在了你手里",
     "clean_text": "炒股就跟恋爱一样\n最可怕的不是那么多优质，没有一个绕着你转\n而是你身边的那个，频繁撩骚暧昧，却没人搭理\n就这么一个极品，烂在了你手里",
@@ -333,11 +416,14 @@
     "reply_count": 104,
     "like_count": 339,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387545139,
-    "created_at": "2026-05-07 03:39:43",
+    "schema_version": 1,
+    "id": "387545139",
+    "created_at_raw": "2026-05-07 03:39:43",
+    "created_at": "2026-05-07T03:39:43+08:00",
     "title": "",
     "text": "昨晚被渣男券商渣了，开盘就一路割啊，割啊，割啊<br/>然后第一时间冲进了光里，沐浴在了日光下，感受着大自然的馈赠<br/>电视剧里被渣了后要去洗澡，我也学着晒日光浴，好像没什么效果啊<br/>这个太阳光紫外线有点强，要晒焦了，明天又要割肉了",
     "clean_text": "昨晚被渣男券商渣了，开盘就一路割啊，割啊，割啊\n然后第一时间冲进了光里，沐浴在了日光下，感受着大自然的馈赠\n电视剧里被渣了后要去洗澡，我也学着晒日光浴，好像没什么效果啊\n这个太阳光紫外线有点强，要晒焦了，明天又要割肉了",
@@ -345,11 +431,14 @@
     "reply_count": 97,
     "like_count": 287,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387517687,
-    "created_at": "2026-05-07 02:16:21",
+    "schema_version": 1,
+    "id": "387517687",
+    "created_at_raw": "2026-05-07 02:16:21",
+    "created_at": "2026-05-07T02:16:21+08:00",
     "title": "",
     "text": "金融体验了一天，一言难尽，赚了点芝麻<br/>结果昨天卖的日联跟华锐，今天集体+7，造了孽",
     "clean_text": "金融体验了一天，一言难尽，赚了点芝麻\n结果昨天卖的日联跟华锐，今天集体+7，造了孽",
@@ -357,11 +446,14 @@
     "reply_count": 102,
     "like_count": 268,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387413023,
-    "created_at": "2026-05-06 09:27:14",
+    "schema_version": 1,
+    "id": "387413023",
+    "created_at_raw": "2026-05-06 09:27:14",
+    "created_at": "2026-05-06T09:27:14+08:00",
     "title": "",
     "text": "都2026了，总不会还有空谈逻辑洗脑的人吧？<br/>我一般都是先找到优质买点，然后赚上那么一赚，然后再慢慢给自己洗脑，大不了就是利润回撤。<br/>最忌讳的就是傻不拉几的不顾点位，不顾筹码，不顾情绪，高位接盘，然后亏损被套，然后开始贴吧找利好，开始自我按摩，然后被洗脑，加仓，深套，无限折磨，运气好也许解套了，但是这种操作但凡有一次你没解套，等来的就是腰斩，输得起吗？<br/>所以可以看到，无论中线，还是短线，我的出击点大多数时候都能让自己处于相对安全的位置。然后想做T扩大利润就做T，想小亏割肉就割肉，想大肉止盈也无所谓会不会卖飞。<br/>我自己的交易，随心所欲居多，在乎的是有趣，好玩。所以，主线在我这并不是唯一的选择。",
     "clean_text": "都2026了，总不会还有空谈逻辑洗脑的人吧？\n我一般都是先找到优质买点，然后赚上那么一赚，然后再慢慢给自己洗脑，大不了就是利润回撤。\n最忌讳的就是傻不拉几的不顾点位，不顾筹码，不顾情绪，高位接盘，然后亏损被套，然后开始贴吧找利好，开始自我按摩，然后被洗脑，加仓，深套，无限折磨，运气好也许解套了，但是这种操作但凡有一次你没解套，等来的就是腰斩，输得起吗？\n所以可以看到，无论中线，还是短线，我的出击点大多数时候都能让自己处于相对安全的位置。然后想做T扩大利润就做T，想小亏割肉就割肉，想大肉止盈也无所谓会不会卖飞。\n我自己的交易，随心所欲居多，在乎的是有趣，好玩。所以，主线在我这并不是唯一的选择。",
@@ -369,11 +461,14 @@
     "reply_count": 173,
     "like_count": 558,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387392587,
-    "created_at": "2026-05-06 07:34:14",
+    "schema_version": 1,
+    "id": "387392587",
+    "created_at_raw": "2026-05-06 07:34:14",
+    "created_at": "2026-05-06T07:34:14+08:00",
     "title": "",
     "text": "下午回落，各种跳水<br/>巨丑的科创指数，下面缺口上面上影<br/>明天又是神仙打架了<br/>希望别拉我金融人下水<img src=\"//assets.imedao.com/ugc/images/face/emoji_09_cry.png?v=1\" title=\"[哭泣]\" alt=\"[哭泣]\" height=\"24\" />",
     "clean_text": "下午回落，各种跳水\n巨丑的科创指数，下面缺口上面上影\n明天又是神仙打架了\n希望别拉我金融人下水",
@@ -381,11 +476,14 @@
     "reply_count": 177,
     "like_count": 344,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387340688,
-    "created_at": "2026-05-06 03:36:47",
+    "schema_version": 1,
+    "id": "387340688",
+    "created_at_raw": "2026-05-06 03:36:47",
+    "created_at": "2026-05-06T03:36:47+08:00",
     "title": "",
     "text": "指数高开，但是不曾想科创能高开4%，更不曾想现在还能到8%，所以今天暴涨的半导体，完全措手不及<br/>金融是计划内的，又一次站在了群众的对立面<img src=\"//assets.imedao.com/ugc/images/face/emoji_13_coldsweat.png?v=1\" title=\"[滴汗]\" alt=\"[滴汗]\" height=\"24\" /><br/>科创高开4%，以为会高开低走，所以竞价1%直接梭了半仓，后面就是割了联讯加仓，割了日联加仓。最后水下亏了一丢丢割了华锐出来后打了个板。<br/>今天没去科技，明天要再想去的话只能在补涨里面找了，难顶。",
     "clean_text": "指数高开，但是不曾想科创能高开4%，更不曾想现在还能到8%，所以今天暴涨的半导体，完全措手不及\n金融是计划内的，又一次站在了群众的对立面\n科创高开4%，以为会高开低走，所以竞价1%直接梭了半仓，后面就是割了联讯加仓，割了日联加仓。最后水下亏了一丢丢割了华锐出来后打了个板。\n今天没去科技，明天要再想去的话只能在补涨里面找了，难顶。",
@@ -393,11 +491,14 @@
     "reply_count": 109,
     "like_count": 320,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387326412,
-    "created_at": "2026-05-06 02:48:26",
+    "schema_version": 1,
+    "id": "387326412",
+    "created_at_raw": "2026-05-06 02:48:26",
+    "created_at": "2026-05-06T02:48:26+08:00",
     "title": "",
     "text": "我说运气好<br/>你们肯定没人信<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" /><br/>狗不理的券商，也有二连板的春天<img src=\"//assets.imedao.com/ugc/images/face/emoji_13_coldsweat.png?v=1\" title=\"[滴汗]\" alt=\"[滴汗]\" height=\"24\" /><br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19dfb2f72e32d7ec3fc06104.jpeg!custom.jpg\" />",
     "clean_text": "我说运气好\n你们肯定没人信\n狗不理的券商，也有二连板的春天",
@@ -405,11 +506,14 @@
     "reply_count": 67,
     "like_count": 273,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387310692,
-    "created_at": "2026-05-06 02:05:22",
+    "schema_version": 1,
+    "id": "387310692",
+    "created_at_raw": "2026-05-06 02:05:22",
+    "created_at": "2026-05-06T02:05:22+08:00",
     "title": "",
     "text": "额。。。红了，跑赢了上证<br/>科创今天的疯狗der是没法看了",
     "clean_text": "额。。。红了，跑赢了上证\n科创今天的疯狗der是没法看了",
@@ -417,11 +521,14 @@
     "reply_count": 54,
     "like_count": 249,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387301178,
-    "created_at": "2026-05-06 01:43:47",
+    "schema_version": 1,
+    "id": "387301178",
+    "created_at_raw": "2026-05-06 01:43:47",
+    "created_at": "2026-05-06T01:43:47+08:00",
     "title": "",
     "text": "妈妈说，不能胡头一把<img src=\"//assets.imedao.com/ugc/images/face/emoji_10_dizzy.png?v=1\" title=\"[亏大了]\" alt=\"[亏大了]\" height=\"24\" />",
     "clean_text": "妈妈说，不能胡头一把",
@@ -429,11 +536,14 @@
     "reply_count": 40,
     "like_count": 213,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387205819,
-    "created_at": "2026-05-05 02:11:40",
+    "schema_version": 1,
+    "id": "387205819",
+    "created_at_raw": "2026-05-05 02:11:40",
+    "created_at": "2026-05-05T02:11:40+08:00",
     "title": "",
     "text": "假期综合征，下周只有3个交易日，正常以平稳过渡为主<br/>每年最容易赚钱的时间段也就1-4月<br/>5月正常会降低风偏，川普来华是个节点<br/>6月做完上旬，世界杯休假，可能连带暑假一起<br/>市场风格上<br/>后续1-2月，可能会从成长切换到题材，切换到绩优<br/>个人操作上<br/>后续的时间，会以题材为主，越新越好。<br/>老题材的Ai，有新面孔会参与，老面孔只做情绪参考不会参与<br/>如果市场风格真的切到低位的绩优，会第一第二时间重仓进去躺平不动。5月只有15-20%的目标",
     "clean_text": "假期综合征，下周只有3个交易日，正常以平稳过渡为主\n每年最容易赚钱的时间段也就1-4月\n5月正常会降低风偏，川普来华是个节点\n6月做完上旬，世界杯休假，可能连带暑假一起\n市场风格上\n后续1-2月，可能会从成长切换到题材，切换到绩优\n个人操作上\n后续的时间，会以题材为主，越新越好。\n老题材的Ai，有新面孔会参与，老面孔只做情绪参考不会参与\n如果市场风格真的切到低位的绩优，会第一第二时间重仓进去躺平不动。5月只有15-20%的目标",
@@ -441,11 +551,14 @@
     "reply_count": 147,
     "like_count": 446,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 387141572,
-    "created_at": "2026-05-04 03:45:26",
+    "schema_version": 1,
+    "id": "387141572",
+    "created_at_raw": "2026-05-04 03:45:26",
+    "created_at": "2026-05-04T03:45:26+08:00",
     "title": "",
     "text": "一觉醒过来，港股暴涨<br/>急死了<br/>不想胡头一把<img src=\"//assets.imedao.com/ugc/images/face/emoji_10_dizzy.png?v=1\" title=\"[亏大了]\" alt=\"[亏大了]\" height=\"24\" />",
     "clean_text": "一觉醒过来，港股暴涨\n急死了\n不想胡头一把",
@@ -453,11 +566,14 @@
     "reply_count": 76,
     "like_count": 366,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 386852277,
-    "created_at": "2026-04-30 08:20:24",
+    "schema_version": 1,
+    "id": "386852277",
+    "created_at_raw": "2026-04-30 08:20:24",
+    "created_at": "2026-04-30T08:20:24+08:00",
     "title": "",
     "text": "短线账户光头阳新高收尾<br/>中线账户两个涨停，一个+5一个+4大回血一口<br/>如果说这个月光锂作为主线，趋势赚钱效应爆炸的话<br/>那么短线赚钱效应一定是在次新<br/>我身边有人这个月专做次新3倍的了<img src=\"//assets.imedao.com/ugc/images/face/emoji_13_coldsweat.png?v=1\" title=\"[滴汗]\" alt=\"[滴汗]\" height=\"24\" />",
     "clean_text": "短线账户光头阳新高收尾\n中线账户两个涨停，一个+5一个+4大回血一口\n如果说这个月光锂作为主线，趋势赚钱效应爆炸的话\n那么短线赚钱效应一定是在次新\n我身边有人这个月专做次新3倍的了",
@@ -465,11 +581,14 @@
     "reply_count": 181,
     "like_count": 377,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 386760270,
-    "created_at": "2026-04-30 02:32:53",
+    "schema_version": 1,
+    "id": "386760270",
+    "created_at_raw": "2026-04-30 02:32:53",
+    "created_at": "2026-04-30T02:32:53+08:00",
     "title": "",
     "text": "最后一天拉航天，80%的人都想不到这个剧本<br/>只能说感恩，最近亏死了，节前回点血，节日好消费<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" />",
     "clean_text": "最后一天拉航天，80%的人都想不到这个剧本\n只能说感恩，最近亏死了，节前回点血，节日好消费",
@@ -477,11 +596,14 @@
     "reply_count": 140,
     "like_count": 332,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 386745349,
-    "created_at": "2026-04-30 02:00:03",
+    "schema_version": 1,
+    "id": "386745349",
+    "created_at_raw": "2026-04-30 02:00:03",
+    "created_at": "2026-04-30T02:00:03+08:00",
     "title": "",
     "text": "收摊。<br/>北交没有负反馈，20个点直接带走，感恩<br/>继续拿点Ai线过节<br/>完美的4月<br/>5月会偷懒一下",
     "clean_text": "收摊。\n北交没有负反馈，20个点直接带走，感恩\n继续拿点Ai线过节\n完美的4月\n5月会偷懒一下",
@@ -489,11 +611,14 @@
     "reply_count": 87,
     "like_count": 283,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 386555690,
-    "created_at": "2026-04-29 07:22:38",
+    "schema_version": 1,
+    "id": "386555690",
+    "created_at_raw": "2026-04-29 07:22:38",
+    "created_at": "2026-04-29T07:22:38+08:00",
     "title": "",
     "text": "截止这个月最后一周，都不曾想过<br/>这个月盈利金额最多的，盈利百分比最多的，居然是光，光之母<img src=\"//assets.imedao.com/ugc/images/face/emoji_33_face.png?v=1\" title=\"[捂脸]\" alt=\"[捂脸]\" height=\"24\" /><br/>但是也要感恩新股大普微30，三瑞智能，创达新材，中科仪都是接近20<br/>也感恩独立个股中复神鹰，宝丽迪，金螳螂的20<br/>兜兜转转，超短没做过任何一个主线，全凭入场节点，梭哈仓位，收益率仅次于去年11月",
     "clean_text": "截止这个月最后一周，都不曾想过\n这个月盈利金额最多的，盈利百分比最多的，居然是光，光之母\n但是也要感恩新股大普微30，三瑞智能，创达新材，中科仪都是接近20\n也感恩独立个股中复神鹰，宝丽迪，金螳螂的20\n兜兜转转，超短没做过任何一个主线，全凭入场节点，梭哈仓位，收益率仅次于去年11月",
@@ -501,11 +626,14 @@
     "reply_count": 319,
     "like_count": 451,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 386500909,
-    "created_at": "2026-04-29 03:34:34",
+    "schema_version": 1,
+    "id": "386500909",
+    "created_at_raw": "2026-04-29 03:34:34",
+    "created_at": "2026-04-29T03:34:34+08:00",
     "title": "",
     "text": "又是学习新知识的一天<br/>小仓位以身入局<br/>完善下北交新股的体系<br/>大市值，大流通，竞价低换手，一堆老股，老股成本，个股属性，分时承接盘口<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19dd74c5ef323d3f3fd5d269.jpg!custom.jpg\" />",
     "clean_text": "又是学习新知识的一天\n小仓位以身入局\n完善下北交新股的体系\n大市值，大流通，竞价低换手，一堆老股，老股成本，个股属性，分时承接盘口",
@@ -513,11 +641,14 @@
     "reply_count": 3,
     "like_count": 305,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 386497093,
-    "created_at": "2026-04-29 03:22:18",
+    "schema_version": 1,
+    "id": "386497093",
+    "created_at_raw": "2026-04-29 03:22:18",
+    "created_at": "2026-04-29T03:22:18+08:00",
     "title": "",
     "text": "60多块的大T<img src=\"//assets.imedao.com/ugc/images/face/emoji_40.png?v=1\" title=\"[辣眼睛]\" alt=\"[辣眼睛]\" height=\"24\" />",
     "clean_text": "60多块的大T",
@@ -525,11 +656,14 @@
     "reply_count": 2,
     "like_count": 307,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 386487335,
-    "created_at": "2026-04-29 02:53:37",
+    "schema_version": 1,
+    "id": "386487335",
+    "created_at_raw": "2026-04-29 02:53:37",
+    "created_at": "2026-04-29T02:53:37+08:00",
     "title": "",
     "text": "臻雷以四天30%的跌幅，摁着板块吃屎<br/>技术上115-117这里有支撑<br/>唯一不确定就是，公募还有多少持仓要处理，量化也会跟着一起甩，包括融资也要降",
     "clean_text": "臻雷以四天30%的跌幅，摁着板块吃屎\n技术上115-117这里有支撑\n唯一不确定就是，公募还有多少持仓要处理，量化也会跟着一起甩，包括融资也要降",
@@ -537,11 +671,14 @@
     "reply_count": 120,
     "like_count": 338,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 386476126,
-    "created_at": "2026-04-29 02:23:42",
+    "schema_version": 1,
+    "id": "386476126",
+    "created_at_raw": "2026-04-29 02:23:42",
+    "created_at": "2026-04-29T02:23:42+08:00",
     "title": "",
     "text": "3月底清仓休假， 4月7日回来直接梭哈，买在了创业板阶段低点3133<br/>4.23日早上9点多大减仓休假，卖在了创业板阶段高点3785<br/>每次减仓就跌的含金量还在上升<img src=\"//assets.imedao.com/ugc/images/face/emoji_73_gossip.png?v=1\" title=\"[吃瓜]\" alt=\"[吃瓜]\" height=\"24\" />",
     "clean_text": "3月底清仓休假， 4月7日回来直接梭哈，买在了创业板阶段低点3133\n4.23日早上9点多大减仓休假，卖在了创业板阶段高点3785\n每次减仓就跌的含金量还在上升",
@@ -549,11 +686,14 @@
     "reply_count": 2,
     "like_count": 539,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 386297964,
-    "created_at": "2026-04-28 09:19:40",
+    "schema_version": 1,
+    "id": "386297964",
+    "created_at_raw": "2026-04-28 09:19:40",
+    "created_at": "2026-04-28T09:19:40+08:00",
     "title": "",
     "text": "明天北交那个新股有几个坑的地方<br/>1）流通盘很大。北交的新股不适用新股模式里的任何一条。<br/>2）目前北交的流动性未必能撑住这个股的换手，尤其早上看似换手够，下午也可能会衰竭。<br/>3）业绩有投资收益，并不是明面上那么多。板块虽属于半导体概念，但是不属于正宗半导体设备。<br/>4）风偏高的根据自己的模式考虑如何参与，比如竞价，比如盘中，比如尾盘。风偏低的可以不考虑。<br/>市场最近兑现盘都比较多，有四月涨多了月底长假机构兑现的，有利空被资金兑现的，有未来看不到太强预期被短线兑现的<br/>盘面也比较明显的机构调仓迹象，或者机构回避月末➕长假效应<br/>我还是纯利润持仓联讯休假中，正常节后再回归<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19dd362f749224033fea4a3e.jpg\" />",
     "clean_text": "明天北交那个新股有几个坑的地方\n1）流通盘很大。北交的新股不适用新股模式里的任何一条。\n2）目前北交的流动性未必能撑住这个股的换手，尤其早上看似换手够，下午也可能会衰竭。\n3）业绩有投资收益，并不是明面上那么多。板块虽属于半导体概念，但是不属于正宗半导体设备。\n4）风偏高的根据自己的模式考虑如何参与，比如竞价，比如盘中，比如尾盘。风偏低的可以不考虑。\n市场最近兑现盘都比较多，有四月涨多了月底长假机构兑现的，有利空被资金兑现的，有未来看不到太强预期被短线兑现的\n盘面也比较明显的机构调仓迹象，或者机构回避月末➕长假效应\n我还是纯利润持仓联讯休假中，正常节后再回归",
@@ -561,11 +701,14 @@
     "reply_count": 2,
     "like_count": 462,
     "retweet_count": 3,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385923109,
-    "created_at": "2026-04-27 01:41:20",
+    "schema_version": 1,
+    "id": "385923109",
+    "created_at_raw": "2026-04-27 01:41:20",
+    "created_at": "2026-04-27T01:41:20+08:00",
     "title": "",
     "text": "减5.5成，留1.5成，全是利润不管不问了<br/>提前放假了<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19dcc9885bc1ec233fe61fb3.jpg!custom.jpg\" />",
     "clean_text": "减5.5成，留1.5成，全是利润不管不问了\n提前放假了",
@@ -573,11 +716,14 @@
     "reply_count": 238,
     "like_count": 369,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385913282,
-    "created_at": "2026-04-27 01:03:25",
+    "schema_version": 1,
+    "id": "385913282",
+    "created_at_raw": "2026-04-27 01:03:25",
+    "created_at": "2026-04-27T01:03:25+08:00",
     "title": "",
     "text": "券商，互金，趁五一，我先筛选一批自选<br/>不知道节点在哪<br/>除了临盘异动外，暂时先锚定6-7月再看<br/>有些准备工作，一般都需要提前1-3个月的",
     "clean_text": "券商，互金，趁五一，我先筛选一批自选\n不知道节点在哪\n除了临盘异动外，暂时先锚定6-7月再看\n有些准备工作，一般都需要提前1-3个月的",
@@ -585,11 +731,14 @@
     "reply_count": 120,
     "like_count": 532,
     "retweet_count": 6,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385911075,
-    "created_at": "2026-04-27 00:44:26",
+    "schema_version": 1,
+    "id": "385911075",
+    "created_at_raw": "2026-04-27 00:44:26",
+    "created_at": "2026-04-27T00:44:26+08:00",
     "title": "",
     "text": "拥挤的光→极度拥挤的光<br/>大概率会催生一波券商➕消费行情（耐心等时间点）<br/>其实中线做好每一轮节奏转换，比如年初的算力切到3月底的航天<br/>再到下半年别的板块摸两把<br/>通过复利，每次节奏转换折腾个50%，一年四次，也有4倍了<br/>基本能跑赢99%以上的人了<br/>关键还不累",
     "clean_text": "拥挤的光→极度拥挤的光\n大概率会催生一波券商➕消费行情（耐心等时间点）\n其实中线做好每一轮节奏转换，比如年初的算力切到3月底的航天\n再到下半年别的板块摸两把\n通过复利，每次节奏转换折腾个50%，一年四次，也有4倍了\n基本能跑赢99%以上的人了\n关键还不累",
@@ -597,11 +746,14 @@
     "reply_count": 105,
     "like_count": 494,
     "retweet_count": 3,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385842763,
-    "created_at": "2026-04-26 03:36:05",
+    "schema_version": 1,
+    "id": "385842763",
+    "created_at_raw": "2026-04-26 03:36:05",
+    "created_at": "2026-04-26T03:36:05+08:00",
     "title": "",
     "text": "<p>周末闲聊：</p><p>1）MLF13个月以来首降。挺多专家表态，是周期性调节，是4月份季节因素，但是背后的宏观就是全球除了美国外，目前都在，或者着手准备加息。这一点对大机构的策略影响会比较大，但是市场反应会相对滞后，可能更多的还需要关注下5月的数据预期。</p><p>2）伊美战争。战争基本脱敏了，目前也看不到继续扩大战争的理由。就这么僵持着，短期对市场是利好，长期是利空，会导致下半年全球经济的通胀衰退。短期如果和谈超预期进展，谨防利好出尽被兑现。短期如果重启战争并扩大，那直接是利空。</p><p>3）下周四个交易日，周三叠加五一长假出金日，月末29-30日一季报结束日，常理来说，财报披露的最后两个交易日，80%的股都不会有惊喜，能平稳度过不暴雷都是庆幸的，更何况五一5天假期，外围是否作妖也未知，所以我下周开始，会保持一个控仓节奏提前放假过节了，开心放假是最重要的，不想浪费假期。</p><p>4）互联网时代的XDD称为第一牛散，不为过，但是是不是代持，心里有个明镜就行。注意一个节奏，谨防有些股年报出现在了十大，但是一季报却减仓或者清仓，这种次日要挨重锤。顺风车可坐，逆风车别格局。</p><p>指数：</p><p>上证：4010，4030，4055，4090-4092，4115-4120</p><p>创业：3530，3600，3650，3710，3750</p><p>科创：1400，1430，1440，1470，1490，1530</p><p>题材：</p><p>光：目前还是继续维持去年12月的判断不做修正。成交上，光的占比再次拥挤。操作上，破位的不如没破位的；中下游的不如上游的；二线的不如一线的，全产业链的。业绩Miss的高PE的不如业绩没Miss的略有成长性的。后续亏钱效应跟赚钱效应共存，踩准节奏，还是一个不错的套利方向。</p><p>航天：这周一传长十推迟，到周二确认，到周三发酵，基本上就是个短线兑现时间点，毕竟长达一个月时间，航天不会再有更强的产业催化，所以里面的短线潜伏资金肯定会砸。后面是一个消息真空期，正常轮动序列。</p><p>Ds：周末感觉发酵的一般般。去年这个时候都在期待R2，等了一年结果还是V4。去年每日互动也就只炒作1周，后面都是炒的算力跟硬件，所以周五的互动，被砸是情理之中，都是散户的潜伏盘。周五拉了半导体，CPU跟国产算力硬件，周一要看承接，毕竟已经快忘了周五强，周末吹，周一会不会砸了。能承接住抛压，能吸到光那边的资金，那么能做个超短过度。</p><p>新能源：周五给我的感觉就是光跌了，航天跌了，在美股盘前还在涨的基础上，咱们暂时不存在单边大跌的可能，资金总要找个宣泄口的话，所以选择了人气三驾马车之一的新能源。</p><p>其他：不懂，不看，不想浪费时间跟精力。精选自己想做的，喜欢做的，我觉得就够了，赚的明白，亏的坦然。</p>",
     "clean_text": "周末闲聊：\n1）MLF13个月以来首降。挺多专家表态，是周期性调节，是4月份季节因素，但是背后的宏观就是全球除了美国外，目前都在，或者着手准备加息。这一点对大机构的策略影响会比较大，但是市场反应会相对滞后，可能更多的还需要关注下5月的数据预期。\n2）伊美战争。战争基本脱敏了，目前也看不到继续扩大战争的理由。就这么僵持着，短期对市场是利好，长期是利空，会导致下半年全球经济的通胀衰退。短期如果和谈超预期进展，谨防利好出尽被兑现。短期如果重启战争并扩大，那直接是利空。\n3）下周四个交易日，周三叠加五一长假出金日，月末29-30日一季报结束日，常理来说，财报披露的最后两个交易日，80%的股都不会有惊喜，能平稳度过不暴雷都是庆幸的，更何况五一5天假期，外围是否作妖也未知，所以我下周开始，会保持一个控仓节奏提前放假过节了，开心放假是最重要的，不想浪费假期。\n4）互联网时代的XDD称为第一牛散，不为过，但是是不是代持，心里有个明镜就行。注意一个节奏，谨防有些股年报出现在了十大，但是一季报却减仓或者清仓，这种次日要挨重锤。顺风车可坐，逆风车别格局。\n指数：\n上证：4010，4030，4055，4090-4092，4115-4120\n创业：3530，3600，3650，3710，3750\n科创：1400，1430，1440，1470，1490，1530\n题材：\n光：目前还是继续维持去年12月的判断不做修正。成交上，光的占比再次拥挤。操作上，破位的不如没破位的；中下游的不如上游的；二线的不如一线的，全产业链的。业绩Miss的高PE的不如业绩没Miss的略有成长性的。后续亏钱效应跟赚钱效应共存，踩准节奏，还是一个不错的套利方向。\n航天：这周一传长十推迟，到周二确认，到周三发酵，基本上就是个短线兑现时间点，毕竟长达一个月时间，航天不会再有更强的产业催化，所以里面的短线潜伏资金肯定会砸。后面是一个消息真空期，正常轮动序列。\nDs：周末感觉发酵的一般般。去年这个时候都在期待R2，等了一年结果还是V4。去年每日互动也就只炒作1周，后面都是炒的算力跟硬件，所以周五的互动，被砸是情理之中，都是散户的潜伏盘。周五拉了半导体，CPU跟国产算力硬件，周一要看承接，毕竟已经快忘了周五强，周末吹，周一会不会砸了。能承接住抛压，能吸到光那边的资金，那么能做个超短过度。\n新能源：周五给我的感觉就是光跌了，航天跌了，在美股盘前还在涨的基础上，咱们暂时不存在单边大跌的可能，资金总要找个宣泄口的话，所以选择了人气三驾马车之一的新能源。\n其他：不懂，不看，不想浪费时间跟精力。精选自己想做的，喜欢做的，我觉得就够了，赚的明白，亏的坦然。",
@@ -609,11 +761,14 @@
     "reply_count": 165,
     "like_count": 506,
     "retweet_count": 2,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385769948,
-    "created_at": "2026-04-25 02:22:26",
+    "schema_version": 1,
+    "id": "385769948",
+    "created_at_raw": "2026-04-25 02:22:26",
+    "created_at": "2026-04-25T02:22:26+08:00",
     "title": "",
     "text": "超聚变完成ipo辅导，虽然感觉进度也挺慢<br/>但是华鲲振宇更是不知道在干嘛<br/>节奏太被动，行业老大的位置就要被超聚变取代了",
     "clean_text": "超聚变完成ipo辅导，虽然感觉进度也挺慢\n但是华鲲振宇更是不知道在干嘛\n节奏太被动，行业老大的位置就要被超聚变取代了",
@@ -621,11 +776,14 @@
     "reply_count": 67,
     "like_count": 299,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385762801,
-    "created_at": "2026-04-25 01:11:36",
+    "schema_version": 1,
+    "id": "385762801",
+    "created_at_raw": "2026-04-25 01:11:36",
+    "created_at": "2026-04-25T01:11:36+08:00",
     "title": "",
     "text": "中，新都表示下半年1.6要加速<br/>国内唯一的光之母，周一能不能给个体面的冲高<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" />",
     "clean_text": "中，新都表示下半年1.6要加速\n国内唯一的光之母，周一能不能给个体面的冲高",
@@ -633,11 +791,14 @@
     "reply_count": 118,
     "like_count": 310,
     "retweet_count": 2,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385660781,
-    "created_at": "2026-04-24 09:23:00",
+    "schema_version": 1,
+    "id": "385660781",
+    "created_at_raw": "2026-04-24 09:23:00",
+    "created_at": "2026-04-24T09:23:00+08:00",
     "title": "",
     "text": "<img src=\"//assets.imedao.com/ugc/images/face/emoji_75_bitter.png?v=1\" title=\"[苦涩]\" alt=\"[苦涩]\" height=\"24\" /><br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19dbecc295d1bfc43fef5d01.jpg!custom.jpg\" />",
     "clean_text": "",
@@ -645,11 +806,14 @@
     "reply_count": 136,
     "like_count": 288,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385635439,
-    "created_at": "2026-04-24 07:41:23",
+    "schema_version": 1,
+    "id": "385635439",
+    "created_at_raw": "2026-04-24 07:41:23",
+    "created_at": "2026-04-24T07:41:23+08:00",
     "title": "",
     "text": "可惜，下周还要上岗加班<img src=\"//assets.imedao.com/ugc/images/face/emoji_75_bitter.png?v=1\" title=\"[苦涩]\" alt=\"[苦涩]\" height=\"24\" /><br/>急，下周买啥好<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19dbe6f2f331b6a33fdcfb18.jpg!custom.jpg\" />",
     "clean_text": "可惜，下周还要上岗加班\n急，下周买啥好",
@@ -657,11 +821,14 @@
     "reply_count": 224,
     "like_count": 277,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385544720,
-    "created_at": "2026-04-24 02:03:50",
+    "schema_version": 1,
+    "id": "385544720",
+    "created_at_raw": "2026-04-24 02:03:50",
+    "created_at": "2026-04-24T02:03:50+08:00",
     "title": "",
     "text": "收摊了，7成仓，过会出门找个麻将研究下<br/>收盘见",
     "clean_text": "收摊了，7成仓，过会出门找个麻将研究下\n收盘见",
@@ -669,11 +836,14 @@
     "reply_count": 174,
     "like_count": 326,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385535127,
-    "created_at": "2026-04-24 01:43:12",
+    "schema_version": 1,
+    "id": "385535127",
+    "created_at_raw": "2026-04-24 01:43:12",
+    "created_at": "2026-04-24T01:43:12+08:00",
     "title": "",
     "text": "预期内的跌停吧，昨天的榜太烂了，前天几个砸盘王锁仓，昨天又来了两亿砸盘王，竞价给红开就撤了<br/>如果竞价能先被核，再走个弱转强还能多看一眼<br/>结果竞价直接强转弱<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19dbd26615d1af2c3fbd8da1.jpg!custom.jpg\" />",
     "clean_text": "预期内的跌停吧，昨天的榜太烂了，前天几个砸盘王锁仓，昨天又来了两亿砸盘王，竞价给红开就撤了\n如果竞价能先被核，再走个弱转强还能多看一眼\n结果竞价直接强转弱",
@@ -681,11 +851,14 @@
     "reply_count": 42,
     "like_count": 235,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385485450,
-    "created_at": "2026-04-23 14:42:39",
+    "schema_version": 1,
+    "id": "385485450",
+    "created_at_raw": "2026-04-23 14:42:39",
+    "created_at": "2026-04-23T14:42:39+08:00",
     "title": "",
     "text": "早上在厕所偷听到隔壁讲x今晚业绩<br/>应该是39<br/>晚上一出来发现没听全<br/>是39二十七",
     "clean_text": "早上在厕所偷听到隔壁讲x今晚业绩\n应该是39\n晚上一出来发现没听全\n是39二十七",
@@ -693,11 +866,14 @@
     "reply_count": 95,
     "like_count": 390,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385482435,
-    "created_at": "2026-04-23 14:27:04",
+    "schema_version": 1,
+    "id": "385482435",
+    "created_at_raw": "2026-04-23 14:27:04",
+    "created_at": "2026-04-23T14:27:04+08:00",
     "title": "",
     "text": "不研究了，大半夜的，宝子们晚安💤",
     "clean_text": "不研究了，大半夜的，宝子们晚安💤",
@@ -705,11 +881,14 @@
     "reply_count": 74,
     "like_count": 343,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385402779,
-    "created_at": "2026-04-23 08:31:18",
+    "schema_version": 1,
+    "id": "385402779",
+    "created_at_raw": "2026-04-23 08:31:18",
+    "created_at": "2026-04-23T08:31:18+08:00",
     "title": "",
     "text": "超捷明天财报<br/>铖昌下周一财报<br/>想躲的可以躲，也许会有雷，也有不会有雷，也许会大低开，也许会正常开<br/>不清楚市场的预期是什么<br/>就好比信维那天业绩，我觉得能打70分，结果市场愣是摁到了70块<br/>炒股自己对自己负责<br/>见多了很多大V的回复，“我很早之前”“我在什么价位”就推了，你为什么不买，我不希望有一天，你们被套了，我也说这话",
     "clean_text": "超捷明天财报\n铖昌下周一财报\n想躲的可以躲，也许会有雷，也有不会有雷，也许会大低开，也许会正常开\n不清楚市场的预期是什么\n就好比信维那天业绩，我觉得能打70分，结果市场愣是摁到了70块\n炒股自己对自己负责\n见多了很多大V的回复，“我很早之前”“我在什么价位”就推了，你为什么不买，我不希望有一天，你们被套了，我也说这话",
@@ -717,11 +896,14 @@
     "reply_count": 200,
     "like_count": 421,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385388717,
-    "created_at": "2026-04-23 07:27:19",
+    "schema_version": 1,
+    "id": "385388717",
+    "created_at_raw": "2026-04-23 07:27:19",
+    "created_at": "2026-04-23T07:27:19+08:00",
     "title": "",
     "text": "今天+4什么水平<br/>距离月底还只有5天了<br/>急啊<img src=\"//assets.imedao.com/ugc/images/face/emoji_77_vision.png?v=1\" title=\"[流鼻血]\" alt=\"[流鼻血]\" height=\"24\" />",
     "clean_text": "今天+4什么水平\n距离月底还只有5天了\n急啊",
@@ -729,11 +911,14 @@
     "reply_count": 175,
     "like_count": 383,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385349122,
-    "created_at": "2026-04-23 04:23:22",
+    "schema_version": 1,
+    "id": "385349122",
+    "created_at_raw": "2026-04-23 04:23:22",
+    "created_at": "2026-04-23T04:23:22+08:00",
     "title": "",
     "text": "25年在没这么多量化前<br/>抓1进2，2进3的小高标的胜率挺高的，印象中还没有过失手<br/>25年下半年开始，量化喜欢平铺首板，二板，就对连板没多大兴趣了，只是偶尔来瘾了，去玩一下而已",
     "clean_text": "25年在没这么多量化前\n抓1进2，2进3的小高标的胜率挺高的，印象中还没有过失手\n25年下半年开始，量化喜欢平铺首板，二板，就对连板没多大兴趣了，只是偶尔来瘾了，去玩一下而已",
@@ -741,11 +926,14 @@
     "reply_count": 106,
     "like_count": 307,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385306483,
-    "created_at": "2026-04-23 02:01:38",
+    "schema_version": 1,
+    "id": "385306483",
+    "created_at_raw": "2026-04-23 02:01:38",
+    "created_at": "2026-04-23T02:01:38+08:00",
     "title": "",
     "text": "看戏了<br/>感慨今天想买的都没机会<br/>感慨神鹰又一次卖飞<br/>感慨高标今天格局<br/>感慨航天人站了出来<br/>感慨这个月旅游回来13个交易日红了12天，可惜这周二被三瑞坑了绿了<br/>3成收摊，感恩4月<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19db8123e3618d4c3fa72c4a.jpg!custom.jpg\" />",
     "clean_text": "看戏了\n感慨今天想买的都没机会\n感慨神鹰又一次卖飞\n感慨高标今天格局\n感慨航天人站了出来\n感慨这个月旅游回来13个交易日红了12天，可惜这周二被三瑞坑了绿了\n3成收摊，感恩4月",
@@ -753,11 +941,14 @@
     "reply_count": 98,
     "like_count": 286,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385300629,
-    "created_at": "2026-04-23 01:49:53",
+    "schema_version": 1,
+    "id": "385300629",
+    "created_at_raw": "2026-04-23 01:49:53",
+    "created_at": "2026-04-23T01:49:53+08:00",
     "title": "",
     "text": "一格局<br/>三S，-2止损，平盘止盈，+5止盈<br/>无开新仓，想开的算力跟航天都没给机会<br/>今天大概就这样结束了<br/>3成",
     "clean_text": "一格局\n三S，-2止损，平盘止盈，+5止盈\n无开新仓，想开的算力跟航天都没给机会\n今天大概就这样结束了\n3成",
@@ -765,11 +956,14 @@
     "reply_count": 151,
     "like_count": 207,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385279686,
-    "created_at": "2026-04-23 00:32:28",
+    "schema_version": 1,
+    "id": "385279686",
+    "created_at_raw": "2026-04-23 00:32:28",
+    "created_at": "2026-04-23T00:32:28+08:00",
     "title": "",
     "text": "二季度才开始筹备超级工厂，就老美这个工程进度，一言难尽<br/>也不知道去年机构吹的25年50万台26年100万台的底气在哪<br/>不过就特斯拉自己描述的年产100万这个论述，好像去年也见到过<br/>机器人确实跌了好久不动弹，但就现在这个氛围，航天都冲不散光，他要想冲，用力过猛的话，也只能是炮灰<br/>回到航天，今年首次从商业航天变成航空航天，最核心的一点，从民营百花齐放转向国家主导民营为辅，背后最核心的不再是商业，而且轨道的抢占。<br/>1）缺运力。上半年批复了很多火箭发射基地新建。<br/>2）降成本。所以要可回收。<br/>3）成熟优先。上半年的节奏就是，国家队成熟体系优先发射，民营往后。成熟优先，首飞尝试往后。<br/>4）一箭多星。大载体优先。<br/>所以要明白一点，可回收不是核心，技术的迭代，成本的降低都是为了加快发射频率，从而更快更多的发射卫星。",
     "clean_text": "二季度才开始筹备超级工厂，就老美这个工程进度，一言难尽\n也不知道去年机构吹的25年50万台26年100万台的底气在哪\n不过就特斯拉自己描述的年产100万这个论述，好像去年也见到过\n机器人确实跌了好久不动弹，但就现在这个氛围，航天都冲不散光，他要想冲，用力过猛的话，也只能是炮灰\n回到航天，今年首次从商业航天变成航空航天，最核心的一点，从民营百花齐放转向国家主导民营为辅，背后最核心的不再是商业，而且轨道的抢占。\n1）缺运力。上半年批复了很多火箭发射基地新建。\n2）降成本。所以要可回收。\n3）成熟优先。上半年的节奏就是，国家队成熟体系优先发射，民营往后。成熟优先，首飞尝试往后。\n4）一箭多星。大载体优先。\n所以要明白一点，可回收不是核心，技术的迭代，成本的降低都是为了加快发射频率，从而更快更多的发射卫星。",
@@ -777,11 +971,14 @@
     "reply_count": 125,
     "like_count": 362,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385174935,
-    "created_at": "2026-04-22 08:59:41",
+    "schema_version": 1,
+    "id": "385174935",
+    "created_at_raw": "2026-04-22 08:59:41",
+    "created_at": "2026-04-22T08:59:41+08:00",
     "title": "",
     "text": "螳螂这个榜给10分都嫌多<img src=\"//assets.imedao.com/ugc/images/face/emoji_13_coldsweat.png?v=1\" title=\"[滴汗]\" alt=\"[滴汗]\" height=\"24\" /><br/>明面上砸盘资金毛毛估估2亿+，还有潜在的资金不知道多少<br/>没什么可推演的，要么一字到死，要么巨量换手后的回首掏，要么就被砸死了<br/>唯一的预期差是现在是高标，不清楚敢死队的资金能不能承接住砸盘资金",
     "clean_text": "螳螂这个榜给10分都嫌多\n明面上砸盘资金毛毛估估2亿+，还有潜在的资金不知道多少\n没什么可推演的，要么一字到死，要么巨量换手后的回首掏，要么就被砸死了\n唯一的预期差是现在是高标，不清楚敢死队的资金能不能承接住砸盘资金",
@@ -789,11 +986,14 @@
     "reply_count": 166,
     "like_count": 303,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385151374,
-    "created_at": "2026-04-22 07:16:21",
+    "schema_version": 1,
+    "id": "385151374",
+    "created_at_raw": "2026-04-22 07:16:21",
+    "created_at": "2026-04-22T07:16:21+08:00",
     "title": "",
     "text": "市场还是暂时按这个节奏再走，从预期停火开始一直反弹。后面上半年断断续续的小节点，无非就是月底的28-30财报➕出金日，那时候出的晚的就未必会被原谅。比如5月是否来华。。比如6月中世界杯➕水逆➕美联储半年议息会议。<br/>手里4只，没有特别强调仓位的话一般都是满仓。<br/>两个光，市场既然选择原谅剧本，那就跟着大资金走，毕竟有些原谅的东西还放了巨量，当然华子也被原谅也感恩。<br/>一个航天连板，看看榜是不是正常还是链子榜再决定明天怎么处理。没去低吸其他的航天，毕竟觉得今天航天要分歧，中线持仓也有，外面的一些其他20cm又下不去手。<br/>一个独立逻辑材料，宝丽迪卖挺好，这个买挺好，明天也是套利S，但不会再切回宝丽迪了。<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19db406d11716fad3fe18e15.jpg\" />",
     "clean_text": "市场还是暂时按这个节奏再走，从预期停火开始一直反弹。后面上半年断断续续的小节点，无非就是月底的28-30财报➕出金日，那时候出的晚的就未必会被原谅。比如5月是否来华。。比如6月中世界杯➕水逆➕美联储半年议息会议。\n手里4只，没有特别强调仓位的话一般都是满仓。\n两个光，市场既然选择原谅剧本，那就跟着大资金走，毕竟有些原谅的东西还放了巨量，当然华子也被原谅也感恩。\n一个航天连板，看看榜是不是正常还是链子榜再决定明天怎么处理。没去低吸其他的航天，毕竟觉得今天航天要分歧，中线持仓也有，外面的一些其他20cm又下不去手。\n一个独立逻辑材料，宝丽迪卖挺好，这个买挺好，明天也是套利S，但不会再切回宝丽迪了。",
@@ -801,11 +1001,14 @@
     "reply_count": 107,
     "like_count": 312,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385135545,
-    "created_at": "2026-04-22 06:24:41",
+    "schema_version": 1,
+    "id": "385135545",
+    "created_at_raw": "2026-04-22 06:24:41",
+    "created_at": "2026-04-22T06:24:41+08:00",
     "title": "",
     "text": "这个算是护盘吗？<br/>需要你们的答案。<br/>急，在线等<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" /><br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19db3d998cf174df3fc424fc.jpg!custom.jpg\" />",
     "clean_text": "这个算是护盘吗？\n需要你们的答案。\n急，在线等",
@@ -813,11 +1016,14 @@
     "reply_count": 201,
     "like_count": 299,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385128298,
-    "created_at": "2026-04-22 05:59:33",
+    "schema_version": 1,
+    "id": "385128298",
+    "created_at_raw": "2026-04-22 05:59:33",
+    "created_at": "2026-04-22T05:59:33+08:00",
     "title": "",
     "text": "能不能再拉一下，让我保本出，我好投入光的怀抱<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" />",
     "clean_text": "能不能再拉一下，让我保本出，我好投入光的怀抱",
@@ -825,11 +1031,14 @@
     "reply_count": 156,
     "like_count": 238,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385086457,
-    "created_at": "2026-04-22 02:48:29",
+    "schema_version": 1,
+    "id": "385086457",
+    "created_at_raw": "2026-04-22 02:48:29",
+    "created_at": "2026-04-22T02:48:29+08:00",
     "title": "",
     "text": "美股期货盘前在涨，所以今天早上指数低开正常会有量化来捞，既然美股涨，那么纳指肯定涨，那么光肯定也要涨，无非就是拉升完后回不回落的问题。<br/>早上还是正常交易，格局两个，切换两个<br/>昨天的螳螂一字，也是预期内的，明天要接受考验了<br/>宝丽迪第一次+13清仓，切换鹰+13，宝丽迪第二次+7清仓，切换鹰+3，反正来回薅着吧<br/>航工竞价破位拉升反抽，不是很信任，微赚止盈后直接切换到光，长光都能被原谅到+20，那还是低吸参与下没被原谅的<br/>三瑞目前-5，还没处理，要死不活的，下午看情况处理",
     "clean_text": "美股期货盘前在涨，所以今天早上指数低开正常会有量化来捞，既然美股涨，那么纳指肯定涨，那么光肯定也要涨，无非就是拉升完后回不回落的问题。\n早上还是正常交易，格局两个，切换两个\n昨天的螳螂一字，也是预期内的，明天要接受考验了\n宝丽迪第一次+13清仓，切换鹰+13，宝丽迪第二次+7清仓，切换鹰+3，反正来回薅着吧\n航工竞价破位拉升反抽，不是很信任，微赚止盈后直接切换到光，长光都能被原谅到+20，那还是低吸参与下没被原谅的\n三瑞目前-5，还没处理，要死不活的，下午看情况处理",
@@ -837,11 +1046,14 @@
     "reply_count": 102,
     "like_count": 270,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385071035,
-    "created_at": "2026-04-22 02:07:12",
+    "schema_version": 1,
+    "id": "385071035",
+    "created_at_raw": "2026-04-22 02:07:12",
+    "created_at": "2026-04-22T02:07:12+08:00",
     "title": "",
     "text": "回到交易上<br/>发现自己胜率最高的地方依然是连板跟次新<br/>说到底，这两块地方是最需要运气的<br/>吉人自有天相吧<img src=\"//assets.imedao.com/ugc/images/face/emoji_61_xieyan.png?v=1\" title=\"[斜眼]\" alt=\"[斜眼]\" height=\"24\" />",
     "clean_text": "回到交易上\n发现自己胜率最高的地方依然是连板跟次新\n说到底，这两块地方是最需要运气的\n吉人自有天相吧",
@@ -849,11 +1061,14 @@
     "reply_count": 72,
     "like_count": 312,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385058083,
-    "created_at": "2026-04-22 01:36:22",
+    "schema_version": 1,
+    "id": "385058083",
+    "created_at_raw": "2026-04-22 01:36:22",
+    "created_at": "2026-04-22T01:36:22+08:00",
     "title": "",
     "text": "两个全部止盈",
     "clean_text": "两个全部止盈",
@@ -861,11 +1076,14 @@
     "reply_count": 37,
     "like_count": 186,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385010109,
-    "created_at": "2026-04-21 14:09:49",
+    "schema_version": 1,
+    "id": "385010109",
+    "created_at_raw": "2026-04-21 14:09:49",
+    "created_at": "2026-04-21T14:09:49+08:00",
     "title": "",
     "text": "今年能不能不炒马，炒螳螂啊<br/>明天能不能给个高溢价回回血，我好割肉<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" /><br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19db05f4f0915b843fee4b8c.jpg!custom.jpg\" />",
     "clean_text": "今年能不能不炒马，炒螳螂啊\n明天能不能给个高溢价回回血，我好割肉",
@@ -873,11 +1091,14 @@
     "reply_count": 85,
     "like_count": 279,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 385006384,
-    "created_at": "2026-04-21 13:47:59",
+    "schema_version": 1,
+    "id": "385006384",
+    "created_at_raw": "2026-04-21 13:47:59",
+    "created_at": "2026-04-21T13:47:59+08:00",
     "title": "",
     "text": "3.26日，华电辽能8进9断板，神剑涨停<br/>4.8日，津药药业7进8断板，神剑涨停<br/>4.15日，华远控股6进7断板，神剑涨停<br/>4.20日，圣阳股份7进8断板，神剑涨停<br/>4.21日，博云新材6进7断板，神剑涨停<br/>兵器谱不排第一说不过去了吧",
     "clean_text": "3.26日，华电辽能8进9断板，神剑涨停\n4.8日，津药药业7进8断板，神剑涨停\n4.15日，华远控股6进7断板，神剑涨停\n4.20日，圣阳股份7进8断板，神剑涨停\n4.21日，博云新材6进7断板，神剑涨停\n兵器谱不排第一说不过去了吧",
@@ -885,11 +1106,14 @@
     "reply_count": 115,
     "like_count": 336,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384992396,
-    "created_at": "2026-04-21 12:31:43",
+    "schema_version": 1,
+    "id": "384992396",
+    "created_at_raw": "2026-04-21 12:31:43",
+    "created_at": "2026-04-21T12:31:43+08:00",
     "title": "",
     "text": "真的是局部牛市<br/>半年前接近400的影石创新，现在快腰斩了<br/>几年前还买过500多的极米，现在只要90多<br/>有些公司能赚钱，但是股价是真不值钱<br/>现在市场的定价跟估值，畸形的离谱",
     "clean_text": "真的是局部牛市\n半年前接近400的影石创新，现在快腰斩了\n几年前还买过500多的极米，现在只要90多\n有些公司能赚钱，但是股价是真不值钱\n现在市场的定价跟估值，畸形的离谱",
@@ -897,11 +1121,14 @@
     "reply_count": 93,
     "like_count": 329,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384886752,
-    "created_at": "2026-04-21 03:11:01",
+    "schema_version": 1,
+    "id": "384886752",
+    "created_at_raw": "2026-04-21 03:11:01",
+    "created_at": "2026-04-21T03:11:01+08:00",
     "title": "",
     "text": "有没有课代表，评论里丢2-3篇我24年写过的新股交易体系<br/>再重申一遍，新股这种，自己没有固定的模式体系，别去碰，亏的你家破人亡",
     "clean_text": "有没有课代表，评论里丢2-3篇我24年写过的新股交易体系\n再重申一遍，新股这种，自己没有固定的模式体系，别去碰，亏的你家破人亡",
@@ -909,11 +1136,14 @@
     "reply_count": 300,
     "like_count": 415,
     "retweet_count": 35,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384868980,
-    "created_at": "2026-04-21 02:13:56",
+    "schema_version": 1,
+    "id": "384868980",
+    "created_at_raw": "2026-04-21 02:13:56",
+    "created_at": "2026-04-21T02:13:56+08:00",
     "title": "",
     "text": "哪哪都有雷，指数都扛不住快要破位了<br/>博云清仓切换低位连板<br/>神鹰清仓切换低吸回另一个独立的逻辑<br/>5日回踩先手低吸一个航天<br/>三瑞跌破94会止损，止损出来的仓位明天银转证转出去",
     "clean_text": "哪哪都有雷，指数都扛不住快要破位了\n博云清仓切换低位连板\n神鹰清仓切换低吸回另一个独立的逻辑\n5日回踩先手低吸一个航天\n三瑞跌破94会止损，止损出来的仓位明天银转证转出去",
@@ -921,11 +1151,14 @@
     "reply_count": 170,
     "like_count": 291,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384855566,
-    "created_at": "2026-04-21 01:40:43",
+    "schema_version": 1,
+    "id": "384855566",
+    "created_at_raw": "2026-04-21 01:40:43",
+    "created_at": "2026-04-21T01:40:43+08:00",
     "title": "",
     "text": "竞价+6止盈博云<br/>开盘-1-2止盈神鹰",
     "clean_text": "竞价+6止盈博云\n开盘-1-2止盈神鹰",
@@ -933,11 +1166,14 @@
     "reply_count": 36,
     "like_count": 208,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384841880,
-    "created_at": "2026-04-21 00:41:12",
+    "schema_version": 1,
+    "id": "384841880",
+    "created_at_raw": "2026-04-21 00:41:12",
+    "created_at": "2026-04-21T00:41:12+08:00",
     "title": "",
     "text": "满仓的弊端就很烦<br/>想做T没仓位<br/>万一有捡漏没仓位<br/>总不能竞价直接核了鹰吧<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19dad7a8643146a63fc4a996.jpg!custom.jpg\" />",
     "clean_text": "满仓的弊端就很烦\n想做T没仓位\n万一有捡漏没仓位\n总不能竞价直接核了鹰吧",
@@ -945,11 +1181,14 @@
     "reply_count": 130,
     "like_count": 311,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384740761,
-    "created_at": "2026-04-20 07:23:41",
+    "schema_version": 1,
+    "id": "384740761",
+    "created_at_raw": "2026-04-20 07:23:41",
+    "created_at": "2026-04-20T07:23:41+08:00",
     "title": "",
     "text": "20天的停战，带来的不光是资金的反扑，反而更像是无节制地逼空。<br/>没办法，这种看人脸色的日子，只能做好每一天交易。<br/>没去光那是因为不确定哪一天的冲高是骗人的，不确定哪一天的低开是拉不起来的，所以宁愿在看的懂的地方少赚，也不愿在看不懂的地方割肉。<br/>航天今天肯定是全场最靓的崽，但是拉了很多股的涨幅，这个月涨的并不少了，底部起来30+的都要算不及格了，所以，别哪天调整了，就又开始骂骂咧咧说垃圾。至于月末的回收，被潜伏资金砸盘，那很正常，没砸死那才算超预期，就好比4.3日天龙的失败，下午只有微弱的砸盘，甚至还有量化在抄底。<br/>指数看不清何时会调整，那就正常继续做到亏钱为止，账户里有独立逻辑，有连板，有次新，几乎都是跟指数无关的票，明天正常继续调仓换股。<br/>有时候为啥会卖飞，因为不卖，就没钱买股，懂？",
     "clean_text": "20天的停战，带来的不光是资金的反扑，反而更像是无节制地逼空。\n没办法，这种看人脸色的日子，只能做好每一天交易。\n没去光那是因为不确定哪一天的冲高是骗人的，不确定哪一天的低开是拉不起来的，所以宁愿在看的懂的地方少赚，也不愿在看不懂的地方割肉。\n航天今天肯定是全场最靓的崽，但是拉了很多股的涨幅，这个月涨的并不少了，底部起来30+的都要算不及格了，所以，别哪天调整了，就又开始骂骂咧咧说垃圾。至于月末的回收，被潜伏资金砸盘，那很正常，没砸死那才算超预期，就好比4.3日天龙的失败，下午只有微弱的砸盘，甚至还有量化在抄底。\n指数看不清何时会调整，那就正常继续做到亏钱为止，账户里有独立逻辑，有连板，有次新，几乎都是跟指数无关的票，明天正常继续调仓换股。\n有时候为啥会卖飞，因为不卖，就没钱买股，懂？",
@@ -957,11 +1196,14 @@
     "reply_count": 211,
     "like_count": 451,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384700503,
-    "created_at": "2026-04-20 03:38:17",
+    "schema_version": 1,
+    "id": "384700503",
+    "created_at_raw": "2026-04-20 03:38:17",
+    "created_at": "2026-04-20T03:38:17+08:00",
     "title": "",
     "text": "创业板今天调整，主要宁德影响，其次美股期货是跌的，所以短期紧跟纳指的创业板先调整。上证跟科创正常在补涨空间中。<br/>最近几天，不管是继续打还是再次谈，都会有个结果，总这么熬下去，也难受。<br/>今天做的挺差，竞价+13没舍得卖宝丽迪+9才卖，开盘+4卖了广联，后面涨到+14，如果有后视镜，今天+15是可以做到的，可惜。<br/>目前满仓，新开3个<br/>宝丽迪清仓切换另一个独立逻辑的材料股，分时还是比较犹豫的，最后反复确认3分钟5分钟预估15分钟都是爆巨量，并且等确保突破20日线后再参与。<br/>广联清仓切换另一个航天股，感觉血亏。<br/>100-102的支撑低吸回独立次新，前一小时感觉还行，跟预想一样，但是后一小时又是放量砸盘。作为C1机构大买，成交量持续没缩下来，是弊端，明天先找机会S，后面等5日站稳或者极致缩量再考虑。",
     "clean_text": "创业板今天调整，主要宁德影响，其次美股期货是跌的，所以短期紧跟纳指的创业板先调整。上证跟科创正常在补涨空间中。\n最近几天，不管是继续打还是再次谈，都会有个结果，总这么熬下去，也难受。\n今天做的挺差，竞价+13没舍得卖宝丽迪+9才卖，开盘+4卖了广联，后面涨到+14，如果有后视镜，今天+15是可以做到的，可惜。\n目前满仓，新开3个\n宝丽迪清仓切换另一个独立逻辑的材料股，分时还是比较犹豫的，最后反复确认3分钟5分钟预估15分钟都是爆巨量，并且等确保突破20日线后再参与。\n广联清仓切换另一个航天股，感觉血亏。\n100-102的支撑低吸回独立次新，前一小时感觉还行，跟预想一样，但是后一小时又是放量砸盘。作为C1机构大买，成交量持续没缩下来，是弊端，明天先找机会S，后面等5日站稳或者极致缩量再考虑。",
@@ -969,11 +1211,14 @@
     "reply_count": 194,
     "like_count": 333,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384691055,
-    "created_at": "2026-04-20 03:00:32",
+    "schema_version": 1,
+    "id": "384691055",
+    "created_at_raw": "2026-04-20 03:00:32",
+    "created_at": "2026-04-20T03:00:32+08:00",
     "title": "",
     "text": "看到卫星涨停，其实这个月感触还是蛮多的<br/>去年这个时候，大多数人都在做机器人，而我在宏景，外面都是嘲讽做Ds二波的<br/>今年这个时候，大多数人都在做光，而我却在航天<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" />，不仅是短线在，中线更在",
     "clean_text": "看到卫星涨停，其实这个月感触还是蛮多的\n去年这个时候，大多数人都在做机器人，而我在宏景，外面都是嘲讽做Ds二波的\n今年这个时候，大多数人都在做光，而我却在航天，不仅是短线在，中线更在",
@@ -981,11 +1226,14 @@
     "reply_count": 142,
     "like_count": 396,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384673971,
-    "created_at": "2026-04-20 02:05:07",
+    "schema_version": 1,
+    "id": "384673971",
+    "created_at_raw": "2026-04-20 02:05:07",
+    "created_at": "2026-04-20T02:05:07+08:00",
     "title": "",
     "text": "打死我也不会想到<br/>短短开盘半小时<br/>手里会有两个+13<br/>切换的好亏<img src=\"//assets.imedao.com/ugc/images/face/emoji_09_cry.png?v=1\" title=\"[哭泣]\" alt=\"[哭泣]\" height=\"24\" />",
     "clean_text": "打死我也不会想到\n短短开盘半小时\n手里会有两个+13\n切换的好亏",
@@ -993,11 +1241,14 @@
     "reply_count": 100,
     "like_count": 287,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384662412,
-    "created_at": "2026-04-20 01:33:46",
+    "schema_version": 1,
+    "id": "384662412",
+    "created_at_raw": "2026-04-20 01:33:46",
+    "created_at": "2026-04-20T01:33:46+08:00",
     "title": "",
     "text": "8个点落袋，套利就按套利处理<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19da8857f65128143fdb85b4.jpg!custom.jpg\" />",
     "clean_text": "8个点落袋，套利就按套利处理",
@@ -1005,11 +1256,14 @@
     "reply_count": 60,
     "like_count": 194,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384597711,
-    "created_at": "2026-04-19 03:46:54",
+    "schema_version": 1,
+    "id": "384597711",
+    "created_at_raw": "2026-04-19 03:46:54",
+    "created_at": "2026-04-19T03:46:54+08:00",
     "title": "",
     "text": "真心话大冒险<br/>知无不言，言无不尽<br/>前提，不违法，不私密",
     "clean_text": "真心话大冒险\n知无不言，言无不尽\n前提，不违法，不私密",
@@ -1017,11 +1271,14 @@
     "reply_count": 1565,
     "like_count": 585,
     "retweet_count": 21,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384588026,
-    "created_at": "2026-04-19 01:22:27",
+    "schema_version": 1,
+    "id": "384588026",
+    "created_at_raw": "2026-04-19 01:22:27",
+    "created_at": "2026-04-19T01:22:27+08:00",
     "title": "",
     "text": "短腿有过三次加仓<br/>100一次<br/>110一次<br/>115一次<br/>所以现在只有20个点的利润，并没有30多个点<br/>后面是继续加，还是开始减，还是一直格局不动，还是拿到跌破成本止损，都有可能。<br/>中线什么时候卖，完全看心情<br/>华子太爱拿6年不动今年才开始减，今年会清完<br/>寒王赚太多没拿到最后，比较可惜<br/>景宝赚太快又正好遇到1月份破事，也是卖飞N截<br/>说到底，真不会做中线，也不喜欢做中线，完全因为短线受限制。<br/>在中线买股，中线持仓上，我还真是没有太多的经验。经常会遇到短线思维卖中线股，咔咔卖飞。短线思维买中线股，没多久就能大涨。<br/>整个体系，整个模式，都还没有从超短思路中跳出来。<br/>所以，互勉吧。",
     "clean_text": "短腿有过三次加仓\n100一次\n110一次\n115一次\n所以现在只有20个点的利润，并没有30多个点\n后面是继续加，还是开始减，还是一直格局不动，还是拿到跌破成本止损，都有可能。\n中线什么时候卖，完全看心情\n华子太爱拿6年不动今年才开始减，今年会清完\n寒王赚太多没拿到最后，比较可惜\n景宝赚太快又正好遇到1月份破事，也是卖飞N截\n说到底，真不会做中线，也不喜欢做中线，完全因为短线受限制。\n在中线买股，中线持仓上，我还真是没有太多的经验。经常会遇到短线思维卖中线股，咔咔卖飞。短线思维买中线股，没多久就能大涨。\n整个体系，整个模式，都还没有从超短思路中跳出来。\n所以，互勉吧。",
@@ -1029,11 +1286,14 @@
     "reply_count": 129,
     "like_count": 423,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384472417,
-    "created_at": "2026-04-17 13:00:33",
+    "schema_version": 1,
+    "id": "384472417",
+    "created_at_raw": "2026-04-17 13:00:33",
+    "created_at": "2026-04-17T13:00:33+08:00",
     "title": "",
     "text": "臻雷这个ST不说板上钉钉吧，起码从1月出事那次，我就觉得起码80%的概率<br/>我还特意给你们举过例子，当年的京山轻机，一样的财务问题，我当初也觉得没必要ST，但是后来的结果京山依然被ST了<br/>所以这轮中线压根就直接给出了pass理由，也机缘巧合的重仓吃到了小短腿的最大涨幅<br/>至于有多大影响，公募机构的风控肯定是要卖出，有没有游资，私募，大户来承接，那是听天由命了",
     "clean_text": "臻雷这个ST不说板上钉钉吧，起码从1月出事那次，我就觉得起码80%的概率\n我还特意给你们举过例子，当年的京山轻机，一样的财务问题，我当初也觉得没必要ST，但是后来的结果京山依然被ST了\n所以这轮中线压根就直接给出了pass理由，也机缘巧合的重仓吃到了小短腿的最大涨幅\n至于有多大影响，公募机构的风控肯定是要卖出，有没有游资，私募，大户来承接，那是听天由命了",
@@ -1041,11 +1301,14 @@
     "reply_count": 212,
     "like_count": 352,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384350673,
-    "created_at": "2026-04-17 02:43:35",
+    "schema_version": 1,
+    "id": "384350673",
+    "created_at_raw": "2026-04-17 02:43:35",
+    "created_at": "2026-04-17T02:43:35+08:00",
     "title": "",
     "text": "光的大高开，大波动，昨天没去Ai，那今天肯定也不会去，今天先让资金乱窜一下，开心过个周末。<br/>竞价+7清了大普微，两天30个点感恩<br/>开盘5日压制跳水止盈了三瑞，昨天就该卖的，被动多做了一天T，今天上不去5日跟着走了，后面再看<br/>今天的新股不符合我的模式，所以没去<br/>目前6成，新开两个，依然套利为主<br/>中线超捷水下-1.5%被动减仓1<br/>中线华子拿到长鑫上市前后会继续减<br/>中线有个利润死仓虽然一度涨停，当他死了吧<br/>中线东西别来问了，都是赚的，自己爱怎么处理怎么处理<br/>后面我不太想说中线的事了，除非有新开的东西",
     "clean_text": "光的大高开，大波动，昨天没去Ai，那今天肯定也不会去，今天先让资金乱窜一下，开心过个周末。\n竞价+7清了大普微，两天30个点感恩\n开盘5日压制跳水止盈了三瑞，昨天就该卖的，被动多做了一天T，今天上不去5日跟着走了，后面再看\n今天的新股不符合我的模式，所以没去\n目前6成，新开两个，依然套利为主\n中线超捷水下-1.5%被动减仓1\n中线华子拿到长鑫上市前后会继续减\n中线有个利润死仓虽然一度涨停，当他死了吧\n中线东西别来问了，都是赚的，自己爱怎么处理怎么处理\n后面我不太想说中线的事了，除非有新开的东西",
@@ -1053,11 +1316,14 @@
     "reply_count": 165,
     "like_count": 317,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384305790,
-    "created_at": "2026-04-16 23:55:58",
+    "schema_version": 1,
+    "id": "384305790",
+    "created_at_raw": "2026-04-16 23:55:58",
+    "created_at": "2026-04-16T23:55:58+08:00",
     "title": "",
     "text": "如果这个月至死不买锂，不买光<br/>在还剩10个交易日，怎么样才能翻倍<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" /><br/>在线等，急<img src=\"//assets.imedao.com/ugc/images/face/emoji_47.png?v=1\" title=\"[寒冷]\" alt=\"[寒冷]\" height=\"24\" />",
     "clean_text": "如果这个月至死不买锂，不买光\n在还剩10个交易日，怎么样才能翻倍\n在线等，急",
@@ -1065,11 +1331,14 @@
     "reply_count": 443,
     "like_count": 350,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384246772,
-    "created_at": "2026-04-16 11:33:02",
+    "schema_version": 1,
+    "id": "384246772",
+    "created_at_raw": "2026-04-16 11:33:02",
+    "created_at": "2026-04-16T11:33:02+08:00",
     "title": "",
     "text": "光，伴着花谢了又开<br/>锂，把悲伤抛向大海<br/>现在的我才明白<br/>要抱着金色光锂走向未来",
     "clean_text": "光，伴着花谢了又开\n锂，把悲伤抛向大海\n现在的我才明白\n要抱着金色光锂走向未来",
@@ -1077,11 +1346,14 @@
     "reply_count": 153,
     "like_count": 395,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384215902,
-    "created_at": "2026-04-16 08:39:21",
+    "schema_version": 1,
+    "id": "384215902",
+    "created_at_raw": "2026-04-16 08:39:21",
+    "created_at": "2026-04-16T08:39:21+08:00",
     "title": "",
     "text": "三瑞第一天冲高回落，机构大买，但是收盘基本都是-5被套的，所以第二天有套利空间<br/>普帝今天是个人都是15+的收益，多的20+，所以不能拿来对比三瑞的第二天<br/>更何况两者市值，流通值，预期差都不同，所以明天还想买的，三瑞不是你的理由，你得找其他理由说服自己<br/>反正我会卖",
     "clean_text": "三瑞第一天冲高回落，机构大买，但是收盘基本都是-5被套的，所以第二天有套利空间\n普帝今天是个人都是15+的收益，多的20+，所以不能拿来对比三瑞的第二天\n更何况两者市值，流通值，预期差都不同，所以明天还想买的，三瑞不是你的理由，你得找其他理由说服自己\n反正我会卖",
@@ -1089,11 +1361,14 @@
     "reply_count": 182,
     "like_count": 299,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384203147,
-    "created_at": "2026-04-16 07:33:12",
+    "schema_version": 1,
+    "id": "384203147",
+    "created_at_raw": "2026-04-16 07:33:12",
+    "created_at": "2026-04-16T07:33:12+08:00",
     "title": "",
     "text": "宁德高开冲高，给业绩线打了针强心剂，光模块同步高开高走，创业板今天就锁死了下跌空间，基本就是一个冲高震荡的局面。<br/>下午一度有鬼故事科创板跳水，但是今天明显是国产Ai的天下，强度拉满，下午也收了回来。非要找个理由，机构对于今年的国产Ai的判断是23-24年美国Ai。<br/>明天鸡哥财报，这种氛围下，貌似即使不及预期，也都不会带崩盘面。<br/>指数锚定5日，不破的情况下还是继续做多，无非就是激情做多还是谨慎做多，先做到自己开始亏钱，受不了再说，<br/>继周一之后，勉强再次单日10吧，没去锂电，没去光，在自己最擅长的地方躲几天，不参与外面的强博弈。<br/>前者模式内的，昨天没有满仓空出来的仓位就是为了看有没有参与他的机会。竞价换手满足一笔，跳水打出199.99对子底再一笔，剩下的就只剩祈祷跟割肉了。明天不会做T，能带走多少老天赏饭。<br/>后者开盘跌太快了，那时候在盯新股，所以也没割，后面确认了109-110的支撑，就慢慢做T过渡下。",
     "clean_text": "宁德高开冲高，给业绩线打了针强心剂，光模块同步高开高走，创业板今天就锁死了下跌空间，基本就是一个冲高震荡的局面。\n下午一度有鬼故事科创板跳水，但是今天明显是国产Ai的天下，强度拉满，下午也收了回来。非要找个理由，机构对于今年的国产Ai的判断是23-24年美国Ai。\n明天鸡哥财报，这种氛围下，貌似即使不及预期，也都不会带崩盘面。\n指数锚定5日，不破的情况下还是继续做多，无非就是激情做多还是谨慎做多，先做到自己开始亏钱，受不了再说，\n继周一之后，勉强再次单日10吧，没去锂电，没去光，在自己最擅长的地方躲几天，不参与外面的强博弈。\n前者模式内的，昨天没有满仓空出来的仓位就是为了看有没有参与他的机会。竞价换手满足一笔，跳水打出199.99对子底再一笔，剩下的就只剩祈祷跟割肉了。明天不会做T，能带走多少老天赏饭。\n后者开盘跌太快了，那时候在盯新股，所以也没割，后面确认了109-110的支撑，就慢慢做T过渡下。",
@@ -1101,11 +1376,14 @@
     "reply_count": 171,
     "like_count": 319,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384145390,
-    "created_at": "2026-04-16 03:06:08",
+    "schema_version": 1,
+    "id": "384145390",
+    "created_at_raw": "2026-04-16 03:06:08",
+    "created_at": "2026-04-16T03:06:08+08:00",
     "title": "",
     "text": "厕所龙的意思是，鸡哥超预期，那我也超预期。鸡哥低预期，那就是被我抢单了？",
     "clean_text": "厕所龙的意思是，鸡哥超预期，那我也超预期。鸡哥低预期，那就是被我抢单了？",
@@ -1113,11 +1391,14 @@
     "reply_count": 75,
     "like_count": 311,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384136904,
-    "created_at": "2026-04-16 02:40:18",
+    "schema_version": 1,
+    "id": "384136904",
+    "created_at_raw": "2026-04-16 02:40:18",
+    "created_at": "2026-04-16T02:40:18+08:00",
     "title": "",
     "text": "去年12月重仓算力，那时候狗看了摇头<br/>今年3月重仓航天，这时候狗看了也摇头<br/>其实摇头的都是同一批狗<br/>哪都能赚，短线不在乎是不是垃圾<br/>但是中线，我只是赚我喜欢的<br/>国产算力，国产航天，一切都是国产",
     "clean_text": "去年12月重仓算力，那时候狗看了摇头\n今年3月重仓航天，这时候狗看了也摇头\n其实摇头的都是同一批狗\n哪都能赚，短线不在乎是不是垃圾\n但是中线，我只是赚我喜欢的\n国产算力，国产航天，一切都是国产",
@@ -1125,11 +1406,14 @@
     "reply_count": 110,
     "like_count": 416,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384127040,
-    "created_at": "2026-04-16 02:14:43",
+    "schema_version": 1,
+    "id": "384127040",
+    "created_at_raw": "2026-04-16 02:14:43",
+    "created_at": "2026-04-16T02:14:43+08:00",
     "title": "",
     "text": "我脑子笨<br/>不想博弈宁德的锂电链<br/>不想博弈旭哥的光电链<br/>不想博弈佰维的存储链<br/>只能在边角料的垃圾堆里看你们赚<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" />",
     "clean_text": "我脑子笨\n不想博弈宁德的锂电链\n不想博弈旭哥的光电链\n不想博弈佰维的存储链\n只能在边角料的垃圾堆里看你们赚",
@@ -1137,11 +1421,14 @@
     "reply_count": 120,
     "like_count": 323,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384092369,
-    "created_at": "2026-04-15 22:29:49",
+    "schema_version": 1,
+    "id": "384092369",
+    "created_at_raw": "2026-04-15 22:29:49",
+    "created_at": "2026-04-15T22:29:49+08:00",
     "title": "",
     "text": "颠婆啊，纳指11连阳历史新高，2026才四个月，真是什么奇葩都见识到了。<br/>川普：你们得感谢我，没有我，你们抄不到底。",
     "clean_text": "颠婆啊，纳指11连阳历史新高，2026才四个月，真是什么奇葩都见识到了。\n川普：你们得感谢我，没有我，你们抄不到底。",
@@ -1149,11 +1436,14 @@
     "reply_count": 76,
     "like_count": 338,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384039939,
-    "created_at": "2026-04-15 10:30:15",
+    "schema_version": 1,
+    "id": "384039939",
+    "created_at_raw": "2026-04-15 10:30:15",
+    "created_at": "2026-04-15T10:30:15+08:00",
     "title": "",
     "text": "有个细节很不起眼，创业板指数最后15分钟拉了0.6%，这个放在正常的早盘，指数涨0.6%，还是挺可观的。<br/>就这个细节，对个股来说影响不大，但是对ETF来说，就有获利空间。<br/>明晚鸡哥财报，怎么说呢，上一次超预期的新哥2.2日历历在目，你没法去预测他这次是超预期还是低预期，也没办法去预判高开低走还是冲高震荡又或者低开低走，但有一点可以预测的，他涨的时候未必能带你赚钱，但他要是放量跳水，创业板被带着破5日的话，会触发机构，量化的系统砸盘，那就是好久没遇到的单边到收盘了。所以这两个交易日，谨慎一点。<br/>从博弈的角度出发，清明节到今天早上7个交易日，赚钱效应不说爆炸吧，那也是热火朝天的。指数不破5日就存在修复的概率，这种修复的结果要么走强到尾盘完全修复，要么早盘冲高修复后下午跳水，次日低走。所以今天，明天，一个鸡哥的节点，一个周末大嘴巴子的节点（下周停战期满），需要打起精神来了。<br/>看的懂的自我消化，看不懂的过滤，别为难自己。",
     "clean_text": "有个细节很不起眼，创业板指数最后15分钟拉了0.6%，这个放在正常的早盘，指数涨0.6%，还是挺可观的。\n就这个细节，对个股来说影响不大，但是对ETF来说，就有获利空间。\n明晚鸡哥财报，怎么说呢，上一次超预期的新哥2.2日历历在目，你没法去预测他这次是超预期还是低预期，也没办法去预判高开低走还是冲高震荡又或者低开低走，但有一点可以预测的，他涨的时候未必能带你赚钱，但他要是放量跳水，创业板被带着破5日的话，会触发机构，量化的系统砸盘，那就是好久没遇到的单边到收盘了。所以这两个交易日，谨慎一点。\n从博弈的角度出发，清明节到今天早上7个交易日，赚钱效应不说爆炸吧，那也是热火朝天的。指数不破5日就存在修复的概率，这种修复的结果要么走强到尾盘完全修复，要么早盘冲高修复后下午跳水，次日低走。所以今天，明天，一个鸡哥的节点，一个周末大嘴巴子的节点（下周停战期满），需要打起精神来了。\n看的懂的自我消化，看不懂的过滤，别为难自己。",
@@ -1161,11 +1451,14 @@
     "reply_count": 102,
     "like_count": 409,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 384000832,
-    "created_at": "2026-04-15 06:47:28",
+    "schema_version": 1,
+    "id": "384000832",
+    "created_at_raw": "2026-04-15 06:47:28",
+    "created_at": "2026-04-15T06:47:28+08:00",
     "title": "",
     "text": "熟悉的高开低走<br/>预期的冲高回落<br/>持续的背离，早晚有一天会在早盘坑人<br/>今天还算满意，满仓的两个全部卖在了最高点，低吸的两个位置也算日内低点<br/>新股拿了三天已经20%了，从第一天完美开盘买，第二天完美正T，第三天完美反T，涨的时候多赚，跌的时候少亏就行。明天5日上移到111-112附近，不会做正T，破位会清。<br/>避险的垃圾股也确实能起到避险的作用，明天割。<br/>目前半仓多一点，明天继续谨慎轮动做多。",
     "clean_text": "熟悉的高开低走\n预期的冲高回落\n持续的背离，早晚有一天会在早盘坑人\n今天还算满意，满仓的两个全部卖在了最高点，低吸的两个位置也算日内低点\n新股拿了三天已经20%了，从第一天完美开盘买，第二天完美正T，第三天完美反T，涨的时候多赚，跌的时候少亏就行。明天5日上移到111-112附近，不会做正T，破位会清。\n避险的垃圾股也确实能起到避险的作用，明天割。\n目前半仓多一点，明天继续谨慎轮动做多。",
@@ -1173,11 +1466,14 @@
     "reply_count": 160,
     "like_count": 303,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383971947,
-    "created_at": "2026-04-15 04:08:23",
+    "schema_version": 1,
+    "id": "383971947",
+    "created_at_raw": "2026-04-15 04:08:23",
+    "created_at": "2026-04-15T04:08:23+08:00",
     "title": "",
     "text": "最近的新股赚钱效应确实不错，就连北交的赛英电子跟创达新材都给了炒作空间，更别提主板这边的泰金跟红板<br/>可惜一个赚了3%卖飞30%，一个赚了18%卖飞20%",
     "clean_text": "最近的新股赚钱效应确实不错，就连北交的赛英电子跟创达新材都给了炒作空间，更别提主板这边的泰金跟红板\n可惜一个赚了3%卖飞30%，一个赚了18%卖飞20%",
@@ -1185,11 +1481,14 @@
     "reply_count": 70,
     "like_count": 253,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383967132,
-    "created_at": "2026-04-15 03:40:29",
+    "schema_version": 1,
+    "id": "383967132",
+    "created_at_raw": "2026-04-15 03:40:29",
+    "created_at": "2026-04-15T03:40:29+08:00",
     "title": "",
     "text": "创业板连续几天大涨背离，调整基本上一触即发。要么乖乖调整一下，要么放量继续逼空到天涯才能修复这个背离。<br/>所以今天直接高开，基本上就是量化熟悉的剧本，先砸了再说。资金砸完新能源跟部分光，创业板应声跳水，然后切了低位的国产Ai芯片，半导体，直接把科创板带飞，所以指数间又是一个割裂的局面。上证还是比较呆萌，在4050-4060压力位徘徊，看两位老大哥创业板跟科创板厮杀。<br/>昨夜美股大涨，预判今天要么高开低走要么冲高回落，所以手里的两个持仓全部在冲高后止盈。<br/>随后买回了部分新股，又做了5%的反T，115-116的支撑低吸回一半，剩下一半本想再等个112-113，结果没有下文了。<br/>小仓位新开了个可顺指数的金融，也可逆指数的ST垃圾做个套利。<br/>目前半仓，留点仓位等尾盘或者明天早盘用。",
     "clean_text": "创业板连续几天大涨背离，调整基本上一触即发。要么乖乖调整一下，要么放量继续逼空到天涯才能修复这个背离。\n所以今天直接高开，基本上就是量化熟悉的剧本，先砸了再说。资金砸完新能源跟部分光，创业板应声跳水，然后切了低位的国产Ai芯片，半导体，直接把科创板带飞，所以指数间又是一个割裂的局面。上证还是比较呆萌，在4050-4060压力位徘徊，看两位老大哥创业板跟科创板厮杀。\n昨夜美股大涨，预判今天要么高开低走要么冲高回落，所以手里的两个持仓全部在冲高后止盈。\n随后买回了部分新股，又做了5%的反T，115-116的支撑低吸回一半，剩下一半本想再等个112-113，结果没有下文了。\n小仓位新开了个可顺指数的金融，也可逆指数的ST垃圾做个套利。\n目前半仓，留点仓位等尾盘或者明天早盘用。",
@@ -1197,11 +1496,14 @@
     "reply_count": 100,
     "like_count": 282,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383934899,
-    "created_at": "2026-04-15 01:55:50",
+    "schema_version": 1,
+    "id": "383934899",
+    "created_at_raw": "2026-04-15 01:55:50",
+    "created_at": "2026-04-15T01:55:50+08:00",
     "title": "",
     "text": "老鹰割了<br/>可以涨了<img src=\"//assets.imedao.com/ugc/images/face/emoji_74_broken.png?v=1\" title=\"[裂开]\" alt=\"[裂开]\" height=\"24\" />",
     "clean_text": "老鹰割了\n可以涨了",
@@ -1209,11 +1511,14 @@
     "reply_count": 59,
     "like_count": 237,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383836753,
-    "created_at": "2026-04-14 08:48:33",
+    "schema_version": 1,
+    "id": "383836753",
+    "created_at_raw": "2026-04-14 08:48:33",
+    "created_at": "2026-04-14T08:48:33+08:00",
     "title": "",
     "text": "“编制工作进展顺利”<br/>“我顺极了，哥哥，我顺极了，真的，顺极了”",
     "clean_text": "“编制工作进展顺利”\n“我顺极了，哥哥，我顺极了，真的，顺极了”",
@@ -1221,11 +1526,14 @@
     "reply_count": 162,
     "like_count": 354,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383811675,
-    "created_at": "2026-04-14 06:41:03",
+    "schema_version": 1,
+    "id": "383811675",
+    "created_at_raw": "2026-04-14 06:41:03",
+    "created_at": "2026-04-14T06:41:03+08:00",
     "title": "",
     "text": "有点羡慕人家雷子一天+11的<br/>短腿的优势无非启动早，提前跑，低点到现在40%了，但是人家大长腿的一天就嘎嘎追回来好多<br/>明天能不能赏个一字板<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" />",
     "clean_text": "有点羡慕人家雷子一天+11的\n短腿的优势无非启动早，提前跑，低点到现在40%了，但是人家大长腿的一天就嘎嘎追回来好多\n明天能不能赏个一字板",
@@ -1233,11 +1541,14 @@
     "reply_count": 68,
     "like_count": 249,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383808515,
-    "created_at": "2026-04-14 06:27:00",
+    "schema_version": 1,
+    "id": "383808515",
+    "created_at_raw": "2026-04-14 06:27:00",
+    "created_at": "2026-04-14T06:27:00+08:00",
     "title": "",
     "text": "小赚，知足常乐。<br/>昨天的创达低开太多，致尚科技开盘没动，导致满仓就比较被动。想买的10cm开盘5分钟就板，也是错过了。<br/>后面创达-2，致尚+3处理完后，才腾出仓位来做了个5%的正T，只是可惜了早上-6的深水没有仓位。<br/>半仓多点过夜。<br/>明天继续努力。",
     "clean_text": "小赚，知足常乐。\n昨天的创达低开太多，致尚科技开盘没动，导致满仓就比较被动。想买的10cm开盘5分钟就板，也是错过了。\n后面创达-2，致尚+3处理完后，才腾出仓位来做了个5%的正T，只是可惜了早上-6的深水没有仓位。\n半仓多点过夜。\n明天继续努力。",
@@ -1245,11 +1556,14 @@
     "reply_count": 229,
     "like_count": 241,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383789996,
-    "created_at": "2026-04-14 04:59:17",
+    "schema_version": 1,
+    "id": "383789996",
+    "created_at_raw": "2026-04-14 04:59:17",
+    "created_at": "2026-04-14T04:59:17+08:00",
     "title": "",
     "text": "今年迄今为止才23次发射<br/>而且还是在4月份提速的情况下<br/>去年全年80多次，下半年任重道远",
     "clean_text": "今年迄今为止才23次发射\n而且还是在4月份提速的情况下\n去年全年80多次，下半年任重道远",
@@ -1257,11 +1571,14 @@
     "reply_count": 44,
     "like_count": 298,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383767825,
-    "created_at": "2026-04-14 02:56:00",
+    "schema_version": 1,
+    "id": "383767825",
+    "created_at_raw": "2026-04-14 02:56:00",
+    "created_at": "2026-04-14T02:56:00+08:00",
     "title": "",
     "text": "最近的行情，给我一种感觉就是<br/>赶紧吃，能吃多少是多少，生怕后面饿着<br/>确实有点疯<br/>分享一个周末机构的观点，最近量化在搏命式的交易Ai，从原本的按部就班，到这个月的疯狂做超短弹性",
     "clean_text": "最近的行情，给我一种感觉就是\n赶紧吃，能吃多少是多少，生怕后面饿着\n确实有点疯\n分享一个周末机构的观点，最近量化在搏命式的交易Ai，从原本的按部就班，到这个月的疯狂做超短弹性",
@@ -1269,11 +1586,14 @@
     "reply_count": 101,
     "like_count": 357,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383753606,
-    "created_at": "2026-04-14 02:11:51",
+    "schema_version": 1,
+    "id": "383753606",
+    "created_at_raw": "2026-04-14 02:11:51",
+    "created_at": "2026-04-14T02:11:51+08:00",
     "title": "",
     "text": "今天就我在亏钱吗<img src=\"//assets.imedao.com/ugc/images/face/emoji_09_cry.png?v=1\" title=\"[哭泣]\" alt=\"[哭泣]\" height=\"24\" />",
     "clean_text": "今天就我在亏钱吗",
@@ -1281,11 +1601,14 @@
     "reply_count": 85,
     "like_count": 215,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383661187,
-    "created_at": "2026-04-13 08:25:56",
+    "schema_version": 1,
+    "id": "383661187",
+    "created_at_raw": "2026-04-13 08:25:56",
+    "created_at": "2026-04-13T08:25:56+08:00",
     "title": "",
     "text": "好久没有单日10+了，一天快干了上周四天。<br/>开盘直接新股一个，次新股一个。前者半导体国产替代（关系下调），后者无人机（周五90分榜，但是今天成交量太大是瑕疵），盘中蘅东光➕优讯股份接连新高，光的资金下沉到二线三线，冲高清完开勒股份后，分时低吸相对还在低位的光做个套利。<br/>平铺是为了不确定今天在周末利空下会如何走，明天聚焦。",
     "clean_text": "好久没有单日10+了，一天快干了上周四天。\n开盘直接新股一个，次新股一个。前者半导体国产替代（关系下调），后者无人机（周五90分榜，但是今天成交量太大是瑕疵），盘中蘅东光➕优讯股份接连新高，光的资金下沉到二线三线，冲高清完开勒股份后，分时低吸相对还在低位的光做个套利。\n平铺是为了不确定今天在周末利空下会如何走，明天聚焦。",
@@ -1293,11 +1616,14 @@
     "reply_count": 212,
     "like_count": 379,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383592054,
-    "created_at": "2026-04-13 02:13:33",
+    "schema_version": 1,
+    "id": "383592054",
+    "created_at_raw": "2026-04-13 02:13:33",
+    "created_at": "2026-04-13T02:13:33+08:00",
     "title": "",
     "text": "中线，短线，起码做过二十多个航天股<br/>筛选来，筛选去<br/>最后重仓的，已经从100涨到130了<br/>依然还是做自己想做的，亏自己想亏的<br/>开心每一天最好",
     "clean_text": "中线，短线，起码做过二十多个航天股\n筛选来，筛选去\n最后重仓的，已经从100涨到130了\n依然还是做自己想做的，亏自己想亏的\n开心每一天最好",
@@ -1305,11 +1631,14 @@
     "reply_count": 151,
     "like_count": 409,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383372849,
-    "created_at": "2026-04-10 07:12:11",
+    "schema_version": 1,
+    "id": "383372849",
+    "created_at_raw": "2026-04-10 07:12:11",
+    "created_at": "2026-04-10T07:12:11+08:00",
     "title": "",
     "text": "这行情，感觉除了前天还算正常外，最近这两天都有点神经病，尤其今天创业板指数能涨成这样，每天还动不动就有闪崩股。多少有点超出我认知了，学不会，再学要废。<br/>月初没胡头一把，旅游7天回来，连胡4天，手风还算顺，不求多少，每天能小赚一点，知足常乐了。<br/>都说要站在光里，我今天站了，还是光着站的，结果这分时，像极了开塞露用多了，勒得慌<img src=\"//assets.imedao.com/ugc/images/face/emoji_74_broken.png?v=1\" title=\"[裂开]\" alt=\"[裂开]\" height=\"24\" />，莫不是只买了一半的缘故？",
     "clean_text": "这行情，感觉除了前天还算正常外，最近这两天都有点神经病，尤其今天创业板指数能涨成这样，每天还动不动就有闪崩股。多少有点超出我认知了，学不会，再学要废。\n月初没胡头一把，旅游7天回来，连胡4天，手风还算顺，不求多少，每天能小赚一点，知足常乐了。\n都说要站在光里，我今天站了，还是光着站的，结果这分时，像极了开塞露用多了，勒得慌，莫不是只买了一半的缘故？",
@@ -1317,11 +1646,14 @@
     "reply_count": 189,
     "like_count": 348,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383312211,
-    "created_at": "2026-04-10 02:30:16",
+    "schema_version": 1,
+    "id": "383312211",
+    "created_at_raw": "2026-04-10 02:30:16",
+    "created_at": "2026-04-10T02:30:16+08:00",
     "title": "",
     "text": "4000点的收费站，忘了吗，哥？",
     "clean_text": "4000点的收费站，忘了吗，哥？",
@@ -1329,11 +1661,14 @@
     "reply_count": 129,
     "like_count": 344,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383276761,
-    "created_at": "2026-04-09 23:33:14",
+    "schema_version": 1,
+    "id": "383276761",
+    "created_at_raw": "2026-04-09 23:33:14",
+    "created_at": "2026-04-09T23:33:14+08:00",
     "title": "",
     "text": "偶尔的投机可以，或者风险过程中投机，避险也可以<br/>但是我很少在大是大非上，很少在最后出结果的时候，去投机逆周期<br/>所以，今天我不会拿避险题材过周末",
     "clean_text": "偶尔的投机可以，或者风险过程中投机，避险也可以\n但是我很少在大是大非上，很少在最后出结果的时候，去投机逆周期\n所以，今天我不会拿避险题材过周末",
@@ -1341,11 +1676,14 @@
     "reply_count": 140,
     "like_count": 446,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383194229,
-    "created_at": "2026-04-09 07:42:40",
+    "schema_version": 1,
+    "id": "383194229",
+    "created_at_raw": "2026-04-09 07:42:40",
+    "created_at": "2026-04-09T07:42:40+08:00",
     "title": "",
     "text": "指数预期内的走势，缩量，冲高回落，科创板甚至给了两次冲高的机会。<br/>个股的话4000家绿盘，比较符合预期，昨天涨多了的小盘股今天没资金接力很正常。有的开盘直接低走，有的冲高后回落，都比较随机。但是盘面还是有两处比较不舒服的地方，一个是昨天111个首板，今天晋级二板的就10个，这数字太离谱了，简直地狱。另一个是成交量前10的股，有8个红盘，说明大资金在大成交股里面抱团，这个也是一种另类的避险。包括光类，能抱着的要么逻辑硬，要么面孔新。<br/>昨夜计划是今天低吸航电或者欧科，一个上影线超爱，一个昨天调研交流利好感觉能新高，结果早上起来以色列作妖，伊朗关闭海峡，就放弃了原计划的Ai，转而考虑避险的医药，毕竟大A的周四周五不同寻常。<br/>开盘直接摁了红板，大肉变小肉。第一，昨天的榜很烂，别说游资了，连量化都看不上。第二，这种市值的新股，这种题材的新股，竞价没有人来维护，说明就真的没有人来。开盘直接处理，有没有冲高也不在考虑范畴。所以，新股，不会做的就别碰，十碰九亏。<br/>备选的两个医药，其中有个连板的金陵，竞价出来，我就觉得有人要被骗。指数低开，但不是冰点，医药➕原油全部抢高是不对的，因为指数低开，会有冲高，这个冲高过程就是医药跳水的过程，所以买点不在早盘。相反，如果指数高开，那么早盘可以强行博弈避险类的，因为指数下跌过程会持续加强避险的情绪。<br/>明天周五，今晚又是要看外围消息的一天。",
     "clean_text": "指数预期内的走势，缩量，冲高回落，科创板甚至给了两次冲高的机会。\n个股的话4000家绿盘，比较符合预期，昨天涨多了的小盘股今天没资金接力很正常。有的开盘直接低走，有的冲高后回落，都比较随机。但是盘面还是有两处比较不舒服的地方，一个是昨天111个首板，今天晋级二板的就10个，这数字太离谱了，简直地狱。另一个是成交量前10的股，有8个红盘，说明大资金在大成交股里面抱团，这个也是一种另类的避险。包括光类，能抱着的要么逻辑硬，要么面孔新。\n昨夜计划是今天低吸航电或者欧科，一个上影线超爱，一个昨天调研交流利好感觉能新高，结果早上起来以色列作妖，伊朗关闭海峡，就放弃了原计划的Ai，转而考虑避险的医药，毕竟大A的周四周五不同寻常。\n开盘直接摁了红板，大肉变小肉。第一，昨天的榜很烂，别说游资了，连量化都看不上。第二，这种市值的新股，这种题材的新股，竞价没有人来维护，说明就真的没有人来。开盘直接处理，有没有冲高也不在考虑范畴。所以，新股，不会做的就别碰，十碰九亏。\n备选的两个医药，其中有个连板的金陵，竞价出来，我就觉得有人要被骗。指数低开，但不是冰点，医药➕原油全部抢高是不对的，因为指数低开，会有冲高，这个冲高过程就是医药跳水的过程，所以买点不在早盘。相反，如果指数高开，那么早盘可以强行博弈避险类的，因为指数下跌过程会持续加强避险的情绪。\n明天周五，今晚又是要看外围消息的一天。",
@@ -1353,11 +1691,14 @@
     "reply_count": 327,
     "like_count": 413,
     "retweet_count": 2,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383100766,
-    "created_at": "2026-04-08 23:15:54",
+    "schema_version": 1,
+    "id": "383100766",
+    "created_at_raw": "2026-04-08 23:15:54",
+    "created_at": "2026-04-08T23:15:54+08:00",
     "title": "",
     "text": "1）以色列在作妖，伊朗被迫还击，原油反弹，黄金白银下跌，在一切尘埃落定之前，没那么乐观。随时给丢个雷出来，炸在了大A。<br/>2）今天周四，明天周五，周末谈判，惊弓之鸟的周五，也一定会有部分资金回避。<br/>3）纳指6连涨，昨天涨幅甚至跑不过我们，我们昨天涨那么多，无非场外资金入场➕日韩暴涨➕美股盘前暴涨。<br/>4）昨天的跳空长阳，不是什么牛市的再次起点，也不是什么黄金坑。没有战争，也会慢慢跌到3800，没有缓和，也会慢慢反抽回4000。战争只不过加快了下跌跟反弹的速度而已。<br/>5）忽略掉昨夜的美股，因为昨天盘中我们已经提前反应，如果今天指数还有冲高，必有资金砸。所以在昨天的基础上，今天无论是做低吸还是做接力，博弈难度不小，甚至，今晚美股也存在调整的概率。<br/>6）有能力做轮动，能力不够的做做T，实在不行那祈祷总会吧，自我安慰。",
     "clean_text": "1）以色列在作妖，伊朗被迫还击，原油反弹，黄金白银下跌，在一切尘埃落定之前，没那么乐观。随时给丢个雷出来，炸在了大A。\n2）今天周四，明天周五，周末谈判，惊弓之鸟的周五，也一定会有部分资金回避。\n3）纳指6连涨，昨天涨幅甚至跑不过我们，我们昨天涨那么多，无非场外资金入场➕日韩暴涨➕美股盘前暴涨。\n4）昨天的跳空长阳，不是什么牛市的再次起点，也不是什么黄金坑。没有战争，也会慢慢跌到3800，没有缓和，也会慢慢反抽回4000。战争只不过加快了下跌跟反弹的速度而已。\n5）忽略掉昨夜的美股，因为昨天盘中我们已经提前反应，如果今天指数还有冲高，必有资金砸。所以在昨天的基础上，今天无论是做低吸还是做接力，博弈难度不小，甚至，今晚美股也存在调整的概率。\n6）有能力做轮动，能力不够的做做T，实在不行那祈祷总会吧，自我安慰。",
@@ -1365,11 +1706,14 @@
     "reply_count": 131,
     "like_count": 494,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 383017970,
-    "created_at": "2026-04-08 07:02:26",
+    "schema_version": 1,
+    "id": "383017970",
+    "created_at_raw": "2026-04-08 07:02:26",
+    "created_at": "2026-04-08T07:02:26+08:00",
     "title": "",
     "text": "今天指数的成交量，一开盘就直接表态了，那么今天低走的可能性就几乎没有了，无非就是盘中各种震荡冲高之类<br/>今年也是好久没有打过这么富裕的仗，感恩<br/>开盘直接处理了赛微，切了另一个Ai，虽然也有10%，但是下午最多回落超过15%，怎么看怎么变扭<br/>中线今天大丰收，熬过了蓝箭中止，熬过了天龙失败，板块指数都没有杀出新低，愿往后，温柔以待<br/>美股只要没有太大的负反馈，明天继续谨慎做多，短线依然泛Ai里找机会或者短期超跌人气股里倒腾",
     "clean_text": "今天指数的成交量，一开盘就直接表态了，那么今天低走的可能性就几乎没有了，无非就是盘中各种震荡冲高之类\n今年也是好久没有打过这么富裕的仗，感恩\n开盘直接处理了赛微，切了另一个Ai，虽然也有10%，但是下午最多回落超过15%，怎么看怎么变扭\n中线今天大丰收，熬过了蓝箭中止，熬过了天龙失败，板块指数都没有杀出新低，愿往后，温柔以待\n美股只要没有太大的负反馈，明天继续谨慎做多，短线依然泛Ai里找机会或者短期超跌人气股里倒腾",
@@ -1377,11 +1721,14 @@
     "reply_count": 210,
     "like_count": 343,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 382997749,
-    "created_at": "2026-04-08 05:32:11",
+    "schema_version": 1,
+    "id": "382997749",
+    "created_at_raw": "2026-04-08 05:32:11",
+    "created_at": "2026-04-08T05:32:11+08:00",
     "title": "",
     "text": "又是一分钱惨案？<br/>印象中今年第三次了吧<br/>前两次都是在北交",
     "clean_text": "又是一分钱惨案？\n印象中今年第三次了吧\n前两次都是在北交",
@@ -1389,11 +1736,14 @@
     "reply_count": 43,
     "like_count": 240,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 382996949,
-    "created_at": "2026-04-08 05:28:46",
+    "schema_version": 1,
+    "id": "382996949",
+    "created_at_raw": "2026-04-08 05:28:46",
+    "created_at": "2026-04-08T05:28:46+08:00",
     "title": "",
     "text": "可不可以收盘了啊<br/>好久没打过这么富裕的仗了<br/>我怕一个半小时后醒过来，是梦一场",
     "clean_text": "可不可以收盘了啊\n好久没打过这么富裕的仗了\n我怕一个半小时后醒过来，是梦一场",
@@ -1401,11 +1751,14 @@
     "reply_count": 55,
     "like_count": 274,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 382966773,
-    "created_at": "2026-04-08 02:48:42",
+    "schema_version": 1,
+    "id": "382966773",
+    "created_at_raw": "2026-04-08 02:48:42",
+    "created_at": "2026-04-08T02:48:42+08:00",
     "title": "",
     "text": "刚发现，好像从2月开始，每次我重仓或者满仓，川普就taco<br/>他是不是在故意麻痹我，好让我放松警惕<img src=\"//assets.imedao.com/ugc/images/face/emoji_42.png?v=1\" title=\"[头秃]\" alt=\"[头秃]\" height=\"24\" />",
     "clean_text": "刚发现，好像从2月开始，每次我重仓或者满仓，川普就taco\n他是不是在故意麻痹我，好让我放松警惕",
@@ -1413,11 +1766,14 @@
     "reply_count": 110,
     "like_count": 348,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 382949107,
-    "created_at": "2026-04-08 01:53:25",
+    "schema_version": 1,
+    "id": "382949107",
+    "created_at_raw": "2026-04-08 01:53:25",
+    "created_at": "2026-04-08T01:53:25+08:00",
     "title": "",
     "text": "双创都是4%，但是涨幅超过5%的股只有400多个<br/>还是有比较明显的分化<br/>短期涨多的，明显涨不动<br/>短期跌多的，反弹都比较猛<br/>最强光内部，也有分时上的高切低跟小跳水<br/>总体还是谨慎乐观多一点<br/>板块之间轮动多一点<br/>找自己熟悉的，喜欢的地儿，即使亏，也亏的明白",
     "clean_text": "双创都是4%，但是涨幅超过5%的股只有400多个\n还是有比较明显的分化\n短期涨多的，明显涨不动\n短期跌多的，反弹都比较猛\n最强光内部，也有分时上的高切低跟小跳水\n总体还是谨慎乐观多一点\n板块之间轮动多一点\n找自己熟悉的，喜欢的地儿，即使亏，也亏的明白",
@@ -1425,11 +1781,14 @@
     "reply_count": 62,
     "like_count": 327,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 382923944,
-    "created_at": "2026-04-07 23:31:48",
+    "schema_version": 1,
+    "id": "382923944",
+    "created_at_raw": "2026-04-07 23:31:48",
+    "created_at": "2026-04-07T23:31:48+08:00",
     "title": "",
     "text": "人家一有利好，暴涨得爹妈都不认识<br/>我们一有利好，高开得爹妈都不敢认<br/>就目前消息面，日韩肯定冲着熔断去<br/>A股正常大高开<br/>然后各凭运气赚钱了",
     "clean_text": "人家一有利好，暴涨得爹妈都不认识\n我们一有利好，高开得爹妈都不敢认\n就目前消息面，日韩肯定冲着熔断去\nA股正常大高开\n然后各凭运气赚钱了",
@@ -1437,11 +1796,14 @@
     "reply_count": 102,
     "like_count": 384,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 382866720,
-    "created_at": "2026-04-07 08:41:36",
+    "schema_version": 1,
+    "id": "382866720",
+    "created_at_raw": "2026-04-07 08:41:36",
+    "created_at": "2026-04-07T08:41:36+08:00",
     "title": "",
     "text": "短线的几个新高的航天标，都参与过，都赚过不少<br/>只能说<br/>再垃圾的板块也有人赚<br/>再牛逼的板块也有人亏<br/>没上过塔山，但也在山腰捡了二十多了点<br/>这股5- 15的时候，低调的很，27-12的时候，骂声遍地<br/>如今又超神，炒股也只不过是人性，人心博弈的数字游戏而已",
     "clean_text": "短线的几个新高的航天标，都参与过，都赚过不少\n只能说\n再垃圾的板块也有人赚\n再牛逼的板块也有人亏\n没上过塔山，但也在山腰捡了二十多了点\n这股5- 15的时候，低调的很，27-12的时候，骂声遍地\n如今又超神，炒股也只不过是人性，人心博弈的数字游戏而已",
@@ -1449,11 +1811,14 @@
     "reply_count": 120,
     "like_count": 336,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 382859195,
-    "created_at": "2026-04-07 07:38:37",
+    "schema_version": 1,
+    "id": "382859195",
+    "created_at_raw": "2026-04-07 07:38:37",
+    "created_at": "2026-04-07T07:38:37+08:00",
     "title": "",
     "text": "3.31日空仓，躲过了4.1日的大涨，依旧将月初不胡头一把贯彻到底<br/>明天迎来川普的史诗级，情绪上，舆论上，手段上应该都是这次战争以来的峰值，看看今晚有没有别的戏码，明早的日韩，港股，期货都是怎么个表态<br/>正常短线还是能力范围内做多，中线根据市场动态氛围灵活仓位<br/>捞点Ai，要死一起死，如果能活，手里还是要有点Ai的<br/><img class=\"ke_img\" src=\"https://xqimg.imedao.com/19d66e014aa9c7d03fb7664c.jpg!custom.jpg\" />",
     "clean_text": "3.31日空仓，躲过了4.1日的大涨，依旧将月初不胡头一把贯彻到底\n明天迎来川普的史诗级，情绪上，舆论上，手段上应该都是这次战争以来的峰值，看看今晚有没有别的戏码，明早的日韩，港股，期货都是怎么个表态\n正常短线还是能力范围内做多，中线根据市场动态氛围灵活仓位\n捞点Ai，要死一起死，如果能活，手里还是要有点Ai的",
@@ -1461,11 +1826,14 @@
     "reply_count": 97,
     "like_count": 317,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 382826793,
-    "created_at": "2026-04-07 04:00:54",
+    "schema_version": 1,
+    "id": "382826793",
+    "created_at_raw": "2026-04-07 04:00:54",
+    "created_at": "2026-04-07T04:00:54+08:00",
     "title": "",
     "text": "美国如意的情况下，伊朗不会同意<br/>伊朗如意的情况下，美国不会同意<br/>美伊同时如意的情况下，以色列不会同意<br/>这场战争的核心是，能不能在一个月内速决<br/>如果能，短多，中多，长震荡<br/>如果不能，短空，中多，长空<br/>今年的宏观问题很多，多做做节奏的踩点转换<br/>交易并不是每天都要做，股市也永远是做的多亏的多<br/>所以尝试放空自己，为了你自己，也为了账户",
     "clean_text": "美国如意的情况下，伊朗不会同意\n伊朗如意的情况下，美国不会同意\n美伊同时如意的情况下，以色列不会同意\n这场战争的核心是，能不能在一个月内速决\n如果能，短多，中多，长震荡\n如果不能，短空，中多，长空\n今年的宏观问题很多，多做做节奏的踩点转换\n交易并不是每天都要做，股市也永远是做的多亏的多\n所以尝试放空自己，为了你自己，也为了账户",
@@ -1473,11 +1841,14 @@
     "reply_count": 307,
     "like_count": 546,
     "retweet_count": 1,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 382346541,
-    "created_at": "2026-04-02 03:36:07",
+    "schema_version": 1,
+    "id": "382346541",
+    "created_at_raw": "2026-04-02 03:36:07",
+    "created_at": "2026-04-02T03:36:07+08:00",
     "title": "",
     "text": "上次是二月春分，似剪刀<br/>这次是清明时节，欲断魂<br/>下次可记住了<br/>别做当代屈原<br/>别忆山顶兄弟",
     "clean_text": "上次是二月春分，似剪刀\n这次是清明时节，欲断魂\n下次可记住了\n别做当代屈原\n别忆山顶兄弟",
@@ -1485,11 +1856,14 @@
     "reply_count": 0,
     "like_count": 638,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   },
   {
-    "id": 382125279,
-    "created_at": "2026-04-01 01:51:13",
+    "schema_version": 1,
+    "id": "382125279",
+    "created_at_raw": "2026-04-01 01:51:13",
+    "created_at": "2026-04-01T01:51:13+08:00",
     "title": "",
     "text": "这欧科亿跟德明利看笑了<br/>不愧是愚人节<br/>大伙节日快乐<br/>补充一句啊<br/>战争只是诱因，并不是这轮调整的核心<br/>去年12月划定4200-4000-3800的时候并没有考虑到美伊战争",
     "clean_text": "这欧科亿跟德明利看笑了\n不愧是愚人节\n大伙节日快乐\n补充一句啊\n战争只是诱因，并不是这轮调整的核心\n去年12月划定4200-4000-3800的时候并没有考虑到美伊战争",
@@ -1497,6 +1871,7 @@
     "reply_count": 0,
     "like_count": 394,
     "retweet_count": 0,
-    "view_count": 0
+    "view_count": 0,
+    "record_contract": "normalized_v1"
   }
 ]

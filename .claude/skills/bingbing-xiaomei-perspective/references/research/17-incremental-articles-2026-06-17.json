@@ -1,0 +1,17 @@
+[
+  {
+    "schema_version": 1,
+    "id": "395326084",
+    "created_at_raw": "2026-06-17 13:48:43",
+    "created_at": "2026-06-17T13:48:43+08:00",
+    "title": "推荐书籍整理贴",
+    "text": "<a href=\"https://xueqiu.com/2786922896/395325283\" title=\"https://xueqiu.com/2786922896/395325283\" target=\"_blank\" class=\"status-link\">网页链接</a><br/>谢谢整理",
+    "clean_text": "网页链接\n谢谢整理",
+    "target": "https://xueqiu.com/7143769715/395326084",
+    "reply_count": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "view_count": 17147,
+    "record_contract": "normalized_v1"
+  }
+]

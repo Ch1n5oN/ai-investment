@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-16T14:29:21.537Z",
+  "subject": {
+    "name": "冰冰小美",
+    "xueqiu_user_id": "7143769715",
+    "profile_url": "https://xueqiu.com/u/7143769715"
+  },
+  "acquisition": {
+    "platform": "Xueqiu",
+    "timeline_endpoint": "https://xueqiu.com/v4/statuses/user_timeline.json",
+    "article_endpoint": "https://xueqiu.com/statuses/original/timeline.json",
+    "comment_endpoint": "https://xueqiu.com/statuses/comments.json",
+    "manifest_builder": "scripts/build_corpus_manifest.mjs"
+  },
+  "claims": {
+    "articles": 118,
+    "framework_links": 83,
+    "reported_official_podcasts": 2,
+    "timeline_2026": 1639,
+    "replies_baseline": 1512,
+    "replies_incremental": 411,
+    "replies_total": 1923,
+    "cutoff_date": "2026-07-14"
+  },
+  "segments": [
+    {
+      "path": "references/sources/xueqiu/2026-timeline-through-2026-06-20.json",
+      "origin": "output/bingbing_xiaomei_comments_2026_full/xueqiu_7143769715_timeline_2026_checkpoint.json",
+      "kind": "timeline",
+      "stage": "baseline",
+      "contract": "legacy_normalized_v1",
+      "from": "2026-01-01",
+      "through": "2026-06-20",
+      "records": 1285,
+      "unique_ids": 1285,
+      "min_date": "2026-01-04",
+      "max_date": "2026-06-20",
+      "sha256": "6dc52c39d0ed162db38b7e71d682bfead3c4502febd297e21f21293b76b20767"
+    },
+    {
+      "path": "references/sources/xueqiu/2026-timeline-incremental-2026-06-21-to-2026-06-29.json",
+      "origin": "output/bingbing_xiaomei_2026_06_29_posts_full/xueqiu_7143769715_posts.json",
+      "kind": "timeline",
+      "stage": "incremental",
+      "contract": "normalized_without_view_count_v1",
+      "from": "2026-06-21",
+      "through": "2026-06-29",
+      "records": 137,
+      "unique_ids": 137,
+      "min_date": "2026-06-21",
+      "max_date": "2026-06-29",
+      "sha256": "9eb914f9e3e25c781a5d8648a726253ee3d67cf1fe4977aa0638fcafc9c46a62"
+    },
+    {
+      "path": "references/sources/xueqiu/2026-timeline-2026-06-30.json",
+      "origin": "output/bingbing_xiaomei_2026_06_30_incremental/xueqiu_7143769715_posts.json",
+      "kind": "timeline",
+      "stage": "incremental",
+      "contract": "normalized_without_view_count_v1",
+      "from": "2026-06-30",
+      "through": "2026-06-30",
+      "records": 18,
+      "unique_ids": 18,
+      "min_date": "2026-06-30",
+      "max_date": "2026-06-30",
+      "sha256": "8f9b25653b0566167121656b88e55d7383a6930465acab36e4e3b0563891d820"
+    },
+    {
+      "path": "references/sources/xueqiu/2026-timeline-2026-07-01-to-2026-07-11.json",
+      "origin": "output/bingbing_xiaomei_sync_browser/xueqiu_7143769715_posts.json",
+      "kind": "timeline",
+      "stage": "incremental",
+      "from": "2026-07-01",
+      "through": "2026-07-11",
+      "records": 160,
+      "unique_ids": 160,
+      "min_date": "2026-07-01",
+      "max_date": "2026-07-11",
+      "sha256": "6f2f8cbe228f99ea6c6a36c4f21de8f57b4179e0974836302ed32809c976b708"
+    },
+    {
+      "path": "references/sources/xueqiu/2026-timeline-2026-07-12-to-2026-07-14.json",
+      "origin": "output/bingbing_xiaomei_sync_browser/xueqiu_7143769715_posts.json",
+      "kind": "timeline",
+      "stage": "incremental",
+      "from": "2026-07-12",
+      "through": "2026-07-14",
+      "records": 39,
+      "unique_ids": 39,
+      "min_date": "2026-07-13",
+      "max_date": "2026-07-14",
+      "sha256": "1dae8fde56e8701f654d33da560aa11b7556b2ea1ba3353da4d2d2bd88f9a3c3"
+    },
+    {
+      "path": "references/sources/xueqiu/2026-self-replies-2026-06-21-to-2026-06-30.json",
+      "origin": "output/bingbing_xiaomei_2026_06_21_to_2026_07_01_self_replies/xueqiu_7143769715_self_replies.json",
+      "kind": "replies",
+      "stage": "incremental",
+      "from": "2026-06-21",
+      "through": "2026-06-30",
+      "records": 135,
+      "unique_ids": 135,
+      "min_date": "2026-06-21",
+      "max_date": "2026-06-30",
+      "sha256": "9504d191b75db4cea35584d3c9fc95a4b963d3bf0ba80e1a4f3090289e2438ac"
+    },
+    {
+      "path": "references/sources/xueqiu/2026-self-replies-2026-07-01-to-2026-07-11.json",
+      "origin": "output/bingbing_xiaomei_sync_browser_comments/xueqiu_7143769715_replies_2026.json",
+      "kind": "replies",
+      "stage": "incremental",
+      "from": "2026-07-01",
+      "through": "2026-07-11",
+      "records": 250,
+      "unique_ids": 250,
+      "min_date": "2026-07-01",
+      "max_date": "2026-07-11",
+      "sha256": "bb7cfe60bd32d7a32b8661edd682797a713fbe6f949320b025af8661474c7ba2"
+    },
+    {
+      "path": "references/sources/xueqiu/2026-self-replies-2026-07-12-to-2026-07-14.json",
+      "origin": "output/bingbing_xiaomei_sync_browser_comments/xueqiu_7143769715_replies_2026.json",
+      "kind": "replies",
+      "stage": "incremental",
+      "from": "2026-07-12",
+      "through": "2026-07-14",
+      "records": 26,
+      "unique_ids": 26,
+      "min_date": "2026-07-13",
+      "max_date": "2026-07-14",
+      "sha256": "4f028ebaa687233698bd0b5e3cc8684f868a4c9ff76295281753a0caf0658799"
+    },
+    {
+      "path": "references/sources/xueqiu/2026-self-replies-through-2026-06-20.json",
+      "origin": "output/bingbing_xiaomei_comments_2026_full/xueqiu_7143769715_replies_2026.json",
+      "kind": "replies",
+      "stage": "baseline",
+      "contract": "legacy_normalized_v1",
+      "from": "2026-01-01",
+      "through": "2026-06-20",
+      "records": 1512,
+      "unique_ids": 1512,
+      "min_date": "2026-01-05",
+      "max_date": "2026-06-20",
+      "sha256": "62df7548860bf735d2f0b6ef9ae9809bc78ac5f533f82802500eef055cb70cd0"
+    },
+    {
+      "path": "references/research/07-full-columns-2026-05-12.json",
+      "origin": "output/bingbing_xiaomei_full/xueqiu_7143769715_articles.json",
+      "kind": "articles",
+      "stage": "baseline",
+      "records": 110,
+      "unique_ids": 110,
+      "min_date": "2024-11-07",
+      "max_date": "2026-05-10",
+      "sha256": "4c74ca5f5b60c51808966900d46402535d16a1a3b0420d78ffdc34d8359a7b3b"
+    },
+    {
+      "path": "references/research/11-incremental-full-articles-2026-06-10.json",
+      "origin": "output/bingbing_xiaomei_2026_06_10_full_articles/xueqiu_7143769715_ids.json",
+      "kind": "articles",
+      "stage": "incremental",
+      "records": 7,
+      "unique_ids": 7,
+      "min_date": "2026-05-14",
+      "max_date": "2026-06-08",
+      "sha256": "a0eff24ed38b85565ce5404c6884febee5c80cc78e5fa176f5442e1b45ffade9"
+    },
+    {
+      "path": "references/research/14-incremental-full-articles-2026-06-16.json",
+      "origin": "output/bingbing_xiaomei_2026_06_16_full_articles/xueqiu_7143769715_ids.json",
+      "kind": "articles",
+      "stage": "incremental",
+      "records": 1,
+      "unique_ids": 1,
+      "min_date": "2026-06-13",
+      "max_date": "2026-06-13",
+      "sha256": "888fd70d287176d189587bcb3dceafa46a18f4d06f1f22aeedf637667d403838"
+    },
+    {
+      "path": "references/research/08-framework-index-2026-05-12.json",
+      "origin": "https://xueqiu.com/6895445760/311912942",
+      "kind": "framework_index",
+      "stage": "baseline",
+      "contract": "framework_index_source_v1",
+      "records": 1,
+      "unique_ids": 1,
+      "min_date": "2024-11-09",
+      "max_date": "2024-11-09",
+      "sha256": "b7a8676ac883f29a3bbc60a412af923ae8096650b4f48981474b5bfb8da46783"
+    },
+    {
+      "path": "references/research/10-framework-linked-posts-2026-05-13.json",
+      "origin": "output/bingbing_xiaomei_framework_links/xueqiu_7143769715_ids.json",
+      "kind": "framework_links",
+      "stage": "baseline",
+      "contract": "framework_index_link_v1",
+      "records": 83,
+      "unique_ids": 83,
+      "min_date": "2023-03-18",
+      "max_date": "2024-10-28",
+      "sha256": "9fe8fec8c412b9543f23dbbdb6daad02f23eadba3d3c8de83dcd6ba1b2dacea2"
+    }
+  ],
+  "archived_record_arrays": [
+    {
+      "path": "references/research/12-incremental-timeline-posts-2026-06-10.json",
+      "kind": "timeline",
+      "contract": "normalized_v1",
+      "disposition": "superseded_snapshot",
+      "reason": "Historical acquisition snapshot retained for cited research notes; every ID is represented by a declared canonical segment, so this snapshot is excluded from aggregate claims.",
+      "counted_in_claims": false,
+      "records": 159,
+      "unique_ids": 159,
+      "overlap_with_declared_corpus": 159,
+      "sha256": "76f602c221568ea4fab8273fa0672ae00babb0cbe5ab266e1a962833679d313a"
+    },
+    {
+      "path": "references/research/15-incremental-timeline-posts-2026-06-16.json",
+      "kind": "timeline",
+      "contract": "normalized_v1",
+      "disposition": "superseded_snapshot",
+      "reason": "Historical acquisition snapshot retained for cited research notes; every ID is represented by a declared canonical segment, so this snapshot is excluded from aggregate claims.",
+      "counted_in_claims": false,
+      "records": 68,
+      "unique_ids": 68,
+      "overlap_with_declared_corpus": 68,
+      "sha256": "c4b968f7342eb3a51a1b7cd6d90b7a76cc725629e9cd93c79b503ccb84e83706"
+    },
+    {
+      "path": "references/research/17-incremental-articles-2026-06-17.json",
+      "kind": "articles",
+      "contract": "normalized_v1",
+      "disposition": "superseded_snapshot",
+      "reason": "Historical acquisition snapshot retained for cited research notes; every ID is represented by a declared canonical segment, so this snapshot is excluded from aggregate claims.",
+      "counted_in_claims": false,
+      "records": 1,
+      "unique_ids": 1,
+      "overlap_with_declared_corpus": 1,
+      "sha256": "d906c795de72bde1f56050be9854b4838ffebdf559d91b24d486f6ca0c3f8eb5"
+    },
+    {
+      "path": "references/research/18-incremental-timeline-posts-2026-06-17.json",
+      "kind": "timeline",
+      "contract": "normalized_v1",
+      "disposition": "superseded_snapshot",
+      "reason": "Historical acquisition snapshot retained for cited research notes; every ID is represented by a declared canonical segment, so this snapshot is excluded from aggregate claims.",
+      "counted_in_claims": false,
+      "records": 30,
+      "unique_ids": 30,
+      "overlap_with_declared_corpus": 30,
+      "sha256": "fec669adfaae91d33938a5aed8d10a57053075fad2b21695a8bcd26cca9d3a3b"
+    }
+  ],
+  "declared_sources": [
+    {
+      "kind": "reported_official_podcasts",
+      "count": 2,
+      "episodes": [
+        {
+          "id": "2840"
+        },
+        {
+          "id": "2841"
+        }
+      ],
+      "evidence": "references/research/04-external-views.md",
+      "evidence_grade": "project_secondary_record",
+      "verification_status": "not_independently_verified"
+    }
+  ],
+  "limitations": [
+    "The July timeline acquisition contained one 2024 post; timeline_2026 excludes it.",
+    "The baseline timeline uses legacy_normalized_v1 because 12 image-only or incomplete captures have no retained title/body text; no text was inferred.",
+    "The baseline replies use legacy_normalized_v1 because comment-level reply_count was not captured and 286 parent URLs retain the post_link alias.",
+    "The 155 timeline records acquired from 2026-06-21 through 2026-06-30 did not retain view_count; they use normalized_without_view_count_v1 and no values were invented.",
+    "The framework index contains one explicitly declared external deleted-post link (status 308254026, owner 5003404268); every other framework link is owned by the subject account.",
+    "The external framework-index source (status 311912942, owner 6895445760) was normalized from its embedded structured status payload; captured page scripts and client context are not retained in the corpus layer.",
+    "Four historical research snapshots are explicitly archived and excluded from aggregate claims because all of their IDs already exist in declared canonical segments.",
+    "Podcast episodes 2840 and 2841 are only reported by a project secondary record; original program pages, metadata, audio, and transcripts are not retained or independently verified.",
+    "Main comment streams are represented, but recursive child-reply coverage is not guaranteed because the endpoint frequently returned API 10020.",
+    "Public activity does not prove complete positions, returns, or off-platform actions."
+  ]
+}
