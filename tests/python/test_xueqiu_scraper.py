@@ -848,6 +848,44 @@ class ApiResponseTests(unittest.TestCase):
         self.assertIsNone(result)
         self.assertEqual(request.call_count, 3)
 
+    def test_article_list_is_hydrated_from_matching_status_detail(self):
+        class Response:
+            status_code = 200
+            headers = {}
+
+            def __init__(self, payload):
+                self.payload = payload
+                self.text = json.dumps(payload)
+
+            def json(self):
+                return self.payload
+
+        list_item = {
+            "id": 7,
+            "created_at": "2026-07-14T09:00:00+08:00",
+            "description": "summary",
+            "view_count": 40,
+        }
+        detail = valid_status(7, text="complete article", view_count=0)
+        with patch.object(
+            scraper,
+            "request_get",
+            side_effect=[Response({"list": [list_item]}), Response(detail)],
+        ) as request, redirect_stdout(io.StringIO()):
+            result = scraper.get_user_articles("7143769715", "cookie", count=1)
+        self.assertEqual(request.call_count, 2)
+        self.assertEqual(result["list"][0]["text"], "complete article")
+        self.assertEqual(result["list"][0]["view_count"], 40)
+
+        with patch.object(
+            scraper,
+            "request_get",
+            side_effect=[Response({"list": [list_item]}), Response(valid_status(8))],
+        ), redirect_stdout(io.StringIO()):
+            self.assertIsNone(
+                scraper.get_user_articles("7143769715", "cookie", count=1)
+            )
+
     def test_transient_status_is_retried_with_bounded_backoff(self):
         class Response:
             def __init__(self, status_code):
@@ -1123,6 +1161,49 @@ class PaginationTests(unittest.TestCase):
         self.assertEqual(activity, {"attempts": 1, "valid_responses": 1})
         self.assertEqual(len(failures), 1)
         self.assertIn("truncated", failures[0])
+
+    def test_marked_pinned_timeline_overflow_is_retained_but_not_pageable(self):
+        failures = []
+        payload = {
+            "statuses": [
+                valid_status(
+                    9,
+                    created_at="2025-01-01T09:00:00+08:00",
+                    mark=1,
+                ),
+                valid_status(2, created_at="2026-07-14T10:00:00+08:00"),
+                valid_status(1, created_at="2026-07-14T09:00:00+08:00"),
+            ]
+        }
+        with redirect_stdout(io.StringIO()):
+            posts = incremental.collect_timeline(
+                fetch_fn=lambda *args, **kwargs: payload,
+                user_id="7",
+                cookie="cookie",
+                pages=1,
+                count=2,
+                since_date=None,
+                delay=0,
+                label="posts",
+                failures=failures,
+            )
+        self.assertEqual([post["id"] for post in posts], ["2", "1", "9"])
+        self.assertEqual(len(failures), 1)
+        self.assertIn("truncated", failures[0])
+
+        invalid = {"statuses": [valid_status(9), valid_status(2), valid_status(1)]}
+        with redirect_stdout(io.StringIO()):
+            with self.assertRaisesRegex(ValueError, "unexplained items"):
+                incremental.collect_timeline(
+                    fetch_fn=lambda *args, **kwargs: invalid,
+                    user_id="7",
+                    cookie="cookie",
+                    pages=1,
+                    count=2,
+                    since_date=None,
+                    delay=0,
+                    label="posts",
+                )
 
     def test_since_boundary_without_terminator_is_not_assumed_complete(self):
         failures = []

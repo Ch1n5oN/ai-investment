@@ -19,6 +19,7 @@ import {
   initialCheckpointState,
   mergeById,
   normalizeNonNegativeInteger,
+  pageableTimelineItems,
   paginationComplete,
   parseArgs,
   parseIntegerOption,
@@ -234,21 +235,69 @@ async function browserJson(session, url, options) {
   throw lastError;
 }
 
+function hasTimelineInteractionCounts(status) {
+  return [
+    ["reply_count", "replyCount"],
+    ["like_count", "likeCount"],
+    ["retweet_count", "retweetCount"],
+    ["view_count", "viewCount"],
+  ].every((aliases) => aliases.some((field) => Object.hasOwn(status || {}, field) && status[field] !== null && status[field] !== undefined));
+}
+
+async function articleStatusForNormalization(session, status, userId, args, metrics) {
+  if (hasTimelineInteractionCounts(status)) return status;
+  const expectedId = acquisitionId(status?.id, "Article timeline record id");
+  const url = `https://xueqiu.com/statuses/show.json?id=${expectedId}`;
+  const detail = await browserJson(session, url, {
+    ...args,
+    metrics,
+    referer: `https://xueqiu.com/${userId}/${expectedId}`,
+  });
+  const actualId = acquisitionId(detail?.id, "Article detail id");
+  if (actualId !== expectedId) {
+    throw Object.assign(new Error(`Article detail returned status ${actualId} while ${expectedId} was requested.`), {
+      code: "INVALID_RESPONSE_SHAPE",
+    });
+  }
+  const merged = { ...status, ...detail };
+  if (status.view_count !== null && status.view_count !== undefined) {
+    merged.view_count = status.view_count;
+  } else if (status.viewCount !== null && status.viewCount !== undefined) {
+    merged.view_count = status.viewCount;
+  }
+  return merged;
+}
+
 export async function fetchTimeline(session, userId, mode, args, metrics) {
   const endpoint = mode === "articles" ? "statuses/original/timeline.json" : "v4/statuses/user_timeline.json";
   let incoming = [];
+  const observedPageableIds = new Set();
   let truncated = false;
   const sinceEpoch = args.sinceDate ? Date.parse(`${args.sinceDate}T00:00:00+08:00`) : null;
   for (let page = 1; page <= args.timelinePages; page += 1) {
     const url = `https://xueqiu.com/${endpoint}?user_id=${userId}&page=${page}&count=${args.count}${mode === "posts" ? "&type=0" : ""}`;
     const data = await browserJson(session, url, { ...args, metrics, referer: `https://xueqiu.com/u/${userId}` });
     const raw = extractArrayField(data, ["statuses", "list", "items"], `${mode} timeline`);
-    for (const status of raw) incoming = mergeById(incoming, [normalizePost(status, userId)]);
+    const pageable = new Set(pageableTimelineItems(raw, {
+      page,
+      count: args.count,
+      label: `${mode} timeline pagination`,
+    }));
+    for (const status of raw) {
+      const needsArticleDetail = mode === "articles" && !hasTimelineInteractionCounts(status);
+      const source = needsArticleDetail
+        ? await articleStatusForNormalization(session, status, userId, args, metrics)
+        : status;
+      const normalized = normalizePost(source, userId);
+      incoming = mergeById(incoming, [normalized]);
+      if (pageable.has(status)) observedPageableIds.add(normalized.id);
+      if (needsArticleDetail && args.requestDelayMs > 0) await sleep(args.requestDelayMs);
+    }
     const complete = paginationComplete(data, {
       page,
       count: args.count,
-      itemCount: raw.length,
-      observedCount: incoming.length,
+      itemCount: pageable.size,
+      observedCount: observedPageableIds.size,
       label: `${mode} timeline pagination`,
     });
     if (complete) break;

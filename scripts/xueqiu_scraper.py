@@ -551,6 +551,33 @@ def pagination_complete(
     return item_count < count
 
 
+def pageable_timeline_items(items, page, count, label="timeline pagination"):
+    """Exclude only explicitly marked first-page pins from page-size accounting."""
+    if not isinstance(items, list):
+        raise ValueError(f"{label} items must be a list")
+    if type(page) is not int or page < 1:
+        raise ValueError(f"{label} page must be a positive integer")
+    if type(count) is not int or count < 1:
+        raise ValueError(f"{label} count must be a positive integer")
+    if len(items) <= count:
+        return items
+    overflow = len(items) - count
+    pinned = (
+        [item for item in items if isinstance(item, dict) and item.get("mark") == 1]
+        if page == 1
+        else []
+    )
+    if len(pinned) != overflow:
+        raise ValueError(
+            f"{label} returned unexplained items beyond the requested page size"
+        )
+    return [
+        item
+        for item in items
+        if not (isinstance(item, dict) and item.get("mark") == 1)
+    ]
+
+
 def parse_json_response(response, label, list_keys=None):
     try:
         data = response.json()
@@ -673,15 +700,90 @@ def get_user_articles(user_id, cookie, page=1, count=10):
         response = request_get(url, params=params, headers=headers, timeout=30)
         print(f"  状态码: {response.status_code}")
         if response.status_code == 200:
-            return parse_json_response(
+            data = parse_json_response(
                 response,
                 "专栏",
                 list_keys=("statuses", "list", "items"),
             )
+            if data is None:
+                return None
+            list_key = next(
+                key for key in ("statuses", "list", "items") if key in data
+            )
+            enriched = []
+            for status in data[list_key]:
+                if has_timeline_interaction_counts(status):
+                    enriched.append(status)
+                    continue
+                post_id = numeric_record_id(
+                    response_field(status, ("id",), "article id"),
+                    "article",
+                )
+                detail = get_status_detail(post_id, cookie, user_id)
+                if detail is None:
+                    return None
+                merged = {**status, **detail}
+                if status.get("view_count") is not None:
+                    merged["view_count"] = status["view_count"]
+                elif status.get("viewCount") is not None:
+                    merged["view_count"] = status["viewCount"]
+                enriched.append(merged)
+            return {**data, list_key: enriched}
         print(f"  响应片段: {response.text[:160]}")
     except requests.exceptions.RequestException as e:
         print(f"  请求失败: {e}")
     return None
+
+
+def has_timeline_interaction_counts(status):
+    if not isinstance(status, dict):
+        return False
+    return all(
+        any(status.get(alias) is not None for alias in aliases)
+        for aliases in (
+            ("reply_count", "replyCount"),
+            ("like_count", "likeCount"),
+            ("retweet_count", "retweetCount"),
+            ("view_count", "viewCount"),
+        )
+    )
+
+
+def get_status_detail(post_id, cookie, user_id):
+    post_id = numeric_record_id(post_id, "article detail")
+    url = "https://xueqiu.com/statuses/show.json"
+    headers = make_headers(cookie, f"https://xueqiu.com/{user_id}/{post_id}")
+    try:
+        response = request_get(
+            url,
+            params={"id": post_id},
+            headers=headers,
+            timeout=30,
+        )
+    except requests.exceptions.RequestException as exc:
+        print(f"  文章详情 {post_id} 请求失败: {exc}")
+        return None
+    if response.status_code != 200:
+        print(f"  文章详情 {post_id} 状态码: {response.status_code}")
+        return None
+    detail = parse_json_response(response, f"文章详情 {post_id}")
+    if detail is None:
+        return None
+    try:
+        actual_id = numeric_record_id(
+            response_field(detail, ("id",), "article detail id"),
+            "article detail",
+        )
+    except ValueError as exc:
+        print(f"  文章详情 {post_id} JSON结构无效: {exc}")
+        return None
+    if actual_id != post_id:
+        print(f"  文章详情返回 {actual_id}，但请求的是 {post_id}")
+        return None
+    if not has_timeline_interaction_counts(detail):
+        print(f"  文章详情 {post_id} 缺少完整互动数")
+        return None
+    return detail
 
 
 def fetch_post_page(user_id, post_id, cookie):
@@ -1204,8 +1306,25 @@ def run_scrape(argv=None):
 
             if data is not None:
                 valid_responses += 1
+                response_items = payload_items(
+                    data,
+                    ("statuses", "list", "items"),
+                    f"{mode} timeline",
+                )
+                pageable_items = pageable_timeline_items(
+                    response_items,
+                    page,
+                    args.count,
+                    f"{mode} timeline pagination",
+                )
+                pageable_ids = {
+                    numeric_record_id(item.get("id"), f"{mode} timeline")
+                    for item in pageable_items
+                }
                 raw_posts = extract_posts(data, args.user_id)
-                observed_post_ids.update(post["id"] for post in raw_posts)
+                observed_post_ids.update(
+                    post["id"] for post in raw_posts if post["id"] in pageable_ids
+                )
                 posts = filter_since(raw_posts, args.since_date)
                 if posts:
                     mode_posts.extend(posts)
@@ -1216,7 +1335,7 @@ def run_scrape(argv=None):
                     data,
                     page,
                     args.count,
-                    len(raw_posts),
+                    len(pageable_items),
                     observed_count=len(observed_post_ids),
                 ):
                     break

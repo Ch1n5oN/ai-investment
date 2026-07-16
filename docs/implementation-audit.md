@@ -27,6 +27,12 @@ Audit date: 2026-07-17
 - Browser IDs mode validates HTML status, content type, WAF markers, and post-body shape; an all-failed batch exits `1` without creating or replacing corpus output, while usable partial output exits `2`.
 - `--reply-pages` is wired into actual pagination.
 - Full final timeline pages and comment page-limit truncation return `needs_verification`; truncated posts do not advance Edge reply-count checkpoints.
+- A marked pinned timeline record returned outside the requested page size is
+  retained in the corpus but excluded from pagination accounting; unmarked or
+  otherwise unexplained overflow still fails closed.
+- Article-list records that omit interaction counts are hydrated from the
+  matching status-detail endpoint. Missing detail counts or a mismatched detail
+  ID fails the complete article stream instead of inventing values.
 - Existing corpus records are validated individually before merge; missing IDs, invalid counts, duplicate IDs, or malformed records fail closed instead of being dropped.
 - Timestamps are normalized to timezone-aware `Asia/Shanghai` values while preserving the raw timestamp; the raw value is authoritative and a conflicting normalized value fails closed.
 - Every post/reply record carries a canonical Xueqiu HTTPS URL. Known user/post IDs can repair a missing target, while external hosts, credentials, and non-standard ports are rejected.
@@ -67,6 +73,10 @@ Audit date: 2026-07-17
   safety tests separately exercise Edge, browser, bootstrap, and legacy recovery
   boundaries.
 - Fixture tests cover Edge/browser full-page truncation, malformed HTTP 200 responses, WAF checkpoint advancement, Python all-failed/partial status semantics, and manifest descriptor/record tampering.
+- A bounded manual smoke check on 2026-07-17 reproduced and fixed current
+  first-page pin and article-list response shapes. The final probe reported no
+  interface drift; its `needs_verification` result was caused only by the
+  intentionally one-page timeline and comment limits.
 - CI is configured to repeat the repository check on Python 3.11, 3.12, and 3.13 with Node 22.22.0.
 - JSON manifests/schemas and GitHub workflow YAML were parsed independently.
 - `npm audit` reported zero known vulnerabilities. Python dependencies are
