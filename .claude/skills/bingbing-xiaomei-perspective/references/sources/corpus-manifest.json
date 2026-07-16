@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T14:29:21.537Z",
+  "generated_at": "2026-07-16T17:03:10.868Z",
   "subject": {
     "name": "冰冰小美",
     "xueqiu_user_id": "7143769715",
@@ -19,8 +19,8 @@
     "reported_official_podcasts": 2,
     "timeline_2026": 1639,
     "replies_baseline": 1512,
-    "replies_incremental": 411,
-    "replies_total": 1923,
+    "replies_incremental": 413,
+    "replies_total": 1925,
     "cutoff_date": "2026-07-14"
   },
   "segments": [
@@ -125,11 +125,11 @@
       "stage": "incremental",
       "from": "2026-07-12",
       "through": "2026-07-14",
-      "records": 26,
-      "unique_ids": 26,
+      "records": 28,
+      "unique_ids": 28,
       "min_date": "2026-07-13",
       "max_date": "2026-07-14",
-      "sha256": "4f028ebaa687233698bd0b5e3cc8684f868a4c9ff76295281753a0caf0658799"
+      "sha256": "8393122d08c4d5476aabb11cc78f0faabbba37f4d109144dfd63c148b57d27d6"
     },
     {
       "path": "references/sources/xueqiu/2026-self-replies-through-2026-06-20.json",
