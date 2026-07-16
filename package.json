@@ -28,6 +28,6 @@
     "ajv-formats": "3.0.1",
     "oxlint": "1.73.0",
     "playwright": "1.61.0",
-    "skills": "1.5.17"
+    "skills": "1.5.18"
   }
 }
