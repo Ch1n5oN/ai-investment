@@ -47,6 +47,10 @@ For Python runtime dependencies, edit only `pyproject.toml` and regenerate
 `requirements-lock.txt` from it. Install from the hash lock; do not recreate an
 unpinned `requirements.txt`. The separate `requirements-audit.in` and
 `requirements-audit-lock.txt` pair belongs only to isolated advisory tooling.
+Use only the `pip-tools` version and dependency closure recorded in
+`requirements-maintenance.in` and `requirements-maintenance-lock.txt` to
+regenerate either lock. CI performs the same isolated recompilation and rejects
+any tracked lock diff.
 
 ## Recovery
 
