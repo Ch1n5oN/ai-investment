@@ -68,6 +68,47 @@ function optionalAcquisitionId(value, label) {
   return value === null || value === undefined ? null : acquisitionId(value, label);
 }
 
+export function upgradeEdgeReplyRecord(record, label = "stored reply") {
+  const isPredecessor = record
+    && typeof record === "object"
+    && !Array.isArray(record)
+    && record.schema_version === SCHEMA_VERSION
+    && !Object.hasOwn(record, "record_contract")
+    && (Object.hasOwn(record, "post_id") || Object.hasOwn(record, "post_target"))
+    && Object.hasOwn(record, "post_created_at")
+    && !Object.hasOwn(record, "post_created_at_raw");
+  if (!isPredecessor) return upgradeRecord(record);
+
+  const upgraded = {
+    ...record,
+    record_contract: RECORD_CONTRACT,
+    post_created_at_raw: record.post_created_at,
+    post_created_at: formatTime(record.post_created_at),
+  };
+  const migratedFields = ["record_contract", "post_created_at_raw"];
+  if (Object.hasOwn(record, "legacy_migrated_fields")
+      && (!Array.isArray(record.legacy_migrated_fields)
+        || record.legacy_migrated_fields.some((field) => typeof field !== "string" || !field)
+        || new Set(record.legacy_migrated_fields).size !== record.legacy_migrated_fields.length)) {
+    throw Object.assign(new Error(`${label}.legacy_migrated_fields is invalid.`), {
+      code: "INVALID_RECORD",
+    });
+  }
+  for (const field of ["id", "post_id", "reply_to", "in_reply_to_comment_id"]) {
+    if (!Object.hasOwn(upgraded, field) || upgraded[field] === null) continue;
+    const normalized = field === "id" || field === "post_id"
+      ? acquisitionId(upgraded[field], `${label}.${field}`)
+      : optionalAcquisitionId(upgraded[field], `${label}.${field}`);
+    if (normalized !== upgraded[field]) migratedFields.push(field);
+    upgraded[field] = normalized;
+  }
+  upgraded.legacy_migrated_fields = [...new Set([
+    ...(Array.isArray(record.legacy_migrated_fields) ? record.legacy_migrated_fields : []),
+    ...migratedFields,
+  ])].sort();
+  return upgradeRecord(upgraded);
+}
+
 function responseField(record, aliases, label, { allowNull = false } = {}) {
   if (!record || typeof record !== "object" || Array.isArray(record)) {
     throw Object.assign(new Error(`${label} must be an object.`), { code: "INVALID_RESPONSE_SHAPE" });
@@ -583,18 +624,29 @@ Options:
       readJsonStrict(stateFile, { defaultValue: initialCheckpointState(args.userId) }),
       args.userId,
     );
+    const oldPosts = readJsonStrict(
+      postsFile,
+      { defaultValue: [], validate: Array.isArray },
+    ).map(upgradeRecord);
+    let articles = readJsonStrict(
+      articlesFile,
+      { defaultValue: [], validate: Array.isArray },
+    ).map(upgradeRecord);
+    const oldReplies = readJsonStrict(
+      repliesFile,
+      { defaultValue: [], validate: Array.isArray },
+    ).map((record, index) => upgradeEdgeReplyRecord(record, `stored reply[${index}]`));
+
     await session.connect();
     await session.enablePage();
     await session.navigate(`https://xueqiu.com/u/${args.userId}`);
 
-    const oldPosts = readJsonStrict(postsFile, { defaultValue: [], validate: Array.isArray });
     const postTimeline = await fetchTimeline(session, args.userId, "posts", args, metrics);
     const posts = mergeById(oldPosts, postTimeline.items);
     report.post_timeline_truncated = postTimeline.truncated;
     atomicWrite(postsFile, JSON.stringify(posts, null, 2));
     atomicWrite(postsMd, renderMarkdown(posts, "posts"));
 
-    let articles = readJsonStrict(articlesFile, { defaultValue: [], validate: Array.isArray });
     if (!args.skipArticles) {
       try {
         const articleTimeline = await fetchTimeline(session, args.userId, "articles", args, metrics);
@@ -607,7 +659,6 @@ Options:
       }
     }
 
-    const oldReplies = readJsonStrict(repliesFile, { defaultValue: [], validate: Array.isArray });
     let incomingReplies = [];
     let commentMethod = "skipped";
     let commentCoverage = "not_requested";
