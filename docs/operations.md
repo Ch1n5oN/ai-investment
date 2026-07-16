@@ -43,6 +43,11 @@ Dependabot intentionally ignores the `skills` installer. Updating it requires on
 manual change that keeps `package.json`, `package-lock.json`, and `skills-lock.json`
 aligned, including the installer integrity and installed snapshot hashes.
 
+For Python runtime dependencies, edit only `pyproject.toml` and regenerate
+`requirements-lock.txt` from it. Install from the hash lock; do not recreate an
+unpinned `requirements.txt`. The separate `requirements-audit.in` and
+`requirements-audit-lock.txt` pair belongs only to isolated advisory tooling.
+
 ## Recovery
 
 1. Read the JSON report before rerunning.

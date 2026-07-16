@@ -47,6 +47,12 @@ pins the tested artifacts and hashes for reproducible installation. The Python
 test suite verifies that every direct range is satisfied and that the installed
 runtime dependency closure exactly matches the hashed lock.
 
+`pyproject.toml` is the sole runtime dependency manifest, while
+`requirements-lock.txt` is the sole runtime installation input. An unpinned
+`requirements.txt` is intentionally absent so dependency constraints cannot drift
+between equivalent manifests. Regenerate the hash lock from `pyproject.toml` when
+the runtime dependency range or resolved closure changes.
+
 Run the advisory scanner in an isolated environment so its dependencies do not
 replace the application runtime packages:
 
