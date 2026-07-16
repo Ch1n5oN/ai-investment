@@ -59,10 +59,10 @@ Audit date: 2026-07-17
 
 ## Corpus and Skill
 
-- `corpus-manifest.json` derives and verifies 1639 timeline records and 1923 reply records through 2026-07-14.
+- `corpus-manifest.json` derives and verifies 1639 timeline records and 1925 reply records through 2026-07-14.
 - Every canonical segment records count, unique IDs, date range, SHA-256 hash, origin, and coverage role.
 - The manifest requires the exact complete segment descriptor set and validates
-  all 3,764 canonical records against executable schema-1 contract discriminators:
+  all 3,766 canonical records against executable schema-1 contract discriminators:
   string IDs, preserved raw timestamps, Asia/Shanghai timestamps, canonical
   URLs, integer counts, and explicit historical gaps.
 - Four superseded research snapshots (258 records) are hash-bound, prove 100%
@@ -72,7 +72,7 @@ Audit date: 2026-07-17
 - The Dongge Skill declares 125 canonical normalized posts through 2026-05-12;
   its older 50-record raw snapshot proves 50/50 ID overlap and is explicitly
   excluded from claims instead of being ambiguously double-counted.
-- Skill claims now use 1512 baseline replies plus 411 incremental replies; they no longer reference ignored `output/` paths.
+- Skill claims now use 1512 baseline replies plus 413 incremental replies; they no longer reference ignored `output/` paths.
 - The latest generated evidence index covers all manifest segments.
 - Twelve behavioral evaluation cases additionally cover verified macro inputs, pricing-function failure, fact/opinion/inference separation, style consistency, and ambiguous role-exit wording.
 

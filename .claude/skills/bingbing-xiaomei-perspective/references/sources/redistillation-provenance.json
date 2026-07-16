@@ -1,38 +1,38 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T22:29:23+08:00",
+  "generated_at": "2026-07-17T01:05:36+08:00",
   "skill": "SKILL.md",
-  "skill_sha256": "96f66f4795be839d2663a9f7496c677b4e7640e7a159ad68aa9fbf158f78e11c",
+  "skill_sha256": "06fc6f24bd41488039a87b146ea6c7e74459879834292112241d152efabd428f",
   "claims": {
     "articles": 118,
     "framework_links": 83,
     "reported_official_podcasts": 2,
     "timeline_2026": 1639,
     "replies_baseline": 1512,
-    "replies_incremental": 411,
-    "replies_total": 1923,
+    "replies_incremental": 413,
+    "replies_total": 1925,
     "cutoff_date": "2026-07-14"
   },
   "evidence": [
     {
       "path": "references/sources/corpus-manifest.json",
       "role": "corpus_manifest",
-      "sha256": "640699af82fac52dbd0181484d35acdd6b84837f480ce0aa790a955d05446652"
+      "sha256": "3465a9b80aac3d5ae1ca71d18d2dab045cb64b1d4931946e889f692080cc5537"
     },
     {
       "path": "references/research/01-writings.md",
       "role": "research_writings",
-      "sha256": "4771096b778af24271b0ffaf40c881f0ba1c1daaaa462d5c5070033f5a7c89cd"
+      "sha256": "11595067295e37a2344accc3f59c537ea79661dd7a0b0637177c1d40cf5f9982"
     },
     {
       "path": "references/research/02-conversations.md",
       "role": "research_conversations",
-      "sha256": "d1d291826f0579f21ca93fe3a47dae8d8f4e473cfad4c51cf34d2cfdd0279ebc"
+      "sha256": "d531972f5369db9670062185907307f55e8730cee2efbe427c938adb5ec02e5e"
     },
     {
       "path": "references/research/03-expression-dna.md",
       "role": "research_expression",
-      "sha256": "5d6d76a20edcd99300eb7a7792fd5ca3f2986e41c65013b34d6bf398e5f46a8c"
+      "sha256": "4c45b869fc72dac7e65afc90000c6bd5a80d9b7fc745697b43f3e78de46ee7c3"
     },
     {
       "path": "references/research/04-external-views.md",
@@ -42,27 +42,27 @@
     {
       "path": "references/research/05-decisions.md",
       "role": "research_decisions",
-      "sha256": "23a7b242798a47a063d1e5ecc081e73b221528db35abfbccdb608d49e110d5a7"
+      "sha256": "f5673140a6e7a555a556788a8b98e92245ebdd71d0f18452e4e757461b6c6a50"
     },
     {
       "path": "references/research/06-timeline.md",
       "role": "research_timeline",
-      "sha256": "7e83660f4cc4ff56fe59d5456955bf3a5b12c8c95b4e0ed8eb485e31e91d8f40"
+      "sha256": "53613daf0540e40900211835a69cb1d8ebe7bbf5f59972a43f269a474c5b239c"
     },
     {
       "path": "references/research/33-corpus-analysis-through-2026-07-14.md",
       "role": "corpus_analysis",
-      "sha256": "2366d3a958d37b199def9dad5501951ae71b9bc2d65e4029669e45ed13deff0e"
+      "sha256": "8850a812f4f35e110092d2be2092c6dcb928c237a87ce14ceadb7fd26825c657"
     },
     {
       "path": "references/research/34-complete-redistill-2026-07-15.md",
       "role": "complete_redistillation",
-      "sha256": "2c7927e03c5b249df4236cfc37baea5c21710f2470bef999ca6a4ddd877bba4f"
+      "sha256": "fcae8c7f687a6d1737c5fe9545d83997909e0c1f5de10350d9efae11426629a3"
     },
     {
       "path": "references/research/35-complete-redistill-validation-2026-07-15.md",
       "role": "redistillation_validation",
-      "sha256": "efab9121db30c5e4e5e8edf3fd354962e85b6b815e5c98c3388c2ffc0bbf7650"
+      "sha256": "eb0beeb73b92033794c9c0ca5cea4f7bb2c4b2bbacc2ca9d8462d8cc712238a4"
     },
     {
       "path": "evaluations/cases.json",
