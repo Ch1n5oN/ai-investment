@@ -1,0 +1,107 @@
+{
+  "started_at": "2026-06-17T16:16:37.403Z",
+  "sinceDate": "2026-01-01",
+  "userId": "7143769715",
+  "errors": [
+    {
+      "post_id": 393582669,
+      "error": "HTTP 405: <!doctypehtml><html lang=\"zh-cn\"><meta charset=\"utf-8\"><meta http-equiv=\"X-UA-Compatible\"content=\"IE=edge,chrome=1\"><meta name=\"data-spm\"content=\"a3c0e\"><title>405</title><style>a,body,div,h2,html,p{m",
+      "at": "2026-06-17T16:20:39.866Z"
+    },
+    {
+      "post_id": 393582669,
+      "index": 149,
+      "error": "HTTP 405: <!doctypehtml><html lang=\"zh-cn\"><meta charset=\"utf-8\"><meta http-equiv=\"X-UA-Compatible\"content=\"IE=edge,chrome=1\"><meta name=\"data-spm\"content=\"a3c0e\"><title>405</title><style>a,body,div,h2,html,p{margin:0;padding:0}a{",
+      "status": 405,
+      "at": "2026-06-17T16:26:01.386Z"
+    },
+    {
+      "post_id": 389387141,
+      "index": 260,
+      "error": "Uncaught (in promise) Error: fetch timeout",
+      "status": null,
+      "at": "2026-06-17T16:38:23.837Z"
+    },
+    {
+      "post_id": 389434815,
+      "index": 259,
+      "error": "Uncaught (in promise) Error: fetch timeout",
+      "status": null,
+      "at": "2026-06-17T16:39:10.832Z"
+    },
+    {
+      "post_id": 383319478,
+      "index": 668,
+      "error": "HTTP 405: <!doctypehtml><html lang=\"zh-cn\"><meta charset=\"utf-8\"><meta http-equiv=\"X-UA-Compatible\"content=\"IE=edge,chrome=1\"><meta name=\"data-spm\"content=\"a3c0e\"><title>405</title><style>a,body,div,h2,html,p{margin:0;padding:0}a{",
+      "status": 405,
+      "at": "2026-06-17T17:06:21.874Z"
+    },
+    {
+      "post_id": 381559684,
+      "index": 761,
+      "error": "Uncaught (in promise) TypeError: Failed to fetch",
+      "status": null,
+      "at": "2026-06-20T14:54:13.270Z"
+    },
+    {
+      "post_id": 377085131,
+      "index": 950,
+      "error": "HTTP 405: <!doctypehtml><html lang=\"zh-cn\"><meta charset=\"utf-8\"><meta http-equiv=\"X-UA-Compatible\"content=\"IE=edge,chrome=1\"><meta name=\"data-spm\"content=\"a3c0e\"><title>405</title><style>a,body,div,h2,html,p{margin:0;padding:0}a{",
+      "status": 405,
+      "at": "2026-06-20T15:12:50.448Z"
+    },
+    {
+      "post_id": 377103853,
+      "index": 949,
+      "error": "Uncaught (in promise) TypeError: Failed to fetch",
+      "status": null,
+      "at": "2026-06-20T15:13:08.664Z"
+    },
+    {
+      "post_id": 377128755,
+      "index": 948,
+      "error": "Uncaught (in promise) TypeError: Failed to fetch",
+      "status": null,
+      "at": "2026-06-20T15:13:22.754Z"
+    },
+    {
+      "post_id": 371691709,
+      "index": 1077,
+      "error": "Uncaught (in promise) Error: fetch timeout",
+      "status": null,
+      "at": "2026-06-20T15:32:21.827Z"
+    },
+    {
+      "post_id": 370255858,
+      "index": 1189,
+      "error": "Uncaught (in promise) Error: fetch timeout",
+      "status": null,
+      "at": "2026-06-20T15:44:57.972Z"
+    }
+  ],
+  "scannedPosts": 1285,
+  "completed": true,
+  "timeline": {
+    "posts": {
+      "page": 67,
+      "rawOnPage": 20,
+      "matchingOnPage": 0,
+      "totalDedup": 1279,
+      "at": "2026-06-17T16:17:40.787Z"
+    },
+    "articles": {
+      "page": 4,
+      "rawOnPage": 20,
+      "matchingOnPage": 0,
+      "totalDedup": 1279,
+      "at": "2026-06-17T16:17:43.720Z"
+    }
+  },
+  "totalPosts": 1285,
+  "resumed_at": "2026-06-20T16:02:46.508Z",
+  "lastFailedPostId": 370255858,
+  "totalReplies": 1512,
+  "updated_at": "2026-06-20T16:03:11.121Z",
+  "lastPostId": 395358246,
+  "completed_at": "2026-06-20T16:03:11.121Z"
+}

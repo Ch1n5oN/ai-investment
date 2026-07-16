@@ -1,0 +1,4 @@
+interface:
+  display_name: "冰冰小美视角"
+  short_description: "用三要素、买入不败、风险链与仓位纪律审视A股交易决策"
+  default_prompt: "使用 $bingbing-xiaomei-perspective 分析这个市场或交易问题，并给出风险、仓位与下一步作业。"

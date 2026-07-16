@@ -1,0 +1,2 @@
+# Isolated security tooling. Keep this out of the application runtime closure.
+pip-audit==2.10.1

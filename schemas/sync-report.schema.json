@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.ai-investment/schemas/sync-report.schema.json",
+  "title": "Xueqiu sync report",
+  "type": "object",
+  "required": ["schema_version", "user_id", "started_at", "status", "metrics"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "user_id": { "type": "string", "minLength": 1 },
+    "started_at": { "type": "string", "format": "date-time" },
+    "finished_at": { "type": "string", "format": "date-time" },
+    "status": { "enum": ["running", "complete", "needs_verification", "failed"] },
+    "post_timeline_truncated": { "type": "boolean" },
+    "article_timeline_truncated": { "type": "boolean" },
+    "comment_coverage": { "type": "string" },
+    "nested_reply_coverage": { "type": "string" },
+    "interface_drift": {
+      "type": "object",
+      "required": ["detected", "signals"],
+      "properties": {
+        "detected": { "type": "boolean" },
+        "signals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["source", "category", "code", "message"],
+            "properties": {
+              "source": { "enum": ["sync", "articles", "user_comments"] },
+              "category": {
+                "enum": ["endpoint_missing", "content_type", "response_encoding", "response_contract"]
+              },
+              "code": { "type": "string", "minLength": 1 },
+              "message": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "detected": { "const": true } },
+            "required": ["detected"]
+          },
+          "then": { "properties": { "signals": { "type": "array", "minItems": 1 } } },
+          "else": { "properties": { "signals": { "type": "array", "maxItems": 0 } } }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "metrics": {
+      "type": "object",
+      "required": ["requests", "errors", "waf"],
+      "properties": {
+        "requests": { "type": "integer", "minimum": 0 },
+        "errors": { "type": "integer", "minimum": 0 },
+        "waf": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "type": "object",
+        "properties": { "status": { "const": "running" } },
+        "required": ["status"]
+      },
+      "then": {
+        "type": "object",
+        "not": { "type": "object", "required": ["finished_at"] }
+      },
+      "else": {
+        "type": "object",
+        "required": ["finished_at", "interface_drift"]
+      }
+    },
+    {
+      "if": {
+        "type": "object",
+        "properties": { "status": { "const": "failed" } },
+        "required": ["status"]
+      },
+      "then": {
+        "type": "object",
+        "required": ["error"],
+        "properties": {
+          "error": {
+            "type": "object",
+            "required": ["code", "message"],
+            "properties": {
+              "code": { "type": "string", "minLength": 1 },
+              "message": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "else": {
+        "type": "object",
+        "not": { "type": "object", "required": ["error"] }
+      }
+    }
+  ],
+  "additionalProperties": true
+}

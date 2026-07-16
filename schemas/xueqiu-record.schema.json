@@ -1,0 +1,281 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.ai-investment/schemas/xueqiu-record.schema.json",
+  "title": "Versioned Xueqiu corpus record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_contract",
+    "id",
+    "created_at",
+    "created_at_raw"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "record_contract": {
+      "enum": [
+        "normalized_v1",
+        "legacy_normalized_v1",
+        "normalized_without_view_count_v1",
+        "framework_index_link_v1",
+        "framework_index_source_v1"
+      ]
+    },
+    "id": { "type": "string", "pattern": "^[0-9]+$" },
+    "created_at_raw": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "number" },
+        { "type": "null" }
+      ],
+      "description": "Original source timestamp. Explicitly missing values are preserved as null, 0, an empty string, 'unknown', or '未知时间'."
+    },
+    "created_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^[2-9][0-9]{3}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\+08:00$"
+        },
+        { "const": "unknown" }
+      ]
+    },
+    "target": { "$ref": "#/$defs/xueqiuUrl" },
+    "post_id": { "type": "string", "pattern": "^[0-9]+$" },
+    "post_target": { "$ref": "#/$defs/xueqiuUrl" },
+    "post_link": { "$ref": "#/$defs/xueqiuUrl" },
+    "reply_to": {
+      "oneOf": [
+        { "type": "string", "pattern": "^[0-9]+$" },
+        { "type": "null" }
+      ]
+    },
+    "in_reply_to_comment_id": {
+      "oneOf": [
+        { "type": "string", "pattern": "^[0-9]+$" },
+        { "type": "null" }
+      ]
+    },
+    "status_id": {
+      "oneOf": [
+        { "type": "string", "pattern": "^[0-9]+$" },
+        { "type": "null" }
+      ]
+    },
+    "user_id": { "type": "string", "pattern": "^[0-9]+$" },
+    "text": { "type": "string" },
+    "clean_text": {
+      "type": "string",
+      "description": "For non-legacy contracts this must equal the deterministic HTML-to-text normalization of text; runtime and manifest validators enforce the relation."
+    },
+    "reply_count": { "$ref": "#/$defs/count" },
+    "like_count": { "$ref": "#/$defs/count" },
+    "retweet_count": { "$ref": "#/$defs/count" },
+    "view_count": { "$ref": "#/$defs/count" },
+    "post_reply_count": { "$ref": "#/$defs/count" },
+    "title": { "type": "string" },
+    "source": { "type": "string" },
+    "origin": { "type": "string" },
+    "mode": { "type": "string" },
+    "post_title": { "type": "string" },
+    "post_text": { "type": "string" },
+    "post_excerpt": { "type": "string" },
+    "created_ms": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+    "fetched_from_page": { "type": "integer", "minimum": 1, "maximum": 9007199254740991 },
+    "post_created_at_raw": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "number" },
+        { "type": "null" }
+      ]
+    },
+    "post_created_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^[2-9][0-9]{3}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\+08:00$"
+        },
+        { "const": "unknown" }
+      ]
+    },
+    "legacy_migrated_fields": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "type": "object",
+        "properties": { "created_at_raw": { "$ref": "#/$defs/unknownRawTime" } },
+        "required": ["created_at_raw"]
+      },
+      "then": {
+        "type": "object",
+        "properties": { "created_at": { "const": "unknown" } }
+      }
+    },
+    {
+      "if": {
+        "type": "object",
+        "properties": { "created_at": { "const": "unknown" } },
+        "required": ["created_at"]
+      },
+      "then": {
+        "type": "object",
+        "properties": { "created_at_raw": { "$ref": "#/$defs/unknownRawTime" } }
+      }
+    },
+    {
+      "if": {
+        "type": "object",
+        "properties": { "post_created_at_raw": { "$ref": "#/$defs/unknownRawTime" } },
+        "required": ["post_created_at_raw"]
+      },
+      "then": {
+        "type": "object",
+        "properties": { "post_created_at": { "const": "unknown" } }
+      }
+    },
+    {
+      "if": {
+        "type": "object",
+        "properties": { "post_created_at": { "const": "unknown" } },
+        "required": ["post_created_at"]
+      },
+      "then": {
+        "type": "object",
+        "properties": { "post_created_at_raw": { "$ref": "#/$defs/unknownRawTime" } }
+      }
+    },
+    {
+      "oneOf": [
+        { "$ref": "#/$defs/strictPost" },
+        { "$ref": "#/$defs/strictReply" },
+        { "$ref": "#/$defs/noViewPost" },
+        { "$ref": "#/$defs/frameworkPost" },
+        { "$ref": "#/$defs/frameworkSource" },
+        { "$ref": "#/$defs/legacyPost" },
+        { "$ref": "#/$defs/legacyReply" }
+      ]
+    }
+  ],
+  "$defs": {
+    "count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "postShape": {
+      "type": "object",
+      "required": ["target", "reply_count", "like_count", "retweet_count"],
+      "not": {
+        "anyOf": [
+          { "type": "object", "required": ["post_id"] },
+          { "type": "object", "required": ["post_target"] },
+          { "type": "object", "required": ["post_link"] }
+        ]
+      }
+    },
+    "strictPost": {
+      "type": "object",
+      "properties": { "record_contract": { "const": "normalized_v1" } },
+      "required": ["record_contract", "text", "clean_text", "view_count"],
+      "allOf": [{ "$ref": "#/$defs/postShape" }]
+    },
+    "strictReply": {
+      "type": "object",
+      "properties": { "record_contract": { "const": "normalized_v1" } },
+      "required": [
+        "record_contract",
+        "post_id",
+        "post_target",
+        "text",
+        "clean_text",
+        "reply_count",
+        "like_count"
+      ],
+      "not": {
+        "anyOf": [
+          { "type": "object", "required": ["target"] },
+          { "type": "object", "required": ["post_link"] }
+        ]
+      }
+    },
+    "noViewPost": {
+      "type": "object",
+      "properties": { "record_contract": { "const": "normalized_without_view_count_v1" } },
+      "required": ["record_contract", "text", "clean_text"],
+      "allOf": [{ "$ref": "#/$defs/postShape" }]
+    },
+    "frameworkPost": {
+      "type": "object",
+      "properties": { "record_contract": { "const": "framework_index_link_v1" } },
+      "required": ["record_contract", "text", "clean_text", "view_count"],
+      "allOf": [{ "$ref": "#/$defs/postShape" }]
+    },
+    "frameworkSource": {
+      "type": "object",
+      "properties": { "record_contract": { "const": "framework_index_source_v1" } },
+      "required": ["record_contract", "text", "clean_text", "view_count"],
+      "allOf": [{ "$ref": "#/$defs/postShape" }]
+    },
+    "legacyPost": {
+      "type": "object",
+      "properties": { "record_contract": { "const": "legacy_normalized_v1" } },
+      "required": ["record_contract", "target", "reply_count", "like_count", "retweet_count", "view_count"],
+      "anyOf": [
+        { "type": "object", "required": ["text"] },
+        { "type": "object", "required": ["clean_text"] }
+      ],
+      "not": {
+        "anyOf": [
+          { "type": "object", "required": ["post_id"] },
+          { "type": "object", "required": ["post_target"] },
+          { "type": "object", "required": ["post_link"] }
+        ]
+      }
+    },
+    "legacyReply": {
+      "type": "object",
+      "properties": { "record_contract": { "const": "legacy_normalized_v1" } },
+      "required": ["record_contract", "post_id", "like_count"],
+      "allOf": [
+        {
+          "anyOf": [
+            { "type": "object", "required": ["post_target"] },
+            { "type": "object", "required": ["post_link"] }
+          ]
+        },
+        {
+          "anyOf": [
+            { "type": "object", "required": ["text"] },
+            { "type": "object", "required": ["clean_text"] }
+          ]
+        }
+      ],
+      "not": { "type": "object", "required": ["target"] }
+    },
+    "unknownRawTime": {
+      "oneOf": [
+        { "type": "null" },
+        { "const": 0 },
+        {
+          "type": "string",
+          "pattern": "^[\\t\\n\\r\\f\\u000b ]*(?:[Uu][Nn][Kk][Nn][Oo][Ww][Nn]|未知时间)?[\\t\\n\\r\\f\\u000b ]*$"
+        }
+      ]
+    },
+    "xueqiuUrl": {
+      "type": "string",
+      "pattern": "^https://(?:[A-Za-z0-9-]+\\.)*xueqiu\\.com/(?:[^/?#]+/)*[0-9]+/?(?:[?#].*)?$"
+    }
+  },
+  "dependentRequired": {
+    "post_created_at_raw": ["post_created_at"],
+    "post_created_at": ["post_created_at_raw"]
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,247 @@
+{
+  "contract_version": 1,
+  "clean_html_cases": [
+    {
+      "name": "paragraphs-breaks-and-entities",
+      "input": "<p>A&amp;B<br/>C&nbsp;D</p><p>&lt;x&gt; &quot;q&quot; &#39;s&#39;</p>",
+      "expected": "A&B\nC D\n<x> \"q\" 's'"
+    },
+    {
+      "name": "collapse-three-or-more-newlines",
+      "input": "one<br><br><br><br>two",
+      "expected": "one\n\ntwo"
+    }
+  ],
+  "normalization_cases": [
+    {
+      "name": "post-preserves-null-unknown-and-view-count",
+      "kind": "post",
+      "user_id": "7",
+      "input": {
+        "schema_version": 1,
+        "id": "101",
+        "created_at_raw": null,
+        "created_at": "unknown",
+        "text": "<p>A&amp;B<br/>C&nbsp;D</p>",
+        "clean_text": "A&B\nC D",
+        "target": "https://xueqiu.com/7/101",
+        "reply_count": 9,
+        "like_count": 8,
+        "retweet_count": 7,
+        "view_count": 6
+      },
+      "expected": {
+        "schema_version": 1,
+        "id": "101",
+        "created_at_raw": null,
+        "created_at": "unknown",
+        "text": "<p>A&amp;B<br/>C&nbsp;D</p>",
+        "clean_text": "A&B\nC D",
+        "target": "https://xueqiu.com/7/101",
+        "reply_count": 9,
+        "like_count": 8,
+        "retweet_count": 7,
+        "view_count": 6
+      }
+    },
+    {
+      "name": "reply-preserves-zero-missing-time-sentinel",
+      "kind": "reply",
+      "user_id": "7",
+      "input": {
+        "schema_version": 1,
+        "id": "201",
+        "created_at_raw": 0,
+        "created_at": "unknown",
+        "text": "reply &lt;body&gt;",
+        "clean_text": "reply <body>",
+        "post_id": "101",
+        "post_target": "https://xueqiu.com/7/101",
+        "reply_count": 3,
+        "like_count": 4
+      },
+      "expected": {
+        "schema_version": 1,
+        "id": "201",
+        "created_at_raw": 0,
+        "created_at": "unknown",
+        "text": "reply &lt;body&gt;",
+        "clean_text": "reply <body>",
+        "post_id": "101",
+        "post_target": "https://xueqiu.com/7/101",
+        "reply_count": 3,
+        "like_count": 4
+      }
+    },
+    {
+      "name": "post-preserves-empty-missing-time-sentinel",
+      "kind": "post",
+      "user_id": "7",
+      "input": {
+        "schema_version": 1,
+        "id": "104",
+        "created_at_raw": "",
+        "created_at": "unknown",
+        "text": "body",
+        "clean_text": "body",
+        "target": "https://xueqiu.com/7/104",
+        "reply_count": 0,
+        "like_count": 0,
+        "retweet_count": 0,
+        "view_count": 0
+      },
+      "expected": {
+        "id": "104",
+        "created_at_raw": "",
+        "created_at": "unknown",
+        "view_count": 0
+      }
+    }
+  ],
+  "invalid_normalization_cases": [
+    {
+      "name": "normalized-post-requires-view-count",
+      "kind": "post",
+      "user_id": "7",
+      "input": {
+        "schema_version": 1,
+        "id": "102",
+        "created_at_raw": "2026-07-14 09:00:00",
+        "created_at": "2026-07-14T09:00:00+08:00",
+        "text": "body",
+        "clean_text": "body",
+        "target": "https://xueqiu.com/7/102",
+        "reply_count": 1,
+        "like_count": 2,
+        "retweet_count": 3
+      }
+    },
+    {
+      "name": "clean-text-must-match-original-text",
+      "kind": "reply",
+      "user_id": "7",
+      "input": {
+        "schema_version": 1,
+        "id": "202",
+        "created_at_raw": null,
+        "created_at": "unknown",
+        "text": "<b>actual</b>",
+        "clean_text": "different",
+        "post_id": "102",
+        "post_target": "https://xueqiu.com/7/102",
+        "reply_count": 0,
+        "like_count": 0
+      }
+    },
+    {
+      "name": "invalid-time-cannot-collapse-to-unknown",
+      "kind": "post",
+      "user_id": "7",
+      "input": {
+        "schema_version": 1,
+        "id": "103",
+        "created_at_raw": "not-a-timestamp",
+        "created_at": "unknown",
+        "text": "body",
+        "clean_text": "body",
+        "target": "https://xueqiu.com/7/103",
+        "reply_count": 0,
+        "like_count": 0,
+        "retweet_count": 0,
+        "view_count": 0
+      }
+    }
+  ],
+  "merge_cases": [
+    {
+      "name": "post-rich-text-is-atomic-counts-may-decrease-and-known-time-wins",
+      "kind": "post",
+      "user_id": "7",
+      "existing": [
+        {
+          "schema_version": 1,
+          "id": "301",
+          "created_at_raw": "2026-07-14 09:00:00",
+          "created_at": "2026-07-14T09:00:00+08:00",
+          "text": "complete <b>historical</b> body",
+          "clean_text": "complete historical body",
+          "target": "https://xueqiu.com/7/301",
+          "reply_count": 10,
+          "like_count": 20,
+          "retweet_count": 30,
+          "view_count": 40
+        }
+      ],
+      "incoming": [
+        {
+          "schema_version": 1,
+          "id": "301",
+          "created_at_raw": null,
+          "created_at": "unknown",
+          "text": "",
+          "clean_text": "",
+          "target": "https://xueqiu.com/7/301",
+          "reply_count": 8,
+          "like_count": 18,
+          "retweet_count": 28,
+          "view_count": 38
+        }
+      ],
+      "expected": [
+        {
+          "id": "301",
+          "created_at_raw": "2026-07-14 09:00:00",
+          "created_at": "2026-07-14T09:00:00+08:00",
+          "text": "complete <b>historical</b> body",
+          "clean_text": "complete historical body",
+          "reply_count": 8,
+          "like_count": 18,
+          "retweet_count": 28,
+          "view_count": 38
+        }
+      ]
+    },
+    {
+      "name": "reply-rich-text-is-atomic-and-counts-may-decrease",
+      "kind": "reply",
+      "user_id": "7",
+      "existing": [
+        {
+          "schema_version": 1,
+          "id": "401",
+          "created_at_raw": "2026-07-14 09:01:00",
+          "created_at": "2026-07-14T09:01:00+08:00",
+          "text": "complete <i>reply</i>",
+          "clean_text": "complete reply",
+          "post_id": "301",
+          "post_target": "https://xueqiu.com/7/301",
+          "reply_count": 5,
+          "like_count": 6
+        }
+      ],
+      "incoming": [
+        {
+          "schema_version": 1,
+          "id": "401",
+          "created_at_raw": "2026-07-14 09:01:00",
+          "created_at": "2026-07-14T09:01:00+08:00",
+          "text": "",
+          "clean_text": "",
+          "post_id": "301",
+          "post_target": "https://xueqiu.com/7/301",
+          "reply_count": 2,
+          "like_count": 3
+        }
+      ],
+      "expected": [
+        {
+          "id": "401",
+          "text": "complete <i>reply</i>",
+          "clean_text": "complete reply",
+          "reply_count": 2,
+          "like_count": 3
+        }
+      ]
+    }
+  ]
+}
