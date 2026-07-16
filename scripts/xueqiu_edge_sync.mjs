@@ -5,6 +5,7 @@ import { CdpSession, sleep } from "./lib/cdp_session.mjs";
 import {
   RECORD_CONTRACT,
   SCHEMA_VERSION,
+  advanceSinceBoundary,
   atomicWrite,
   asciiTrim,
   canonicalTarget,
@@ -315,6 +316,7 @@ export async function fetchTimeline(session, userId, mode, args, metrics) {
   const observedPageableIds = new Set();
   let truncated = false;
   const sinceEpoch = args.sinceDate ? Date.parse(`${args.sinceDate}T00:00:00+08:00`) : null;
+  let sinceBoundary = null;
   for (let page = 1; page <= args.timelinePages; page += 1) {
     const url = `https://xueqiu.com/${endpoint}?user_id=${userId}&page=${page}&count=${args.count}${mode === "posts" ? "&type=0" : ""}`;
     const data = await browserJson(session, url, { ...args, metrics, referer: `https://xueqiu.com/u/${userId}` });
@@ -324,6 +326,7 @@ export async function fetchTimeline(session, userId, mode, args, metrics) {
       count: args.count,
       label: `${mode} timeline pagination`,
     }));
+    const pageableRecords = [];
     for (const status of raw) {
       const needsArticleDetail = mode === "articles" && !hasTimelineInteractionCounts(status);
       const source = needsArticleDetail
@@ -331,9 +334,13 @@ export async function fetchTimeline(session, userId, mode, args, metrics) {
         : status;
       const normalized = normalizePost(source, userId);
       incoming = mergeById(incoming, [normalized]);
-      if (pageable.has(status)) observedPageableIds.add(normalized.id);
+      if (pageable.has(status)) {
+        observedPageableIds.add(normalized.id);
+        pageableRecords.push(normalized);
+      }
       if (needsArticleDetail && args.requestDelayMs > 0) await sleep(args.requestDelayMs);
     }
+    sinceBoundary = advanceSinceBoundary(sinceBoundary, pageableRecords, sinceEpoch);
     const complete = paginationComplete(data, {
       page,
       count: args.count,
@@ -341,7 +348,7 @@ export async function fetchTimeline(session, userId, mode, args, metrics) {
       observedCount: observedPageableIds.size,
       label: `${mode} timeline pagination`,
     });
-    if (complete) break;
+    if (complete || sinceBoundary.confirmed) break;
     if (page === args.timelinePages) {
       truncated = true;
       break;

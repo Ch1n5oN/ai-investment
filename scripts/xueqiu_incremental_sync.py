@@ -786,6 +786,14 @@ def collect_timeline(
 ) -> list[dict[str, Any]]:
     items: list[dict[str, Any]] = []
     observed_ids: set[str] = set()
+    since_cutoff = (
+        datetime.strptime(since_date, "%Y-%m-%d").replace(tzinfo=SHANGHAI_TZ)
+        if since_date
+        else None
+    )
+    boundary_ordered = True
+    boundary_last_time: datetime | None = None
+    boundary_candidate = False
     for page in range(1, pages + 1):
         print(f"[{label}] page {page}/{pages}")
         if activity is not None:
@@ -817,8 +825,31 @@ def collect_timeline(
             normalize_post(item, user_id)
             for item in extract_posts(data, user_id)
         ]
+        pageable_batch = [item for item in batch if item["id"] in pageable_ids]
         observed_ids.update(
-            item["id"] for item in batch if item["id"] in pageable_ids
+            item["id"] for item in pageable_batch
+        )
+        page_times: list[datetime | None] = []
+        for item in pageable_batch:
+            parsed = parse_xueqiu_time(item.get("created_at"))
+            page_times.append(parsed)
+            if parsed is None or (
+                boundary_last_time is not None and parsed > boundary_last_time
+            ):
+                boundary_ordered = False
+            if parsed is not None:
+                boundary_last_time = parsed
+        boundary_confirmed = bool(
+            since_cutoff
+            and boundary_candidate
+            and boundary_ordered
+            and page_times
+            and all(parsed is not None and parsed < since_cutoff for parsed in page_times)
+        )
+        boundary_candidate = bool(
+            since_cutoff
+            and boundary_ordered
+            and any(parsed is not None and parsed < since_cutoff for parsed in page_times)
         )
         if since_date:
             filtered = filter_since(batch, since_date)
@@ -833,7 +864,7 @@ def collect_timeline(
             count,
             len(pageable_items),
             observed_count=len(observed_ids),
-        ):
+        ) or boundary_confirmed:
             break
         if page == pages:
             if failures is not None:

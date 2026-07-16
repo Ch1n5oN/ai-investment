@@ -6,6 +6,7 @@ import { CdpSession } from "./lib/cdp_session.mjs";
 import {
   RECORD_CONTRACT,
   SCHEMA_VERSION,
+  advanceSinceBoundary,
   atomicWrite,
   asciiTrim,
   canonicalTarget,
@@ -141,6 +142,8 @@ export async function fetchTimeline(send, userId, mode, pages, count, sinceDate,
   let items = [];
   const observedPageableIds = new Set();
   let truncated = false;
+  const sinceEpoch = sinceDate ? Date.parse(`${sinceDate}T00:00:00+08:00`) : null;
+  let sinceBoundary = null;
   const endpoint = mode === "articles"
     ? "https://xueqiu.com/statuses/original/timeline.json"
     : "https://xueqiu.com/v4/statuses/user_timeline.json";
@@ -155,6 +158,7 @@ export async function fetchTimeline(send, userId, mode, pages, count, sinceDate,
       count,
       label: `${mode} timeline pagination`,
     }));
+    const pageableRecords = [];
     for (const status of raw) {
       const expectedId = normalizeId(status?.id, `${mode} timeline status.id`);
       const needsArticleDetail = mode === "articles" && !hasTimelineInteractionCounts(status);
@@ -170,9 +174,13 @@ export async function fetchTimeline(send, userId, mode, pages, count, sinceDate,
       }
       const normalized = normalizeStatus(source, userId, expectedId);
       items = mergeById(items, [normalized]);
-      if (pageable.has(status)) observedPageableIds.add(normalized.id);
+      if (pageable.has(status)) {
+        observedPageableIds.add(normalized.id);
+        pageableRecords.push(normalized);
+      }
       if (needsArticleDetail && delayMs > 0) await new Promise((resolve) => setTimeout(resolve, delayMs));
     }
+    sinceBoundary = advanceSinceBoundary(sinceBoundary, pageableRecords, sinceEpoch);
     const complete = paginationComplete(data, {
       page,
       count,
@@ -180,7 +188,7 @@ export async function fetchTimeline(send, userId, mode, pages, count, sinceDate,
       observedCount: observedPageableIds.size,
       label: `${mode} timeline pagination`,
     });
-    if (complete) {
+    if (complete || sinceBoundary.confirmed) {
       if (!raw.length) console.log(`stop: no items on page ${page}`);
       break;
     }

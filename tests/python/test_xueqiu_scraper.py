@@ -1229,6 +1229,40 @@ class PaginationTests(unittest.TestCase):
         self.assertEqual(len(failures), 1)
         self.assertIn("truncated", failures[0])
 
+    def test_ordered_confirmation_page_proves_since_boundary(self):
+        failures = []
+        calls = []
+
+        def fetch(*args, page, **kwargs):
+            calls.append(page)
+            if page == 1:
+                statuses = [
+                    valid_status(4, created_at="2026-07-14T10:00:00+08:00"),
+                    valid_status(3, created_at="2026-06-30T23:59:59+08:00"),
+                ]
+            else:
+                statuses = [
+                    valid_status(2, created_at="2026-06-30T22:00:00+08:00"),
+                    valid_status(1, created_at="2026-06-30T21:00:00+08:00"),
+                ]
+            return {"statuses": statuses, "total": 100}
+
+        with redirect_stdout(io.StringIO()):
+            posts = incremental.collect_timeline(
+                fetch_fn=fetch,
+                user_id="7",
+                cookie="cookie",
+                pages=2,
+                count=2,
+                since_date="2026-07-01",
+                delay=0,
+                label="posts",
+                failures=failures,
+            )
+        self.assertEqual(calls, [1, 2])
+        self.assertEqual([post["id"] for post in posts], ["4"])
+        self.assertEqual(failures, [])
+
     def test_old_pinned_item_does_not_stop_later_timeline_pages(self):
         calls = []
 

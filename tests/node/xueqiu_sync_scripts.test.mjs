@@ -236,6 +236,123 @@ test("Edge timeline reaching the historical boundary is not truncated", async ()
   assert.equal(result.truncated, false);
 });
 
+test("ordered confirmation page proves an incremental since boundary", async () => {
+  const pages = [
+    {
+      statuses: [
+        timelineStatus(4, "2026-07-14 09:00:00"),
+        timelineStatus(3, "2026-07-13 23:00:00"),
+      ],
+      total: 100,
+      max_page: 50,
+    },
+    {
+      statuses: [
+        timelineStatus(2, "2026-07-13 22:00:00"),
+        timelineStatus(1, "2026-07-13 21:00:00"),
+      ],
+      total: 100,
+      max_page: 50,
+    },
+  ];
+  let edgeCalls = 0;
+  const edge = await fetchEdgeTimeline(
+    {
+      async send() { return runtimeJson(pages[edgeCalls++]); },
+      async navigate() {},
+    },
+    "7143769715",
+    "posts",
+    edgeArgs({ sinceDate: "2026-07-14", timelinePages: 2 }),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+  assert.equal(edgeCalls, 2);
+  assert.deepEqual(edge.items.map((item) => item.id), ["4"]);
+  assert.equal(edge.truncated, false);
+
+  let browserCalls = 0;
+  const browser = await fetchBrowserTimeline(
+    async () => runtimeJson(pages[browserCalls++]),
+    "7143769715",
+    "posts",
+    2,
+    2,
+    "2026-07-14",
+    0,
+  );
+  assert.equal(browserCalls, 2);
+  assert.deepEqual(browser.items.map((item) => item.id), ["4"]);
+  assert.equal(browser.truncated, false);
+});
+
+test("out-of-order pages cannot prove an incremental since boundary", async () => {
+  const pages = [
+    {
+      statuses: [
+        timelineStatus(4, "2026-07-14 09:00:00"),
+        timelineStatus(2, "2026-07-13 23:00:00"),
+      ],
+      total: 100,
+    },
+    {
+      statuses: [
+        timelineStatus(3, "2026-07-14 08:00:00"),
+        timelineStatus(1, "2026-07-13 22:00:00"),
+      ],
+      total: 100,
+    },
+  ];
+  let calls = 0;
+  const result = await fetchEdgeTimeline(
+    {
+      async send() { return runtimeJson(pages[calls++]); },
+      async navigate() {},
+    },
+    "7143769715",
+    "posts",
+    edgeArgs({ sinceDate: "2026-07-14", timelinePages: 2 }),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+  assert.equal(result.truncated, true);
+  assert.deepEqual(result.items.map((item) => item.id), ["4", "3"]);
+});
+
+test("an old pinned overflow cannot become a since-boundary candidate", async () => {
+  const pinned = timelineStatus(9, "2025-01-01 09:00:00");
+  pinned.mark = 1;
+  const pages = [
+    {
+      statuses: [
+        pinned,
+        timelineStatus(4, "2026-07-14 09:00:00"),
+        timelineStatus(3, "2026-07-14 08:00:00"),
+      ],
+      total: 100,
+    },
+    {
+      statuses: [
+        timelineStatus(2, "2026-07-12 23:00:00"),
+        timelineStatus(1, "2026-07-12 22:00:00"),
+      ],
+      total: 100,
+    },
+  ];
+  let calls = 0;
+  const result = await fetchEdgeTimeline(
+    {
+      async send() { return runtimeJson(pages[calls++]); },
+      async navigate() {},
+    },
+    "7143769715",
+    "posts",
+    edgeArgs({ sinceDate: "2026-07-13", timelinePages: 2 }),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+  assert.equal(calls, 2);
+  assert.equal(result.truncated, true);
+  assert.deepEqual(result.items.map((item) => item.id), ["4", "3"]);
+});
+
 test("old pinned timeline items do not hide newer records on later pages", async () => {
   const pages = [
     {
