@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:xueqiu.com)",
+      "Bash(node scripts/*)",
+      "Bash(python3 scripts/*)"
+    ]
+  }
+}
