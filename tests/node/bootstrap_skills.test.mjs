@@ -48,6 +48,18 @@ function snapshotFramedHash(files) {
   return digest.digest("hex");
 }
 
+test("Dependabot leaves custom-hashed skills installer updates to the manual lock workflow", () => {
+  const config = fs.readFileSync(
+    new URL("../../.github/dependabot.yml", import.meta.url),
+    "utf8",
+  );
+  const npmSection = config
+    .split(/\n(?=\s{2}- package-ecosystem:)/)
+    .find((section) => section.includes("package-ecosystem: npm"));
+  assert.match(npmSection, /\n\s+ignore:\s*$/m);
+  assert.match(npmSection, /\n\s+- dependency-name: skills(?:\s|$)/);
+});
+
 function makeProject() {
   const rootDir = fs.mkdtempSync(path.join(os.tmpdir(), "skill-bootstrap-"));
   const directory = path.join(rootDir, ".agents", "skills", "example");

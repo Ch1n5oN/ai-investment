@@ -39,6 +39,10 @@ not proof of an interface change.
 - On dependency changes: run the isolated Python advisory-audit CI job in addition
   to `npm audit`.
 
+Dependabot intentionally ignores the `skills` installer. Updating it requires one
+manual change that keeps `package.json`, `package-lock.json`, and `skills-lock.json`
+aligned, including the installer integrity and installed snapshot hashes.
+
 ## Recovery
 
 1. Read the JSON report before rerunning.
