@@ -1,12 +1,15 @@
 # Optimization Implementation Audit
 
-Audit date: 2026-07-16
+Audit date: 2026-07-17
 
 ## Reproducibility
 
 - Node is pinned to 22.22.0 through `.nvmrc` and CI; npm is pinned to 10.9.4 and checked at runtime.
 - Node dependencies are exact and captured in `package-lock.json`.
-- Python supports 3.11+; `requirements-lock.txt` records hashed direct and transitive versions, and tests prove that its installed closure satisfies `pyproject.toml`.
+- Python supports 3.11+; `pyproject.toml` is the sole runtime dependency manifest,
+  `requirements-lock.txt` is the sole runtime installation input, and tests prove
+  that its hashed installed closure satisfies the declared ranges. The redundant
+  unpinned `requirements.txt` entrypoint was removed to prevent manifest drift.
 - `skills-lock.json` pins full commits, the local installer and its runtime dependencies. Upstream-compatible and length-prefixed hashes are both checked; installation failures roll back the complete local Skill tree.
 - A clean directory install from both lock files completed successfully before handoff.
 

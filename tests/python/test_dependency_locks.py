@@ -95,6 +95,12 @@ def parse_lock(text):
 
 
 class DependencyLockTests(unittest.TestCase):
+    def test_runtime_dependencies_have_no_legacy_requirements_manifest(self):
+        self.assertFalse(
+            (ROOT / "requirements.txt").exists(),
+            "declare runtime dependencies only in pyproject.toml and install requirements-lock.txt",
+        )
+
     def test_audit_tooling_has_an_independent_hashed_lock(self):
         runtime, _ = parse_lock((ROOT / "requirements-lock.txt").read_text(encoding="utf-8"))
         audit, hashes = parse_lock((ROOT / "requirements-audit-lock.txt").read_text(encoding="utf-8"))
