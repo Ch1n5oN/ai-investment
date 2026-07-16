@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "installer": {
+    "package": "skills",
+    "version": "1.5.17",
+    "integrity": "sha512-Mi8P0sy/4rLYESPTCw4tso1hj87zpD3KRVg1iFUlLby2V0+SNAyWNHo/Gq9cruNww8oCSjB9S2hIWtUbVnklcg==",
+    "installedHash": "6ab345079eaaf049c67da8335f1888b72b270991c4af15aae9620e194f435f6f",
+    "installedFramedHash": "a6f94bdd03096d0e4d40742662ddcb0e9a0cd6d53171bb2e2294be1261426c2e",
+    "runtimeDependencies": {
+      "yaml": {
+        "version": "2.9.0",
+        "integrity": "sha512-2AvhNX3mb8zd6Zy7INTtSpl1F15HW6Wnqj0srWlkKLcpYl/gMIMJiyuGq2KeI2YFxUPjdlB+3Lc10seMLtL4cA==",
+        "installedHash": "371aa3e80bad2a4b4815ee23c170895285900702f2987483a6c9d695401aef52",
+        "installedFramedHash": "74c957be0f5c5429222d9485f3ada50c59e55ed8fd07c42b6bc56c7e21d13609"
+      }
+    }
+  },
+  "hash_algorithm": "skills-cli-v1-sha256-path-content-locale-en",
+  "audit_hash_algorithm": "sha256-length-prefixed-path-content-v1",
+  "skills": {
+    "darwin-skill": {
+      "source": "alchaincyf/darwin-skill",
+      "sourceType": "github",
+      "ref": "2056abfccd924d68ae6baa9193cafff0f666260b",
+      "computedHash": "645d7272998a01fe95c0deb826fbb311e915d15fa24442fe43702c2162a7f05c",
+      "framedHash": "b64a7dab7aefc1e483ded53ee9d3a608dd978dde5204ef3d68def499a098d49d"
+    },
+    "huashu-nuwa": {
+      "source": "alchaincyf/nuwa-skill",
+      "sourceType": "github",
+      "ref": "ea4b9abfe0e60e5051ed946c70e51434402d3545",
+      "computedHash": "4fa0a975b63981c427848f86d99bc0c3244d864e09c15ebec2a1c316019d3e02",
+      "framedHash": "654108cc64aeac8333f3c5f141c4b31babc58e94c4a3c9b716509befdd744719",
+      "mutablePaths": [
+        {
+          "path": "references/nuwa-config.md",
+          "baselineSha256": "09a58cdcc7c968e70248d2715453d742b2ad19f6604f8f33321d4c286242d85e"
+        }
+      ]
+    }
+  }
+}

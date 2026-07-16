@@ -3,11 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "packageManager": "npm@10.9.4",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
+    "sync:xiaomei": "node scripts/xueqiu_edge_sync.mjs",
+    "sync:xiaomei:audit": "node scripts/xueqiu_edge_sync.mjs --force-comments --comment-posts 80",
+    "smoke:xueqiu": "node scripts/xueqiu_smoke.mjs",
     "scrape:browser": "node scripts/xueqiu_browser_scraper.mjs",
-    "check:node": "node --check scripts/xueqiu_browser_scraper.mjs"
+    "bootstrap:skills": "node scripts/bootstrap_skills.mjs",
+    "check:locks": "node scripts/bootstrap_skills.mjs --verify-locks",
+    "check:node": "node --check scripts/lib/xueqiu_core.mjs && node --check scripts/lib/cdp_session.mjs && node --check scripts/xueqiu_browser_scraper.mjs && node --check scripts/xueqiu_comments_resume.mjs && node --check scripts/xueqiu_edge_sync.mjs && node --check scripts/xueqiu_smoke.mjs && node --check scripts/xueqiu_playwright_article_fetch.mjs && node --check scripts/bootstrap_skills.mjs && node --check .claude/skills/bingbing-xiaomei-perspective/scripts/build_corpus_manifest.mjs && node --check .claude/skills/bingbing-xiaomei-perspective/scripts/validate_skill.mjs && node --check .claude/skills/dongge-perspective/scripts/build_corpus_manifest.mjs",
+    "check:cli": "node scripts/xueqiu_edge_sync.mjs --help >/dev/null && node scripts/xueqiu_smoke.mjs --help >/dev/null && node scripts/xueqiu_browser_scraper.mjs --help >/dev/null && node scripts/xueqiu_comments_resume.mjs --help >/dev/null && node scripts/xueqiu_playwright_article_fetch.mjs --help >/dev/null && python3 scripts/xueqiu_scraper.py --help >/dev/null && python3 scripts/xueqiu_incremental_sync.py --help >/dev/null",
+    "lint": "oxlint scripts tests/node .claude/skills/bingbing-xiaomei-perspective/scripts .claude/skills/dongge-perspective/scripts",
+    "test:node": "node --experimental-test-coverage --test-coverage-include='scripts/**/*.mjs' --test-coverage-lines=65 --test tests/node/*.test.mjs",
+    "test:python": "python3 -m unittest discover -s tests/python -v",
+    "test:skill": "node .claude/skills/bingbing-xiaomei-perspective/scripts/validate_skill.mjs && node .claude/skills/dongge-perspective/scripts/build_corpus_manifest.mjs",
+    "test": "npm run test:node && npm run test:python && npm run test:skill",
+    "check": "npm run check:node && npm run check:cli && npm run check:locks && npm run lint && npm test"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "oxlint": "1.73.0",
+    "playwright": "1.61.0",
+    "skills": "1.5.17"
   }
 }
