@@ -45,6 +45,7 @@ from xueqiu_scraper import (
     non_negative_record_int,
     numeric_record_id,
     pagination_complete,
+    pageable_timeline_items,
     parse_xueqiu_time,
     payload_items,
     positive_int,
@@ -797,11 +798,28 @@ def collect_timeline(
             break
         if activity is not None:
             activity["valid_responses"] += 1
+        response_items = payload_items(
+            data,
+            ("statuses", "list", "items"),
+            f"{label} timeline",
+        )
+        pageable_items = pageable_timeline_items(
+            response_items,
+            page,
+            count,
+            f"{label} timeline pagination",
+        )
+        pageable_ids = {
+            numeric_record_id(item.get("id"), f"{label} timeline")
+            for item in pageable_items
+        }
         batch = [
             normalize_post(item, user_id)
             for item in extract_posts(data, user_id)
         ]
-        observed_ids.update(item["id"] for item in batch)
+        observed_ids.update(
+            item["id"] for item in batch if item["id"] in pageable_ids
+        )
         if since_date:
             filtered = filter_since(batch, since_date)
         else:
@@ -813,7 +831,7 @@ def collect_timeline(
             data,
             page,
             count,
-            len(batch),
+            len(pageable_items),
             observed_count=len(observed_ids),
         ):
             break

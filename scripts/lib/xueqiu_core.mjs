@@ -754,6 +754,26 @@ function invalidPagination(label, message) {
   return Object.assign(new Error(`${label} ${message}`), { code: "INVALID_RESPONSE_SHAPE" });
 }
 
+export function pageableTimelineItems(items, {
+  page,
+  count,
+  label = "Timeline pagination",
+}) {
+  if (!Array.isArray(items)) throw invalidPagination(label, "items must be an array.");
+  if (!Number.isSafeInteger(page) || page < 1) throw invalidPagination(label, "received an invalid page.");
+  if (!Number.isSafeInteger(count) || count < 1) throw invalidPagination(label, "received an invalid count.");
+  if (items.length <= count) return items;
+
+  const overflow = items.length - count;
+  const pinned = page === 1
+    ? items.filter((item) => item && typeof item === "object" && !Array.isArray(item) && item.mark === 1)
+    : [];
+  if (pinned.length !== overflow) {
+    throw invalidPagination(label, "returned unexplained items beyond the requested page size.");
+  }
+  return items.filter((item) => !(item && typeof item === "object" && !Array.isArray(item) && item.mark === 1));
+}
+
 function paginationContainers(payload, label) {
   if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
     throw invalidPagination(label, "must be a JSON object.");

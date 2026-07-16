@@ -108,6 +108,111 @@ test("Edge timeline marks a full final page as truncated", async () => {
   );
 });
 
+test("Edge timeline retains a marked pinned overflow without weakening page-size checks", async () => {
+  const pinned = { ...timelineStatus(9, "2025-01-01 09:00:00"), mark: 1, type: "2" };
+  const normal = [
+    timelineStatus(2, "2026-07-14 09:00:00"),
+    timelineStatus(1, "2026-07-14 08:00:00"),
+  ];
+  const result = await fetchEdgeTimeline(
+    {
+      async send() { return runtimeJson({ statuses: [pinned, ...normal] }); },
+      async navigate() {},
+    },
+    "7143769715",
+    "posts",
+    edgeArgs(),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+  assert.deepEqual(result.items.map((item) => item.id), ["2", "1", "9"]);
+  assert.equal(result.truncated, true);
+
+  await assert.rejects(
+    fetchEdgeTimeline(
+      {
+        async send() { return runtimeJson({ statuses: [timelineStatus(9, "2025-01-01 09:00:00"), ...normal] }); },
+        async navigate() {},
+      },
+      "7143769715",
+      "posts",
+      edgeArgs(),
+      { requests: 0, errors: 0, waf: 0 },
+    ),
+    { code: "INVALID_RESPONSE_SHAPE" },
+  );
+});
+
+test("timeline acquisition hydrates article-list records without inventing interaction counts", async () => {
+  const articleListItem = {
+    id: 7,
+    created_at: "2026-07-14 09:00:00",
+    description: "article summary",
+    target: "/7143769715/7",
+    view_count: 40,
+  };
+  const detail = {
+    ...timelineStatus(7, "2026-07-14 09:00:00"),
+    text: "complete article body",
+    reply_count: 1,
+    like_count: 2,
+    retweet_count: 3,
+    view_count: 0,
+  };
+
+  let edgeCalls = 0;
+  const edge = await fetchEdgeTimeline(
+    {
+      async send() {
+        edgeCalls += 1;
+        return runtimeJson(edgeCalls === 1 ? { list: [articleListItem] } : detail);
+      },
+      async navigate() {},
+    },
+    "7143769715",
+    "articles",
+    edgeArgs(),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+  assert.equal(edgeCalls, 2);
+  assert.equal(edge.items[0].clean_text, "complete article body");
+  assert.equal(edge.items[0].reply_count, 1);
+  assert.equal(edge.items[0].view_count, 40);
+
+  let browserCalls = 0;
+  const browser = await fetchBrowserTimeline(
+    async () => {
+      browserCalls += 1;
+      return runtimeJson(browserCalls === 1 ? { list: [articleListItem] } : detail);
+    },
+    "7143769715",
+    "articles",
+    1,
+    2,
+    null,
+    0,
+  );
+  assert.equal(browserCalls, 2);
+  assert.equal(browser.items[0].clean_text, "complete article body");
+  assert.equal(browser.items[0].view_count, 40);
+
+  await assert.rejects(
+    fetchEdgeTimeline(
+      {
+        async send() {
+          return runtimeJson(this.calls++ ? { ...detail, id: 8 } : { list: [articleListItem] });
+        },
+        calls: 0,
+        async navigate() {},
+      },
+      "7143769715",
+      "articles",
+      edgeArgs(),
+      { requests: 0, errors: 0, waf: 0 },
+    ),
+    { code: "INVALID_RESPONSE_SHAPE" },
+  );
+});
+
 test("Edge timeline reaching the historical boundary is not truncated", async () => {
   const session = {
     async send() {

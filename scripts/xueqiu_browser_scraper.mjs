@@ -16,6 +16,7 @@ import {
   formatTime,
   mergeById,
   normalizeNonNegativeInteger,
+  pageableTimelineItems,
   paginationComplete,
   parseArgs,
   parseIntegerOption,
@@ -127,8 +128,18 @@ function normalizeStatus(status, userId = "", expectedId = "") {
   });
 }
 
+function hasTimelineInteractionCounts(status) {
+  return [
+    ["reply_count", "replyCount"],
+    ["like_count", "likeCount"],
+    ["retweet_count", "retweetCount"],
+    ["view_count", "viewCount"],
+  ].every((aliases) => aliases.some((field) => Object.hasOwn(status || {}, field) && status[field] !== null && status[field] !== undefined));
+}
+
 export async function fetchTimeline(send, userId, mode, pages, count, sinceDate, delayMs) {
   let items = [];
+  const observedPageableIds = new Set();
   let truncated = false;
   const endpoint = mode === "articles"
     ? "https://xueqiu.com/statuses/original/timeline.json"
@@ -139,12 +150,34 @@ export async function fetchTimeline(send, userId, mode, pages, count, sinceDate,
     console.log(`fetch ${mode} page ${page}: ${url}`);
     const data = await browserFetch(send, url, true);
     const raw = extractArrayField(data, ["statuses", "list", "items"], `${mode} timeline`);
-    for (const status of raw) items = mergeById(items, [normalizeStatus(status, userId)]);
+    const pageable = new Set(pageableTimelineItems(raw, {
+      page,
+      count,
+      label: `${mode} timeline pagination`,
+    }));
+    for (const status of raw) {
+      const expectedId = normalizeId(status?.id, `${mode} timeline status.id`);
+      const needsArticleDetail = mode === "articles" && !hasTimelineInteractionCounts(status);
+      let source = status;
+      if (needsArticleDetail) {
+        const detail = await browserFetch(send, `https://xueqiu.com/statuses/show.json?id=${expectedId}`, true);
+        source = { ...status, ...detail };
+        if (status.view_count !== null && status.view_count !== undefined) {
+          source.view_count = status.view_count;
+        } else if (status.viewCount !== null && status.viewCount !== undefined) {
+          source.view_count = status.viewCount;
+        }
+      }
+      const normalized = normalizeStatus(source, userId, expectedId);
+      items = mergeById(items, [normalized]);
+      if (pageable.has(status)) observedPageableIds.add(normalized.id);
+      if (needsArticleDetail && delayMs > 0) await new Promise((resolve) => setTimeout(resolve, delayMs));
+    }
     const complete = paginationComplete(data, {
       page,
       count,
-      itemCount: raw.length,
-      observedCount: items.length,
+      itemCount: pageable.size,
+      observedCount: observedPageableIds.size,
       label: `${mode} timeline pagination`,
     });
     if (complete) {
