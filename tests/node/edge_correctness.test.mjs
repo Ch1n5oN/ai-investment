@@ -5,6 +5,7 @@ import {
   fetchChangedPostComments,
   fetchTimeline,
   fetchUserCommentStream,
+  upgradeEdgeReplyRecord,
   userCommentStreamCanAdvance,
 } from "../../scripts/xueqiu_edge_sync.mjs";
 import { updatePostReplyCounts } from "../../scripts/lib/xueqiu_core.mjs";
@@ -77,6 +78,65 @@ function rawStatus(overrides = {}) {
     ...overrides,
   };
 }
+
+function predecessorReply(overrides = {}) {
+  return {
+    schema_version: 1,
+    id: 900,
+    created_at_raw: "2026-07-14 09:30:00",
+    created_at: "2026-07-14T09:30:00+08:00",
+    text: "reply",
+    clean_text: "reply",
+    reply_to: null,
+    in_reply_to_comment_id: 800,
+    post_id: 100,
+    post_created_at: "2026-07-14T09:00:00+08:00",
+    post_title: "",
+    post_text: "post",
+    post_target: `https://xueqiu.com/${USER_ID}/100`,
+    like_count: 0,
+    reply_count: 0,
+    origin: "post_comments",
+    source: "",
+    ...overrides,
+  };
+}
+
+test("Edge reply preflight migrates only the known schema-1 predecessor", () => {
+  const migrated = upgradeEdgeReplyRecord(predecessorReply(), "stored reply[0]");
+
+  assert.equal(migrated.record_contract, "normalized_v1");
+  assert.equal(migrated.id, "900");
+  assert.equal(migrated.post_id, "100");
+  assert.equal(migrated.in_reply_to_comment_id, "800");
+  assert.equal(migrated.post_created_at_raw, "2026-07-14T09:00:00+08:00");
+  assert.equal(migrated.post_created_at, "2026-07-14T09:00:00+08:00");
+  assert.deepEqual(migrated.legacy_migrated_fields, [
+    "id",
+    "in_reply_to_comment_id",
+    "post_created_at_raw",
+    "post_id",
+    "record_contract",
+  ]);
+});
+
+test("Edge reply preflight does not repair malformed current-contract records", () => {
+  const current = predecessorReply({
+    id: "900",
+    post_id: "100",
+    in_reply_to_comment_id: "800",
+    record_contract: "normalized_v1",
+  });
+  assert.throws(() => upgradeEdgeReplyRecord(current), { code: "INVALID_RECORD" });
+  assert.throws(
+    () => upgradeEdgeReplyRecord(predecessorReply({ unsupported: true })),
+    { code: "INVALID_RECORD" },
+  );
+  assert.throws(
+    () => upgradeEdgeReplyRecord(predecessorReply({ legacy_migrated_fields: ["x", "x"] })),
+    { code: "INVALID_RECORD" },
+  );
+});
 
 test("HTTP 200 empty comments do not confirm a post whose reply count is positive", async () => {
   const result = await fetchChangedPostComments(

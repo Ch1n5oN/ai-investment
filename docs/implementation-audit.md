@@ -34,6 +34,12 @@ Audit date: 2026-07-17
   matching status-detail endpoint. Missing detail counts or a mismatched detail
   ID fails the complete article stream instead of inventing values.
 - Existing corpus records are validated individually before merge; missing IDs, invalid counts, duplicate IDs, or malformed records fail closed instead of being dropped.
+- Edge sync preflights all stored post, article, and reply records before opening
+  a CDP session or mutating corpus/state output. Its one supported reply
+  predecessor (schema 1 without `record_contract` or
+  `post_created_at_raw`) is upgraded with string IDs, a preserved raw post
+  timestamp, and an explicit `legacy_migrated_fields` audit trail; malformed
+  current-contract records still fail closed.
 - Timestamps are normalized to timezone-aware `Asia/Shanghai` values while preserving the raw timestamp; the raw value is authoritative and a conflicting normalized value fails closed.
 - Every post/reply record carries a canonical Xueqiu HTTPS URL. Known user/post IDs can repair a missing target, while external hosts, credentials, and non-standard ports are rejected.
 - Normalized records and sync reports declare schema version 1; maintained
