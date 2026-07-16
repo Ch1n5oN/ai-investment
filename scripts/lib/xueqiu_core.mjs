@@ -774,6 +774,34 @@ export function pageableTimelineItems(items, {
   return items.filter((item) => !(item && typeof item === "object" && !Array.isArray(item) && item.mark === 1));
 }
 
+export function advanceSinceBoundary(previous, records, sinceEpoch) {
+  const state = previous || {
+    ordered: true,
+    lastEpoch: null,
+    candidate: false,
+    confirmed: false,
+  };
+  if (sinceEpoch === null) return { ...state, confirmed: false };
+
+  let ordered = state.ordered;
+  let lastEpoch = state.lastEpoch;
+  const epochs = [];
+  for (const record of records) {
+    const epoch = toEpochMs(record?.created_at);
+    epochs.push(epoch);
+    if (epoch === null || (lastEpoch !== null && epoch > lastEpoch)) ordered = false;
+    if (epoch !== null) lastEpoch = epoch;
+  }
+  const allBefore = epochs.length > 0
+    && epochs.every((epoch) => epoch !== null && epoch < sinceEpoch);
+  return {
+    ordered,
+    lastEpoch,
+    candidate: ordered && epochs.some((epoch) => epoch !== null && epoch < sinceEpoch),
+    confirmed: state.candidate && ordered && allBefore,
+  };
+}
+
 function paginationContainers(payload, label) {
   if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
     throw invalidPagination(label, "must be a JSON object.");

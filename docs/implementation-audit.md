@@ -27,6 +27,10 @@ Audit date: 2026-07-17
 - Browser IDs mode validates HTML status, content type, WAF markers, and post-body shape; an all-failed batch exits `1` without creating or replacing corpus output, while usable partial output exits `2`.
 - `--reply-pages` is wired into actual pagination.
 - Full final timeline pages and comment page-limit truncation return `needs_verification`; truncated posts do not advance Edge reply-count checkpoints.
+- Incremental timeline scans confirm a `since-date` boundary only after a second
+  pageable batch remains entirely older and the non-pinned sequence stays in
+  descending timestamp order. A single old item, an old pin, an unknown time,
+  or out-of-order pages cannot hide later records or suppress truncation.
 - A marked pinned timeline record returned outside the requested page size is
   retained in the corpus but excluded from pagination accounting; unmarked or
   otherwise unexplained overflow still fails closed.
