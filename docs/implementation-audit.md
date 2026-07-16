@@ -10,6 +10,9 @@ Audit date: 2026-07-17
   `requirements-lock.txt` is the sole runtime installation input, and tests prove
   that its hashed installed closure satisfies the declared ranges. The redundant
   unpinned `requirements.txt` entrypoint was removed to prevent manifest drift.
+- Python lock generation uses a separately hash-locked `pip-tools 7.5.3`
+  environment. CI recompiles the runtime, audit, and maintenance locks and rejects
+  any diff before auditing all three dependency closures.
 - `skills-lock.json` pins full commits, the local installer and its runtime dependencies. Upstream-compatible and length-prefixed hashes are both checked; installation failures roll back the complete local Skill tree.
 - A clean directory install from both lock files completed successfully before handoff.
 
@@ -68,8 +71,10 @@ Audit date: 2026-07-17
 - JSON manifests/schemas and GitHub workflow YAML were parsed independently.
 - `npm audit` reported zero known vulnerabilities. Python dependencies are
   hash-locked and range-validated; a separate CI job installs the independently
-  hash-locked `pip-audit` tool closure and audits both `requirements-lock.txt` and
-  `requirements-audit-lock.txt` without resolving or installing the runtime
+  hash-locked maintenance closure, verifies lock reproducibility, installs the
+  independently hash-locked `pip-audit` tool closure, and audits
+  `requirements-lock.txt`, `requirements-audit-lock.txt`, and
+  `requirements-maintenance-lock.txt` without resolving or installing the runtime
   dependencies.
 - The first Python advisory run identified 2026 advisories in `idna 3.11` and
   `urllib3 2.6.3`. The runtime lock now uses `idna 3.18`, `urllib3 2.7.0`, and

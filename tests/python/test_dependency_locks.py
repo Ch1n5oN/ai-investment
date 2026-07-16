@@ -110,6 +110,17 @@ class DependencyLockTests(unittest.TestCase):
         self.assertNotIn("pip-audit", runtime)
         self.assertTrue(all(hashes.values()))
 
+    def test_lock_generation_tooling_has_an_independent_hashed_lock(self):
+        runtime, _ = parse_lock((ROOT / "requirements-lock.txt").read_text(encoding="utf-8"))
+        maintenance, hashes = parse_lock(
+            (ROOT / "requirements-maintenance-lock.txt").read_text(encoding="utf-8")
+        )
+        maintenance_input = (ROOT / "requirements-maintenance.in").read_text(encoding="utf-8")
+        self.assertEqual(maintenance["pip-tools"], "7.5.3")
+        self.assertRegex(maintenance_input, r"(?m)^pip-tools==7\.5\.3$")
+        self.assertNotIn("pip-tools", runtime)
+        self.assertTrue(all(hashes.values()))
+
     def test_pyproject_ranges_and_installed_runtime_closure_match_hashed_lock(self):
         project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
         locked, hashes = parse_lock((ROOT / "requirements-lock.txt").read_text(encoding="utf-8"))

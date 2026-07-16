@@ -66,6 +66,33 @@ python3 -m venv /tmp/ai-investment-pip-audit
   --disable-pip --require-hashes -r requirements-audit-lock.txt
 ```
 
+Regenerate Python locks only with the separately hash-locked maintenance
+environment:
+
+```bash
+python3 -m venv /tmp/ai-investment-lock-tools
+/tmp/ai-investment-lock-tools/bin/python -m pip install \
+  --require-hashes -r requirements-maintenance-lock.txt
+/tmp/ai-investment-lock-tools/bin/pip-compile \
+  --generate-hashes --output-file=requirements-lock.txt \
+  --strip-extras pyproject.toml
+/tmp/ai-investment-lock-tools/bin/pip-compile \
+  --allow-unsafe --generate-hashes \
+  --output-file=requirements-audit-lock.txt \
+  --strip-extras requirements-audit.in
+/tmp/ai-investment-lock-tools/bin/pip-compile \
+  --allow-unsafe --generate-hashes \
+  --output-file=requirements-maintenance-lock.txt \
+  --strip-extras requirements-maintenance.in
+```
+
+`requirements-maintenance.in` pins `pip-tools`; its generated lock also pins and
+hashes the complete lock-generation closure. CI installs this closure in an
+isolated environment, recompiles all three Python locks, rejects any resulting
+diff, and audits the maintenance closure for known vulnerabilities. After changing
+the `pip-tools` pin itself, recreate the isolated environment from the new
+maintenance lock and run all three commands again before committing.
+
 Node browser scraper:
 
 ```bash

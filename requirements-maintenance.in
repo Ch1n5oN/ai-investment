@@ -1,0 +1,2 @@
+# Isolated lock-generation tooling. Keep this out of the application runtime closure.
+pip-tools==7.5.3

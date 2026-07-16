@@ -59,6 +59,28 @@ jobs:
           cache-dependency-path: |
             requirements-lock.txt
             requirements-audit-lock.txt
+            requirements-maintenance-lock.txt
+
+      - name: Verify Python locks reproduce
+        run: |
+          python -m venv /tmp/ai-investment-lock-tools
+          /tmp/ai-investment-lock-tools/bin/python -m pip install \
+            --require-hashes -r requirements-maintenance-lock.txt
+          /tmp/ai-investment-lock-tools/bin/pip-compile \
+            --generate-hashes --output-file=requirements-lock.txt \
+            --strip-extras pyproject.toml
+          /tmp/ai-investment-lock-tools/bin/pip-compile \
+            --allow-unsafe --generate-hashes \
+            --output-file=requirements-audit-lock.txt \
+            --strip-extras requirements-audit.in
+          /tmp/ai-investment-lock-tools/bin/pip-compile \
+            --allow-unsafe --generate-hashes \
+            --output-file=requirements-maintenance-lock.txt \
+            --strip-extras requirements-maintenance.in
+          git diff --exit-code -- \
+            requirements-lock.txt \
+            requirements-audit-lock.txt \
+            requirements-maintenance-lock.txt
 
       - name: Install pinned audit tooling
         run: python -m pip install --require-hashes -r requirements-audit-lock.txt
@@ -68,3 +90,6 @@ jobs:
 
       - name: Audit the locked Python audit-tooling closure
         run: python -m pip_audit --disable-pip --require-hashes -r requirements-audit-lock.txt
+
+      - name: Audit the locked Python maintenance-tooling closure
+        run: python -m pip_audit --disable-pip --require-hashes -r requirements-maintenance-lock.txt
