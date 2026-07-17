@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-17T01:05:36+08:00",
+  "generated_at": "2026-07-17T23:52:46+08:00",
   "skill": "SKILL.md",
-  "skill_sha256": "06fc6f24bd41488039a87b146ea6c7e74459879834292112241d152efabd428f",
+  "skill_sha256": "ef30725996547676d2c0231cf30d23d3f1ebb96432ede99c5a922e3e66acc75f",
   "claims": {
     "articles": 118,
     "framework_links": 83,
     "reported_official_podcasts": 2,
-    "timeline_2026": 1639,
+    "timeline_2026": 1645,
     "replies_baseline": 1512,
     "replies_incremental": 413,
     "replies_total": 1925,
-    "cutoff_date": "2026-07-14"
+    "cutoff_date": "2026-07-17"
   },
   "evidence": [
     {
       "path": "references/sources/corpus-manifest.json",
       "role": "corpus_manifest",
-      "sha256": "3465a9b80aac3d5ae1ca71d18d2dab045cb64b1d4931946e889f692080cc5537"
+      "sha256": "aa451d366ac2b6fdcdbda25bc0782eb790f74d99f5f46613d4c995a431170f52"
     },
     {
       "path": "references/research/01-writings.md",
@@ -47,12 +47,12 @@
     {
       "path": "references/research/06-timeline.md",
       "role": "research_timeline",
-      "sha256": "53613daf0540e40900211835a69cb1d8ebe7bbf5f59972a43f269a474c5b239c"
+      "sha256": "5c394d89ce5e6d7403ef52e1a78f8a90cd6999f2b0372c6e8640bb0513bea37f"
     },
     {
-      "path": "references/research/33-corpus-analysis-through-2026-07-14.md",
+      "path": "references/research/33-corpus-analysis-through-2026-07-17.md",
       "role": "corpus_analysis",
-      "sha256": "8850a812f4f35e110092d2be2092c6dcb928c237a87ce14ceadb7fd26825c657"
+      "sha256": "a166aba77e83915c1c4a8f04457568e2c93192ed9263d7cca227059a45e9bf12"
     },
     {
       "path": "references/research/34-complete-redistill-2026-07-15.md",
@@ -63,6 +63,11 @@
       "path": "references/research/35-complete-redistill-validation-2026-07-15.md",
       "role": "redistillation_validation",
       "sha256": "eb0beeb73b92033794c9c0ca5cea4f7bb2c4b2bbacc2ca9d8462d8cc712238a4"
+    },
+    {
+      "path": "references/research/36-incremental-summary-2026-07-17.md",
+      "role": "incremental_research",
+      "sha256": "6d8fa212c14644dfe88a64c7084f5dbc18b4bcb6956f3061edd66ba5d238066f"
     },
     {
       "path": "evaluations/cases.json",

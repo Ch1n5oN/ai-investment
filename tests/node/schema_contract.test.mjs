@@ -133,6 +133,25 @@ test("sync report schema is executable in CI", () => {
     interface_drift: { detected: false, signals: [] },
   };
   assert.equal(validateReport(report), true, schemaErrors(validateReport));
+  const visibilityGap = {
+    post_id: "400171105",
+    declared_count: 57,
+    visible_count: 56,
+    unavailable_count: 1,
+    count_source: "comment_endpoint_final_page",
+  };
+  assert.equal(validateReport({
+    ...report,
+    comment_visibility_gaps: [visibilityGap],
+  }), true, schemaErrors(validateReport));
+  assert.equal(validateReport({
+    ...report,
+    comment_visibility_gaps: [{ ...visibilityGap, unavailable_count: 0 }],
+  }), false);
+  assert.equal(validateReport({
+    ...report,
+    comment_visibility_gaps: [{ ...visibilityGap, extra: true }],
+  }), false);
   assert.equal(validateReport({ ...report, user_id: "" }), false);
   const unfinished = structuredClone(report);
   delete unfinished.finished_at;

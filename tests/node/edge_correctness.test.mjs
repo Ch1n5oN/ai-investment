@@ -235,6 +235,105 @@ test("short comment reads below declared reply_count remain unverified", async (
   assert.deepEqual(result.confirmed, []);
 });
 
+test("explicitly terminated inaccessible comments are checkpointed with a visibility gap", async () => {
+  const result = await fetchChangedPostComments(
+    sessionReturning({
+      page: 1,
+      count: 2,
+      maxPage: 1,
+      comments: [{ id: "900", status_id: "100", user: { id: "other" } }],
+    }),
+    USER_ID,
+    [post({ reply_count: 2 })],
+    {},
+    args(),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+
+  assert.deepEqual(result.truncated, []);
+  assert.deepEqual(result.unverified, []);
+  assert.deepEqual(result.confirmed, ["100"]);
+  assert.deepEqual(result.visibilityGaps, [{
+    post_id: "100",
+    declared_count: 2,
+    visible_count: 1,
+    unavailable_count: 1,
+    count_source: "comment_endpoint_final_page",
+  }]);
+});
+
+test("the explicit final page count governs a visibility gap", async () => {
+  const pages = [
+    {
+      page: 1,
+      count: 2,
+      maxPage: 2,
+      comments: [{ id: "900", status_id: "100", user: { id: "other" } }],
+    },
+    {
+      page: 2,
+      count: 3,
+      maxPage: 2,
+      comments: [{ id: "901", status_id: "100", user: { id: "other" } }],
+    },
+  ];
+  let call = 0;
+  const result = await fetchChangedPostComments(
+    {
+      async send() { return runtimeJson(pages[call++]); },
+      async navigate() {},
+    },
+    USER_ID,
+    [post({ reply_count: 3 })],
+    {},
+    args({ commentPages: 2, commentCount: 1 }),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+
+  assert.deepEqual(result.unverified, []);
+  assert.deepEqual(result.confirmed, ["100"]);
+  assert.deepEqual(result.visibilityGaps, [{
+    post_id: "100",
+    declared_count: 3,
+    visible_count: 2,
+    unavailable_count: 1,
+    count_source: "comment_endpoint_final_page",
+  }]);
+});
+
+test("visible comments exceeding the explicit final count remain unverified", async () => {
+  const pages = [
+    {
+      page: 1,
+      count: 2,
+      maxPage: 2,
+      comments: [{ id: "900", status_id: "100", user: { id: "other" } }],
+    },
+    {
+      page: 2,
+      count: 1,
+      maxPage: 2,
+      comments: [{ id: "901", status_id: "100", user: { id: "other" } }],
+    },
+  ];
+  let call = 0;
+  const result = await fetchChangedPostComments(
+    {
+      async send() { return runtimeJson(pages[call++]); },
+      async navigate() {},
+    },
+    USER_ID,
+    [post({ reply_count: 2 })],
+    {},
+    args({ commentPages: 2, commentCount: 1 }),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+
+  assert.deepEqual(result.unverified, ["100"]);
+  assert.deepEqual(result.confirmed, []);
+  assert.deepEqual(result.visibilityGaps, []);
+});
+
 test("a full configured final comment page needs explicit termination evidence", async () => {
   const fullPage = {
     comments: [{

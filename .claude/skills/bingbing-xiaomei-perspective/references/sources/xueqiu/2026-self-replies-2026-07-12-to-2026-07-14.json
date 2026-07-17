@@ -7,18 +7,22 @@
     "text": "回复<a href=\"https://xueqiu.com/n/仙居杨梅最初的梦\" target=\"_blank\">@仙居杨梅最初的梦</a>: 以我为主，看汇率，<br/>汇率升值就继续按中央加杠杆思路做。",
     "clean_text": "回复@仙居杨梅最初的梦: 以我为主，看汇率，\n汇率升值就继续按中央加杠杆思路做。",
     "reply_to": null,
-    "in_reply_to_comment_id": null,
+    "in_reply_to_comment_id": "415948784",
     "post_id": "400171105",
-    "post_created_at_raw": "2026-07-14T23:09:23+08:00",
+    "post_created_at_raw": 1784041763000,
     "post_created_at": "2026-07-14T23:09:23+08:00",
     "post_title": "",
     "post_text": "最近发帖有点多。休息一下，停更几天。",
     "post_target": "https://xueqiu.com/7143769715/400171105",
-    "like_count": 11,
+    "like_count": 31,
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -28,18 +32,22 @@
     "text": "回复<a href=\"https://xueqiu.com/n/仙居杨梅最初的梦\" target=\"_blank\">@仙居杨梅最初的梦</a>: 看人民币汇率，今天重击，有望重回升值趋势。",
     "clean_text": "回复@仙居杨梅最初的梦: 看人民币汇率，今天重击，有望重回升值趋势。",
     "reply_to": null,
-    "in_reply_to_comment_id": null,
+    "in_reply_to_comment_id": "415948784",
     "post_id": "400171105",
-    "post_created_at_raw": "2026-07-14T23:09:23+08:00",
+    "post_created_at_raw": 1784041763000,
     "post_created_at": "2026-07-14T23:09:23+08:00",
     "post_title": "",
     "post_text": "最近发帖有点多。休息一下，停更几天。",
     "post_target": "https://xueqiu.com/7143769715/400171105",
-    "like_count": 6,
+    "like_count": 16,
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -49,21 +57,26 @@
     "text": "回复<a href=\"https://xueqiu.com/n/韭菜青年的灵魂导师\" target=\"_blank\">@韭菜青年的灵魂导师</a>: 85拿下日，91拿下苏，92拿下英法，导致欧盟成立制衡，93拿下韩，97最后目标，兔，没拿下，平手。00崩盘，03wto让步。<img src=\"//assets.imedao.com/ugc/images/face/emoji_51.png?v=1\" title=\"[偷笑]\" alt=\"[偷笑]\" height=\"24\" />",
     "clean_text": "回复@韭菜青年的灵魂导师: 85拿下日，91拿下苏，92拿下英法，导致欧盟成立制衡，93拿下韩，97最后目标，兔，没拿下，平手。00崩盘，03wto让步。",
     "reply_to": null,
-    "in_reply_to_comment_id": null,
+    "in_reply_to_comment_id": "415930786",
     "post_id": "400140532",
-    "post_created_at_raw": "2026-07-14T20:20:13+08:00",
+    "post_created_at_raw": 1784031613000,
     "post_created_at": "2026-07-14T20:20:13+08:00",
     "post_title": "",
     "post_text": "灵魂问题，\n1，韩国股市去杠杆，谁得利。\n2，亚太金融风险演绎，谁得利。\n3，石油危机冲击，哪个地区冲击最大？\n4，中欧贸易摩擦，谁被冲击？\n5，14国重提南海裁定，针对谁？\n6，海力士ADR高溢价随后做空，针对谁？\n7，为何央妈要动用外汇支持H市，历史说外汇支持是什么时候什么事件。",
     "post_target": "https://xueqiu.com/7143769715/400140532",
-    "like_count": 8,
+    "like_count": 10,
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
+    "record_contract": "normalized_v1",
     "id": "415922632",
     "created_at_raw": 1784032300000,
     "created_at": "2026-07-14T20:31:40+08:00",
@@ -80,8 +93,7 @@
     "like_count": 77,
     "reply_count": 1,
     "origin": "post_comments",
-    "source": "雪球",
-    "record_contract": "normalized_v1"
+    "source": "雪球"
   },
   {
     "schema_version": 1,
@@ -93,19 +105,24 @@
     "reply_to": null,
     "in_reply_to_comment_id": null,
     "post_id": "400123004",
-    "post_created_at_raw": "2026-07-14T18:43:33+08:00",
+    "post_created_at_raw": 1784025813000,
     "post_created_at": "2026-07-14T18:43:33+08:00",
     "post_title": "",
     "post_text": "7月上半月盘面观察总结，\n1，走势同步伴随韩国杠杆爆破下跌，国内量化锚定日韩，同涨同跌，波动巨大。集中在，国外链。量化同质化危害悬在头顶。\n2，业绩报陆续发布，新登老登下跌过程，挣的假钱的业绩大增个股开始反弹，市场K型分化有所减弱。但是仅仅是对冲还是真走出风格漂移，其实还需要观察。\n3，市场暴涨暴跌频繁，交易难度并没有下降。新登老登还有各种莫名其妙大跌，都是流动性挤压，流动性衰竭引发，市场不看基本面，失去定价逻辑。\n4，根据6月月报，做空的第一阶段，7-1到7-13，7-14场外有利信息开始增加，尤其是政策相关，这与接下来事件相关。期待下半月国内的一些好的方面，能带动信心恢复。\n5，如果量化锚定海力士波动，很容易被外部势力利用而引导国内量化做空。传言韩国大量杠杆爆仓强制平仓，午盘韩国紧急干预，调整了平仓线，同步调查做空行为，缓和了一些恐慌紧张。如果传言属实，接下来强制去杠杆，还会经历一次卖盘集中考验。传言这部分卖出会由政府接盘兜底。听其言，观其行。\n6，宏观风险的各种因子，或者数据，或者不确定性，营造的收割氛围并没有解除。这种未知风险冲击的预期，需要一定外部力量干预缓和。金融war不能让定价权拱手与人。不然市场岌岌可危。目前看，k型分化的市场危害众所周知，希望各种预期管理，让新登老登上涨都有一席之地。",
     "post_target": "https://xueqiu.com/7143769715/400123004",
-    "like_count": 15,
+    "like_count": 19,
     "reply_count": 3,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
+    "record_contract": "normalized_v1",
     "id": "415839403",
     "created_at_raw": 1784008265000,
     "created_at": "2026-07-14T13:51:05+08:00",
@@ -122,8 +139,7 @@
     "like_count": 1,
     "reply_count": 0,
     "origin": "post_comments",
-    "source": "雪球",
-    "record_contract": "normalized_v1"
+    "source": "雪球"
   },
   {
     "schema_version": 1,
@@ -133,9 +149,9 @@
     "text": "回复<a href=\"https://xueqiu.com/n/麦穗33\" target=\"_blank\">@麦穗33</a>: <img src=\"//assets.imedao.com/ugc/images/face/emoji_38_flower.png?v=1\" title=\"[献花花]\" alt=\"[献花花]\" height=\"24\" />从危机中学习，成长，终究会得到不一样的感悟。这在网文叫做，燃烧本源，极尽升华？",
     "clean_text": "回复@麦穗33: 从危机中学习，成长，终究会得到不一样的感悟。这在网文叫做，燃烧本源，极尽升华？",
     "reply_to": null,
-    "in_reply_to_comment_id": null,
+    "in_reply_to_comment_id": "415816181",
     "post_id": "400023065",
-    "post_created_at_raw": "2026-07-14T11:36:10+08:00",
+    "post_created_at_raw": 1784000170000,
     "post_created_at": "2026-07-14T11:36:10+08:00",
     "post_title": "",
     "post_text": "收盘总结，\n从交易层面看，\n有一股力量引导做空恐慌。",
@@ -144,7 +160,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -154,18 +174,22 @@
     "text": "回复<a href=\"https://xueqiu.com/n/憨憨胖\" target=\"_blank\">@憨憨胖</a>: <img src=\"//assets.imedao.com/ugc/images/face/emoji_51.png?v=1\" title=\"[偷笑]\" alt=\"[偷笑]\" height=\"24\" /><img src=\"//assets.imedao.com/ugc/images/face/emoji_38_flower.png?v=1\" title=\"[献花花]\" alt=\"[献花花]\" height=\"24\" />唯一看懂，金融war一部分",
     "clean_text": "回复@憨憨胖: 唯一看懂，金融war一部分",
     "reply_to": null,
-    "in_reply_to_comment_id": null,
+    "in_reply_to_comment_id": "415815286",
     "post_id": "400023065",
-    "post_created_at_raw": "2026-07-14T11:36:10+08:00",
+    "post_created_at_raw": 1784000170000,
     "post_created_at": "2026-07-14T11:36:10+08:00",
     "post_title": "",
     "post_text": "收盘总结，\n从交易层面看，\n有一股力量引导做空恐慌。",
     "post_target": "https://xueqiu.com/7143769715/400023065",
-    "like_count": 8,
+    "like_count": 9,
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -175,9 +199,9 @@
     "text": "回复<a href=\"https://xueqiu.com/n/littleprince913\" target=\"_blank\">@littleprince913</a>: 市场K型分化，非科技盈利股，都认为挣的假钱。<img src=\"//assets.imedao.com/ugc/images/face/emoji_51.png?v=1\" title=\"[偷笑]\" alt=\"[偷笑]\" height=\"24\" />而3月对冲很显然是热钱推动，因此热钱逃离，就形成过山车。但是，企业真正的价值，以及未来合理的估值，随着市场风格变化，应该会得到修复。只是a股，情绪波动极大，涨了吹，跌了踩，短期内对价值投资者极为不利。因此，这类个股只能长线。",
     "clean_text": "回复@littleprince913: 市场K型分化，非科技盈利股，都认为挣的假钱。而3月对冲很显然是热钱推动，因此热钱逃离，就形成过山车。但是，企业真正的价值，以及未来合理的估值，随着市场风格变化，应该会得到修复。只是a股，情绪波动极大，涨了吹，跌了踩，短期内对价值投资者极为不利。因此，这类个股只能长线。",
     "reply_to": null,
-    "in_reply_to_comment_id": null,
+    "in_reply_to_comment_id": "415813509",
     "post_id": "400015915",
-    "post_created_at_raw": "2026-07-14T11:16:24+08:00",
+    "post_created_at_raw": 1783998984000,
     "post_created_at": "2026-07-14T11:16:24+08:00",
     "post_title": "",
     "post_text": "华正新材与生益科技砸盘，10:44\n通源石油直接爆拉，10:44\n这精准的无话可说。\n也只能怪我筹码太少，石油砸不死。\n想阻碍这种恐慌情绪演绎，也是尽力了。",
@@ -186,7 +210,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -196,9 +224,9 @@
     "text": "回复<a href=\"https://xueqiu.com/n/littleprince913\" target=\"_blank\">@littleprince913</a>: 她的长线股。还在的。不过成本极低。<br/>但这不是我长线股，<br/>我个人配置更多是产业思维。",
     "clean_text": "回复@littleprince913: 她的长线股。还在的。不过成本极低。\n但这不是我长线股，\n我个人配置更多是产业思维。",
     "reply_to": null,
-    "in_reply_to_comment_id": null,
+    "in_reply_to_comment_id": "415813509",
     "post_id": "400015915",
-    "post_created_at_raw": "2026-07-14T11:16:24+08:00",
+    "post_created_at_raw": 1783998984000,
     "post_created_at": "2026-07-14T11:16:24+08:00",
     "post_title": "",
     "post_text": "华正新材与生益科技砸盘，10:44\n通源石油直接爆拉，10:44\n这精准的无话可说。\n也只能怪我筹码太少，石油砸不死。\n想阻碍这种恐慌情绪演绎，也是尽力了。",
@@ -207,7 +235,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -217,9 +249,9 @@
     "text": "回复<a href=\"https://xueqiu.com/n/littleprince913\" target=\"_blank\">@littleprince913</a>: 第三，当下的石油波动，并非供需。而是川普反复无常画K线。这是政治与操纵。<img src=\"//assets.imedao.com/ugc/images/face/emoji_51.png?v=1\" title=\"[偷笑]\" alt=\"[偷笑]\" height=\"24\" />",
     "clean_text": "回复@littleprince913: 第三，当下的石油波动，并非供需。而是川普反复无常画K线。这是政治与操纵。",
     "reply_to": null,
-    "in_reply_to_comment_id": null,
+    "in_reply_to_comment_id": "415808094",
     "post_id": "400015915",
-    "post_created_at_raw": "2026-07-14T11:16:24+08:00",
+    "post_created_at_raw": 1783998984000,
     "post_created_at": "2026-07-14T11:16:24+08:00",
     "post_title": "",
     "post_text": "华正新材与生益科技砸盘，10:44\n通源石油直接爆拉，10:44\n这精准的无话可说。\n也只能怪我筹码太少，石油砸不死。\n想阻碍这种恐慌情绪演绎，也是尽力了。",
@@ -228,7 +260,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -238,9 +274,9 @@
     "text": "回复<a href=\"https://xueqiu.com/n/littleprince913\" target=\"_blank\">@littleprince913</a>: 第二，霍尔木兹海峡危机，我国石油进口分布广泛，该地区依赖度降低，石油冲击理应对我国影响较小，但是资本市场有放大作用。<img src=\"//assets.imedao.com/ugc/images/face/emoji_51.png?v=1\" title=\"[偷笑]\" alt=\"[偷笑]\" height=\"24\" />石油波动影响物价，我国也会宏观调控，以应对波动。因此，这里不是收益与否的问题。",
     "clean_text": "回复@littleprince913: 第二，霍尔木兹海峡危机，我国石油进口分布广泛，该地区依赖度降低，石油冲击理应对我国影响较小，但是资本市场有放大作用。石油波动影响物价，我国也会宏观调控，以应对波动。因此，这里不是收益与否的问题。",
     "reply_to": null,
-    "in_reply_to_comment_id": null,
+    "in_reply_to_comment_id": "415808094",
     "post_id": "400015915",
-    "post_created_at_raw": "2026-07-14T11:16:24+08:00",
+    "post_created_at_raw": 1783998984000,
     "post_created_at": "2026-07-14T11:16:24+08:00",
     "post_title": "",
     "post_text": "华正新材与生益科技砸盘，10:44\n通源石油直接爆拉，10:44\n这精准的无话可说。\n也只能怪我筹码太少，石油砸不死。\n想阻碍这种恐慌情绪演绎，也是尽力了。",
@@ -249,7 +285,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -259,18 +299,22 @@
     "text": "回复<a href=\"https://xueqiu.com/n/littleprince913\" target=\"_blank\">@littleprince913</a>: 我国不是产油国。原油第二大进口国。<br/>三桶油质地不错，但是其他石油个股质地极差。<br/>目前市场情绪恐慌，<br/>极差的石油逆势暴涨会加剧恐慌，<br/>那么高位科技套牢盘，解套真的遥遥无期了。<br/>科技股推动指数的上涨，<br/>指数的下跌，也会引发其他非科技板块的估值下修。因此，这是做空行为。",
     "clean_text": "回复@littleprince913: 我国不是产油国。原油第二大进口国。\n三桶油质地不错，但是其他石油个股质地极差。\n目前市场情绪恐慌，\n极差的石油逆势暴涨会加剧恐慌，\n那么高位科技套牢盘，解套真的遥遥无期了。\n科技股推动指数的上涨，\n指数的下跌，也会引发其他非科技板块的估值下修。因此，这是做空行为。",
     "reply_to": null,
-    "in_reply_to_comment_id": null,
+    "in_reply_to_comment_id": "415808094",
     "post_id": "400015915",
-    "post_created_at_raw": "2026-07-14T11:16:24+08:00",
+    "post_created_at_raw": 1783998984000,
     "post_created_at": "2026-07-14T11:16:24+08:00",
     "post_title": "",
     "post_text": "华正新材与生益科技砸盘，10:44\n通源石油直接爆拉，10:44\n这精准的无话可说。\n也只能怪我筹码太少，石油砸不死。\n想阻碍这种恐慌情绪演绎，也是尽力了。",
     "post_target": "https://xueqiu.com/7143769715/400015915",
-    "like_count": 22,
+    "like_count": 23,
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -280,9 +324,9 @@
     "text": "回复<a href=\"https://xueqiu.com/n/麦穗33\" target=\"_blank\">@麦穗33</a>: 债务膨胀速度过快＝印钞票泛滥＝热钱增多＝金融狂热投机增多＝操纵市场",
     "clean_text": "回复@麦穗33: 债务膨胀速度过快＝印钞票泛滥＝热钱增多＝金融狂热投机增多＝操纵市场",
     "reply_to": null,
-    "in_reply_to_comment_id": null,
+    "in_reply_to_comment_id": "415807495",
     "post_id": "400012596",
-    "post_created_at_raw": "2026-07-14T11:08:53+08:00",
+    "post_created_at_raw": 1783998533000,
     "post_created_at": "2026-07-14T11:08:53+08:00",
     "post_title": "",
     "post_text": "宏观让你控制仓位，\n微观让你谨慎交易。\n宏观贴提过多次，希望反复看。\n你不看，起码看一眼10年期美国国债。\n目前4.62，依旧是红线4.5以上，\n这说明，随时可能出现新的风险，\n我也不知道是啥。\n微观贴，比如今天的帖子，对于盘面的变化的解读，然后从体系三要素不利因素，亏钱认知，亏钱效应等我的体系防御性观点去思考变化，从而拒绝平庸的交易。\n昨天提过，\n宏观决定仓位，\n仓位决定抗风险能力，\n而交易体系决定交易能力。\n我的交易体系是深度熊市建立的，\n因此是防御体系。并非进攻。\n主要是践行买入不败，减少平庸交易，识别风险减弱的节点，思考市场理性与非理性的界限等等。\n因此，观察，印证，再交易，目前处于观察市场的过程。帖子反应这种观察变化。",
@@ -291,7 +335,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -312,7 +360,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -333,7 +385,11 @@
     "reply_count": 1,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -354,7 +410,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -375,7 +435,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -396,7 +460,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -417,7 +485,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -438,7 +510,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -459,7 +535,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -480,7 +560,11 @@
     "reply_count": 5,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -501,7 +585,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -522,7 +610,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -543,7 +635,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -564,7 +660,11 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   },
   {
     "schema_version": 1,
@@ -585,6 +685,10 @@
     "reply_count": 0,
     "origin": "post_comments",
     "source": "雪球",
-    "record_contract": "normalized_v1"
+    "record_contract": "normalized_v1",
+    "legacy_migrated_fields": [
+      "post_created_at_raw",
+      "record_contract"
+    ]
   }
 ]

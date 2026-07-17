@@ -19,9 +19,10 @@ export const requiredEvidence = Object.freeze([
   ["references/research/04-external-views.md", "research_external_views"],
   ["references/research/05-decisions.md", "research_decisions"],
   ["references/research/06-timeline.md", "research_timeline"],
-  ["references/research/33-corpus-analysis-through-2026-07-14.md", "corpus_analysis"],
+  ["references/research/33-corpus-analysis-through-2026-07-17.md", "corpus_analysis"],
   ["references/research/34-complete-redistill-2026-07-15.md", "complete_redistillation"],
   ["references/research/35-complete-redistill-validation-2026-07-15.md", "redistillation_validation"],
+  ["references/research/36-incremental-summary-2026-07-17.md", "incremental_research"],
   ["evaluations/cases.json", "behavioral_evaluations"],
 ].map((entry) => Object.freeze(entry)));
 

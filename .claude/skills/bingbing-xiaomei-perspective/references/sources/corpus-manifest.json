@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T17:03:10.868Z",
+  "generated_at": "2026-07-17T15:50:17.874Z",
   "subject": {
     "name": "冰冰小美",
     "xueqiu_user_id": "7143769715",
@@ -17,11 +17,11 @@
     "articles": 118,
     "framework_links": 83,
     "reported_official_podcasts": 2,
-    "timeline_2026": 1639,
+    "timeline_2026": 1645,
     "replies_baseline": 1512,
     "replies_incremental": 413,
     "replies_total": 1925,
-    "cutoff_date": "2026-07-14"
+    "cutoff_date": "2026-07-17"
   },
   "segments": [
     {
@@ -90,7 +90,20 @@
       "unique_ids": 39,
       "min_date": "2026-07-13",
       "max_date": "2026-07-14",
-      "sha256": "1dae8fde56e8701f654d33da560aa11b7556b2ea1ba3353da4d2d2bd88f9a3c3"
+      "sha256": "1ef81fbd82d7d855846cb2e38de09e06b98649e2dd3685f210621b742e4ee7cd"
+    },
+    {
+      "path": "references/sources/xueqiu/2026-timeline-2026-07-17.json",
+      "origin": "output/bingbing_xiaomei_sync_browser/xueqiu_7143769715_posts.json",
+      "kind": "timeline",
+      "stage": "incremental",
+      "from": "2026-07-17",
+      "through": "2026-07-17",
+      "records": 6,
+      "unique_ids": 6,
+      "min_date": "2026-07-17",
+      "max_date": "2026-07-17",
+      "sha256": "e2a39f3f96a75bc3cbf50b95cacb2f17f1389df40c9fd6c26e56061c77e0372e"
     },
     {
       "path": "references/sources/xueqiu/2026-self-replies-2026-06-21-to-2026-06-30.json",
@@ -116,7 +129,7 @@
       "unique_ids": 250,
       "min_date": "2026-07-01",
       "max_date": "2026-07-11",
-      "sha256": "bb7cfe60bd32d7a32b8661edd682797a713fbe6f949320b025af8661474c7ba2"
+      "sha256": "a04b6b77478c341ef0cee746cc47b1ff747157b1092aadb0884612b21bf4240c"
     },
     {
       "path": "references/sources/xueqiu/2026-self-replies-2026-07-12-to-2026-07-14.json",
@@ -129,7 +142,7 @@
       "unique_ids": 28,
       "min_date": "2026-07-13",
       "max_date": "2026-07-14",
-      "sha256": "8393122d08c4d5476aabb11cc78f0faabbba37f4d109144dfd63c148b57d27d6"
+      "sha256": "85ef185ae6d4eeb3d6be34ddceabca3e469d9580b6188e7d883916ec66ff0b3e"
     },
     {
       "path": "references/sources/xueqiu/2026-self-replies-through-2026-06-20.json",
@@ -280,6 +293,7 @@
     "Four historical research snapshots are explicitly archived and excluded from aggregate claims because all of their IDs already exist in declared canonical segments.",
     "Podcast episodes 2840 and 2841 are only reported by a project secondary record; original program pages, metadata, audio, and transcripts are not retained or independently verified.",
     "Main comment streams are represented, but recursive child-reply coverage is not guaranteed because the endpoint frequently returned API 10020.",
+    "The 2026-07-17 timeline segment has complete timeline pagination, but comment verification remained incomplete for one active post; the reply corpus makes no completeness claim after 2026-07-14.",
     "Public activity does not prove complete positions, returns, or off-platform actions."
   ]
 }
