@@ -27,6 +27,10 @@ Audit date: 2026-07-17
 - Browser IDs mode validates HTML status, content type, WAF markers, and post-body shape; an all-failed batch exits `1` without creating or replacing corpus output, while usable partial output exits `2`.
 - `--reply-pages` is wired into actual pagination.
 - Full final timeline pages and comment page-limit truncation return `needs_verification`; truncated posts do not advance Edge reply-count checkpoints.
+- Explicitly terminated comment streams distinguish visible coverage from the
+  final page's platform-declared count. Quantified visibility gaps remain
+  in state/report while their accessible stream advances its checkpoint; inferred
+  short reads and contradictory counts still remain unverified.
 - Incremental timeline scans confirm a `since-date` boundary only after a second
   pageable batch remains entirely older and the non-pinned sequence stays in
   descending timestamp order. A single old item, an old pin, an unknown time,
@@ -59,10 +63,10 @@ Audit date: 2026-07-17
 
 ## Corpus and Skill
 
-- `corpus-manifest.json` derives and verifies 1639 timeline records and 1925 reply records through 2026-07-14.
+- `corpus-manifest.json` derives and verifies 1645 timeline records through 2026-07-17 and 1925 reply records through 2026-07-14.
 - Every canonical segment records count, unique IDs, date range, SHA-256 hash, origin, and coverage role.
 - The manifest requires the exact complete segment descriptor set and validates
-  all 3,766 canonical records against executable schema-1 contract discriminators:
+  all 3,772 canonical records against executable schema-1 contract discriminators:
   string IDs, preserved raw timestamps, Asia/Shanghai timestamps, canonical
   URLs, integer counts, and explicit historical gaps.
 - Four superseded research snapshots (258 records) are hash-bound, prove 100%

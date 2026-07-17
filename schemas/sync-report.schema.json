@@ -13,6 +13,22 @@
     "post_timeline_truncated": { "type": "boolean" },
     "article_timeline_truncated": { "type": "boolean" },
     "comment_coverage": { "type": "string" },
+    "comment_visibility_gaps": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": ["post_id", "declared_count", "visible_count", "unavailable_count", "count_source"],
+        "properties": {
+          "post_id": { "type": "string", "pattern": "^[0-9]+$" },
+          "declared_count": { "type": "integer", "minimum": 1 },
+          "visible_count": { "type": "integer", "minimum": 0 },
+          "unavailable_count": { "type": "integer", "minimum": 1 },
+          "count_source": { "enum": ["comment_endpoint_final_page", "timeline"] }
+        },
+        "additionalProperties": false
+      }
+    },
     "nested_reply_coverage": { "type": "string" },
     "interface_drift": {
       "type": "object",

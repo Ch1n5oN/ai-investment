@@ -104,6 +104,14 @@ const generatedSegments = Object.freeze([
     through: "2026-07-14",
   },
   {
+    path: "references/sources/xueqiu/2026-timeline-2026-07-17.json",
+    origin: "output/bingbing_xiaomei_sync_browser/xueqiu_7143769715_posts.json",
+    kind: "timeline",
+    stage: "incremental",
+    from: "2026-07-17",
+    through: "2026-07-17",
+  },
+  {
     path: "references/sources/xueqiu/2026-self-replies-2026-06-21-to-2026-06-30.json",
     origin: "output/bingbing_xiaomei_2026_06_21_to_2026_07_01_self_replies/xueqiu_7143769715_self_replies.json",
     kind: "replies",
@@ -1116,6 +1124,7 @@ export function buildManifest({ baseDir = skillDir } = {}) {
       "Four historical research snapshots are explicitly archived and excluded from aggregate claims because all of their IDs already exist in declared canonical segments.",
       "Podcast episodes 2840 and 2841 are only reported by a project secondary record; original program pages, metadata, audio, and transcripts are not retained or independently verified.",
       "Main comment streams are represented, but recursive child-reply coverage is not guaranteed because the endpoint frequently returned API 10020.",
+      "The 2026-07-17 timeline segment has complete timeline pagination, but comment verification remained incomplete for one active post; the reply corpus makes no completeness claim after 2026-07-14.",
       "Public activity does not prove complete positions, returns, or off-platform actions.",
     ],
   };

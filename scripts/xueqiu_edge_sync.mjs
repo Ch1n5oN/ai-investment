@@ -22,9 +22,11 @@ import {
   normalizeNonNegativeInteger,
   pageableTimelineItems,
   paginationComplete,
+  paginationResult,
   parseArgs,
   parseIntegerOption,
   readJsonStrict,
+  reconcileCommentVisibilityGaps,
   renderMarkdown,
   selectChangedPosts,
   syncStatusFor,
@@ -369,6 +371,18 @@ function extractComments(data) {
   return extractArrayField(data, ["comments", "list", "items", "statuses"], "comment stream");
 }
 
+function commentEndpointCount(data, postId) {
+  if (!Object.hasOwn(data, "count")) return null;
+  try {
+    return normalizeNonNegativeInteger(data.count, `post ${postId} comment count`);
+  } catch (error) {
+    throw Object.assign(
+      new Error(`Post ${postId} comment count is invalid: ${error.message}`),
+      { code: "INVALID_RESPONSE_SHAPE", cause: error },
+    );
+  }
+}
+
 function observedCommentId(comment) {
   return acquisitionId(comment?.id, "Comment record id");
 }
@@ -461,15 +475,18 @@ export async function fetchChangedPostComments(session, userId, posts, previousC
   const scanned = [];
   const truncated = [];
   const unverified = [];
+  const visibilityGaps = [];
   for (const post of changed) {
     try {
-      const requiredPages = Math.max(1, Math.ceil(Number(post.reply_count || 0) / args.commentCount));
       const observedIds = new Set();
       let complete = false;
+      let explicitTermination = false;
+      let finalEndpointCount = null;
       for (let page = 1; page <= args.commentPages; page += 1) {
         const url = `https://xueqiu.com/statuses/comments.json?id=${post.id}&page=${page}&count=${args.commentCount}&type=status`;
         const data = await browserJson(session, url, { ...args, metrics, referer: post.target || `https://xueqiu.com/${userId}/${post.id}` });
         const comments = extractComments(data);
+        const endpointCount = commentEndpointCount(data, post.id);
         for (const comment of comments) {
           assertCommentBelongsToPost(comment, post.id);
           observedIds.add(observedCommentId(comment));
@@ -477,20 +494,38 @@ export async function fetchChangedPostComments(session, userId, posts, previousC
             found = mergeById(found, [normalizeReply(comment, post, "post_comments", userId)]);
           }
         }
-        if (paginationComplete(data, {
+        const pagination = paginationResult(data, {
           page,
           count: args.commentCount,
           itemCount: comments.length,
           observedCount: observedIds.size,
           label: `post ${post.id} comment pagination`,
-        })) {
+        });
+        if (pagination.complete) {
           complete = true;
+          explicitTermination = pagination.explicitTermination;
+          finalEndpointCount = endpointCount;
           break;
         }
       }
-      if (!complete || requiredPages > args.commentPages) truncated.push(String(post.id));
-      if (observedIds.size < Number(post.reply_count)) unverified.push(String(post.id));
-      scanned.push(String(post.id));
+      const postId = String(post.id);
+      if (!complete) truncated.push(postId);
+      const declaredCount = finalEndpointCount ?? Number(post.reply_count);
+      if (observedIds.size > declaredCount
+        || (observedIds.size < declaredCount && !explicitTermination)) {
+        unverified.push(postId);
+      } else if (observedIds.size < declaredCount) {
+        visibilityGaps.push({
+          post_id: postId,
+          declared_count: declaredCount,
+          visible_count: observedIds.size,
+          unavailable_count: declaredCount - observedIds.size,
+          count_source: finalEndpointCount === null
+            ? "timeline"
+            : "comment_endpoint_final_page",
+        });
+      }
+      scanned.push(postId);
     } catch (error) {
       if (["WAF", "CDP_TIMEOUT", "FETCH_FAILED"].includes(error.code)) break;
       throw error;
@@ -503,6 +538,7 @@ export async function fetchChangedPostComments(session, userId, posts, previousC
     confirmed: confirmedPostIdsFor(scanned, truncated, unverified),
     truncated,
     unverified,
+    visibilityGaps,
     candidates: changed.map((post) => String(post.id)),
   };
 }
@@ -670,6 +706,7 @@ Options:
     let commentMethod = "skipped";
     let commentCoverage = "not_requested";
     let scannedPostIds = [];
+    let commentVisibilityGaps = previousState.comment_visibility_gaps || [];
     if (!args.skipComments) {
       if (args.probeUserComments) {
         try {
@@ -691,15 +728,25 @@ Options:
       const hadDiagnosticReplies = incomingReplies.length > 0;
       incomingReplies = mergeById(incomingReplies, fallback.replies);
       scannedPostIds = fallback.confirmed;
+      commentVisibilityGaps = reconcileCommentVisibilityGaps(
+        commentVisibilityGaps,
+        fallback.visibilityGaps,
+        fallback.confirmed,
+        posts.slice(0, args.initialCommentPosts).map((post) => String(post.id)),
+      );
       commentMethod = hadDiagnosticReplies
         ? "user_comments+changed_post_comments"
         : "changed_post_comments";
-      commentCoverage = commentCoverageFor(fallback);
+      commentCoverage = commentCoverageFor({
+        ...fallback,
+        visibilityGaps: commentVisibilityGaps,
+      });
       report.comment_candidates = fallback.candidates;
       report.comment_scanned = fallback.scanned;
       report.comment_confirmed = fallback.confirmed;
       report.comment_truncated = fallback.truncated;
       report.comment_unverified = fallback.unverified;
+      report.comment_visibility_gaps = commentVisibilityGaps;
       const replies = mergeById(oldReplies, incomingReplies);
       atomicWrite(repliesFile, JSON.stringify(replies, null, 2));
       atomicWrite(repliesMd, renderMarkdown(replies, "self replies"));
@@ -725,6 +772,7 @@ Options:
       comment_coverage: commentCoverage,
       scanned_post_ids: report.comment_scanned || scannedPostIds,
       confirmed_post_ids: confirmedPostIds,
+      comment_visibility_gaps: commentVisibilityGaps,
       nested_reply_coverage: "not_guaranteed_api_10020",
     };
     atomicWrite(stateFile, JSON.stringify(state, null, 2));
@@ -737,6 +785,7 @@ Options:
       articles_total: articles.length,
       comment_method: commentMethod,
       comment_coverage: commentCoverage,
+      comment_visibility_gaps: commentVisibilityGaps,
       nested_reply_coverage: "not_guaranteed_api_10020",
     });
     process.exitCode = exitCodeForStatus(report.status);

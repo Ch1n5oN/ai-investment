@@ -174,6 +174,10 @@ lines.push(
 fs.mkdirSync(researchDir, { recursive: true });
 const output = path.join(researchDir, `33-corpus-analysis-through-${manifest.claims.cutoff_date}.md`);
 const temporary = `${output}.tmp-${process.pid}`;
-fs.writeFileSync(temporary, `${lines.join("\n")}\n`, "utf8");
+fs.writeFileSync(
+  temporary,
+  `${lines.map((line) => line.trimEnd()).join("\n").trimEnd()}\n`,
+  "utf8",
+);
 fs.renameSync(temporary, output);
 console.log(`wrote ${output}`);

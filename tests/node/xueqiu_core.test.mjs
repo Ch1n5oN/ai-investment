@@ -23,10 +23,12 @@ import {
   mergeById,
   normalizeNonNegativeInteger,
   paginationComplete,
+  paginationResult,
   parseArgs,
   parseIntegerOption,
   parseNumberOption,
   readJsonStrict,
+  reconcileCommentVisibilityGaps,
   renderMarkdown,
   selectChangedPosts,
   syncStatusFor,
@@ -506,6 +508,14 @@ test("endpoint payloads require an explicit array field", () => {
 
 test("pagination prioritizes consistent metadata and fails closed on conflicts", () => {
   const options = { page: 1, count: 2, itemCount: 1, observedCount: 1, label: "timeline" };
+  assert.deepEqual(paginationResult({}, options), {
+    complete: true,
+    explicitTermination: false,
+  });
+  assert.deepEqual(paginationResult({ has_more: false }, options), {
+    complete: true,
+    explicitTermination: true,
+  });
   assert.equal(paginationComplete({}, options), true);
   assert.equal(paginationComplete({}, { ...options, itemCount: 2, observedCount: 2 }), false);
   assert.equal(paginationComplete({ has_more: true }, options), false);
@@ -545,6 +555,38 @@ test("validates reply-count checkpoint state before it can suppress scans", () =
   assert.equal(isValidCheckpointState(initial, userId), true);
   assert.equal(isValidCheckpointState(initial, "999"), false);
   assert.equal(isValidCheckpointState({ ...initial, user_id: "999" }, userId), false);
+  const gap = {
+    post_id: "123",
+    declared_count: 4,
+    visible_count: 3,
+    unavailable_count: 1,
+    count_source: "comment_endpoint_final_page",
+  };
+  assert.equal(isValidCheckpointState({
+    ...initial,
+    comment_visibility_gaps: [gap],
+  }, userId), true);
+  assert.equal(isValidCheckpointState({
+    ...initial,
+    comment_visibility_gaps: [{ ...gap, unavailable_count: 2 }],
+  }, userId), false);
+  assert.deepEqual(
+    reconcileCommentVisibilityGaps([gap], [], [], ["123"]),
+    [gap],
+  );
+  assert.deepEqual(
+    reconcileCommentVisibilityGaps([gap], [], ["123"], ["123"]),
+    [],
+  );
+  const refreshedGap = { ...gap, visible_count: 2, unavailable_count: 2 };
+  assert.deepEqual(
+    reconcileCommentVisibilityGaps([gap], [refreshedGap], ["123"], ["123"]),
+    [refreshedGap],
+  );
+  assert.throws(
+    () => reconcileCommentVisibilityGaps([], [gap], [], ["123"]),
+    { code: "INVALID_JSON_SHAPE" },
+  );
   const predecessorState = { ...initial };
   delete predecessorState.user_id;
   predecessorState.latest_post_id = "999";
@@ -609,10 +651,23 @@ test("selects changed posts and calculates partial coverage deterministically", 
     commentCoverageFor({ scanned: ["1"], candidates: ["1"], truncated: [], unverified: ["1"] }),
     "partial_incomplete_response",
   );
+  assert.equal(
+    commentCoverageFor({
+      scanned: ["1"],
+      candidates: ["1"],
+      truncated: [],
+      visibilityGaps: [{ post_id: "1" }],
+    }),
+    "accessible_main_stream_complete_with_known_gaps",
+  );
   assert.deepEqual(confirmedPostIdsFor(["1", "2", "3"], ["2"], ["3"]), ["1"]);
   assert.equal(syncStatusFor({ commentCoverage: "partial_page_limit" }), "needs_verification");
   assert.equal(
     syncStatusFor({ commentCoverage: "changed_posts_main_stream_complete" }),
+    "complete",
+  );
+  assert.equal(
+    syncStatusFor({ commentCoverage: "accessible_main_stream_complete_with_known_gaps" }),
     "complete",
   );
   assert.equal(
