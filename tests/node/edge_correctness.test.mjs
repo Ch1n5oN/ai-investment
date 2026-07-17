@@ -301,8 +301,8 @@ test("the explicit final page count governs a visibility gap", async () => {
   }]);
 });
 
-test("visible comments exceeding the explicit final count remain unverified", async () => {
-  const pages = [
+test("a stable double scan checkpoints visible comments exceeding the declared count", async () => {
+  const pass = [
     {
       page: 1,
       count: 2,
@@ -316,6 +316,7 @@ test("visible comments exceeding the explicit final count remain unverified", as
       comments: [{ id: "901", status_id: "100", user: { id: "other" } }],
     },
   ];
+  const pages = [...pass, ...pass];
   let call = 0;
   const result = await fetchChangedPostComments(
     {
@@ -329,9 +330,139 @@ test("visible comments exceeding the explicit final count remain unverified", as
     { requests: 0, errors: 0, waf: 0 },
   );
 
+  assert.deepEqual(result.unverified, []);
+  assert.deepEqual(result.confirmed, ["100"]);
+  assert.deepEqual(result.visibilityGaps, []);
+  assert.deepEqual(result.countSurpluses, [{
+    post_id: "100",
+    declared_count: 1,
+    visible_count: 2,
+    surplus_count: 1,
+    count_source: "comment_endpoint_final_page",
+    verification: "stable_double_scan",
+  }]);
+});
+
+test("a changing second scan leaves a visible-count surplus unverified", async () => {
+  const pages = [
+    {
+      page: 1,
+      count: 1,
+      maxPage: 1,
+      comments: [
+        { id: "900", status_id: "100", user: { id: "other" } },
+        { id: "901", status_id: "100", user: { id: "other" } },
+      ],
+    },
+    {
+      page: 1,
+      count: 1,
+      maxPage: 1,
+      comments: [
+        { id: "900", status_id: "100", user: { id: "other" } },
+        { id: "902", status_id: "100", user: { id: "other" } },
+      ],
+    },
+  ];
+  let call = 0;
+  const result = await fetchChangedPostComments(
+    {
+      async send() { return runtimeJson(pages[call++]); },
+      async navigate() {},
+    },
+    USER_ID,
+    [post({ reply_count: 1 })],
+    {},
+    args({ commentPages: 1, commentCount: 20 }),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+
   assert.deepEqual(result.unverified, ["100"]);
   assert.deepEqual(result.confirmed, []);
-  assert.deepEqual(result.visibilityGaps, []);
+  assert.deepEqual(result.countSurpluses, []);
+});
+
+test("a changing declared count leaves an otherwise stable surplus unverified", async () => {
+  const comments = [
+    { id: "900", status_id: "100", user: { id: "other" } },
+    { id: "901", status_id: "100", user: { id: "other" } },
+  ];
+  const pages = [
+    { page: 1, count: 1, maxPage: 1, comments },
+    { page: 1, count: 0, maxPage: 1, comments },
+  ];
+  let call = 0;
+  const result = await fetchChangedPostComments(
+    {
+      async send() { return runtimeJson(pages[call++]); },
+      async navigate() {},
+    },
+    USER_ID,
+    [post({ reply_count: 1 })],
+    {},
+    args({ commentPages: 1, commentCount: 20 }),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+
+  assert.deepEqual(result.unverified, ["100"]);
+  assert.deepEqual(result.confirmed, []);
+  assert.deepEqual(result.countSurpluses, []);
+});
+
+test("a second explicit scan whose count catches up confirms without a surplus", async () => {
+  const comments = [
+    { id: "900", status_id: "100", user: { id: "other" } },
+    { id: "901", status_id: "100", user: { id: "other" } },
+  ];
+  const pages = [
+    { page: 1, count: 1, maxPage: 1, comments },
+    { page: 1, count: 2, maxPage: 1, comments },
+  ];
+  let call = 0;
+  const result = await fetchChangedPostComments(
+    {
+      async send() { return runtimeJson(pages[call++]); },
+      async navigate() {},
+    },
+    USER_ID,
+    [post({ reply_count: 1 })],
+    {},
+    args({ commentPages: 1, commentCount: 20 }),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+
+  assert.deepEqual(result.unverified, []);
+  assert.deepEqual(result.confirmed, ["100"]);
+  assert.deepEqual(result.countSurpluses, []);
+});
+
+test("a visible-count surplus without explicit termination remains unverified", async () => {
+  let calls = 0;
+  const result = await fetchChangedPostComments(
+    {
+      async send() {
+        calls += 1;
+        return runtimeJson({
+          count: 1,
+          comments: [
+            { id: "900", status_id: "100", user: { id: "other" } },
+            { id: "901", status_id: "100", user: { id: "other" } },
+          ],
+        });
+      },
+      async navigate() {},
+    },
+    USER_ID,
+    [post({ reply_count: 1 })],
+    {},
+    args({ commentPages: 1, commentCount: 20 }),
+    { requests: 0, errors: 0, waf: 0 },
+  );
+
+  assert.equal(calls, 1);
+  assert.deepEqual(result.unverified, ["100"]);
+  assert.deepEqual(result.confirmed, []);
+  assert.deepEqual(result.countSurpluses, []);
 });
 
 test("a full configured final comment page needs explicit termination evidence", async () => {
