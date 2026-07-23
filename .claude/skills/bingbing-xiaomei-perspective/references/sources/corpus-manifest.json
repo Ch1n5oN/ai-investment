@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-17T15:50:17.874Z",
+  "generated_at": "2026-07-23T15:10:10.432Z",
   "subject": {
     "name": "冰冰小美",
     "xueqiu_user_id": "7143769715",
@@ -17,11 +17,11 @@
     "articles": 118,
     "framework_links": 83,
     "reported_official_podcasts": 2,
-    "timeline_2026": 1645,
+    "timeline_2026": 1699,
     "replies_baseline": 1512,
-    "replies_incremental": 413,
-    "replies_total": 1925,
-    "cutoff_date": "2026-07-17"
+    "replies_incremental": 430,
+    "replies_total": 1942,
+    "cutoff_date": "2026-07-22"
   },
   "segments": [
     {
@@ -103,7 +103,20 @@
       "unique_ids": 6,
       "min_date": "2026-07-17",
       "max_date": "2026-07-17",
-      "sha256": "e2a39f3f96a75bc3cbf50b95cacb2f17f1389df40c9fd6c26e56061c77e0372e"
+      "sha256": "e4bb77a44e7902740c2fa2c8c17e520fd8569e173b1030fe5d777e514a52f4fe"
+    },
+    {
+      "path": "references/sources/xueqiu/2026-timeline-2026-07-18-to-2026-07-22.json",
+      "origin": "output/bingbing_xiaomei_sync/xueqiu_7143769715_posts.json",
+      "kind": "timeline",
+      "stage": "incremental",
+      "from": "2026-07-18",
+      "through": "2026-07-22",
+      "records": 54,
+      "unique_ids": 54,
+      "min_date": "2026-07-18",
+      "max_date": "2026-07-22",
+      "sha256": "6d39d2db0fddc98c337e1d9f2f3e3f9f59ceaf7cf0e133c949f8eb68a6fdfce8"
     },
     {
       "path": "references/sources/xueqiu/2026-self-replies-2026-06-21-to-2026-06-30.json",
@@ -143,6 +156,19 @@
       "min_date": "2026-07-13",
       "max_date": "2026-07-14",
       "sha256": "85ef185ae6d4eeb3d6be34ddceabca3e469d9580b6188e7d883916ec66ff0b3e"
+    },
+    {
+      "path": "references/sources/xueqiu/2026-self-replies-2026-07-15-to-2026-07-22.json",
+      "origin": "output/bingbing_xiaomei_sync/xueqiu_7143769715_replies_2026.json",
+      "kind": "replies",
+      "stage": "incremental",
+      "from": "2026-07-15",
+      "through": "2026-07-22",
+      "records": 17,
+      "unique_ids": 17,
+      "min_date": "2026-07-21",
+      "max_date": "2026-07-21",
+      "sha256": "1411732deb73ddb789cf87dacc8cd7ccadb368a5ba38bb171ea045553b06f9cc"
     },
     {
       "path": "references/sources/xueqiu/2026-self-replies-through-2026-06-20.json",

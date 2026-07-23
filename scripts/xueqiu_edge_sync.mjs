@@ -26,6 +26,7 @@ import {
   parseArgs,
   parseIntegerOption,
   readJsonStrict,
+  reconcileCommentCountSurpluses,
   reconcileCommentVisibilityGaps,
   renderMarkdown,
   selectChangedPosts,
@@ -466,6 +467,49 @@ export function userCommentStreamCanAdvance() {
   return false;
 }
 
+function sameIdSet(left, right) {
+  return left.size === right.size && [...left].every((id) => right.has(id));
+}
+
+async function scanPostComments(session, userId, post, args, metrics) {
+  let replies = [];
+  const observedIds = new Set();
+  let complete = false;
+  let explicitTermination = false;
+  let finalEndpointCount = null;
+  for (let page = 1; page <= args.commentPages; page += 1) {
+    const url = `https://xueqiu.com/statuses/comments.json?id=${post.id}&page=${page}&count=${args.commentCount}&type=status`;
+    const data = await browserJson(session, url, {
+      ...args,
+      metrics,
+      referer: post.target || `https://xueqiu.com/${userId}/${post.id}`,
+    });
+    const comments = extractComments(data);
+    const endpointCount = commentEndpointCount(data, post.id);
+    for (const comment of comments) {
+      assertCommentBelongsToPost(comment, post.id);
+      observedIds.add(observedCommentId(comment));
+      if (String(commentUserId(comment)) === String(userId)) {
+        replies = mergeById(replies, [normalizeReply(comment, post, "post_comments", userId)]);
+      }
+    }
+    const pagination = paginationResult(data, {
+      page,
+      count: args.commentCount,
+      itemCount: comments.length,
+      observedCount: observedIds.size,
+      label: `post ${post.id} comment pagination`,
+    });
+    if (pagination.complete) {
+      complete = true;
+      explicitTermination = pagination.explicitTermination;
+      finalEndpointCount = endpointCount;
+      break;
+    }
+  }
+  return { replies, observedIds, complete, explicitTermination, finalEndpointCount };
+}
+
 export async function fetchChangedPostComments(session, userId, posts, previousCounts, args, metrics) {
   const changed = selectChangedPosts(posts, previousCounts, {
     limit: args.initialCommentPosts,
@@ -476,51 +520,63 @@ export async function fetchChangedPostComments(session, userId, posts, previousC
   const truncated = [];
   const unverified = [];
   const visibilityGaps = [];
+  const countSurpluses = [];
   for (const post of changed) {
     try {
-      const observedIds = new Set();
-      let complete = false;
-      let explicitTermination = false;
-      let finalEndpointCount = null;
-      for (let page = 1; page <= args.commentPages; page += 1) {
-        const url = `https://xueqiu.com/statuses/comments.json?id=${post.id}&page=${page}&count=${args.commentCount}&type=status`;
-        const data = await browserJson(session, url, { ...args, metrics, referer: post.target || `https://xueqiu.com/${userId}/${post.id}` });
-        const comments = extractComments(data);
-        const endpointCount = commentEndpointCount(data, post.id);
-        for (const comment of comments) {
-          assertCommentBelongsToPost(comment, post.id);
-          observedIds.add(observedCommentId(comment));
-          if (String(commentUserId(comment)) === String(userId)) {
-            found = mergeById(found, [normalizeReply(comment, post, "post_comments", userId)]);
-          }
-        }
-        const pagination = paginationResult(data, {
-          page,
-          count: args.commentCount,
-          itemCount: comments.length,
-          observedCount: observedIds.size,
-          label: `post ${post.id} comment pagination`,
-        });
-        if (pagination.complete) {
-          complete = true;
-          explicitTermination = pagination.explicitTermination;
-          finalEndpointCount = endpointCount;
-          break;
+      let scan = await scanPostComments(session, userId, post, args, metrics);
+      found = mergeById(found, scan.replies);
+      let declaredCount = scan.finalEndpointCount ?? Number(post.reply_count);
+      let stableSurplus = null;
+      let contradictoryRescan = false;
+      if (scan.complete && scan.explicitTermination && scan.observedIds.size > declaredCount) {
+        await sleep(args.requestDelayMs);
+        const verification = await scanPostComments(session, userId, post, args, metrics);
+        found = mergeById(found, verification.replies);
+        const verificationDeclared = verification.finalEndpointCount ?? Number(post.reply_count);
+        const stableIds = sameIdSet(scan.observedIds, verification.observedIds);
+        if (verification.complete
+          && verification.explicitTermination
+          && stableIds
+          && verification.observedIds.size === verificationDeclared) {
+          scan = verification;
+          declaredCount = verificationDeclared;
+        } else if (verification.complete
+          && verification.explicitTermination
+          && stableIds
+          && verificationDeclared === declaredCount
+          && verification.observedIds.size > verificationDeclared) {
+          scan = verification;
+          stableSurplus = {
+            post_id: String(post.id),
+            declared_count: verificationDeclared,
+            visible_count: verification.observedIds.size,
+            surplus_count: verification.observedIds.size - verificationDeclared,
+            count_source: verification.finalEndpointCount === null
+              ? "timeline"
+              : "comment_endpoint_final_page",
+            verification: "stable_double_scan",
+          };
+        } else {
+          scan = verification;
+          declaredCount = verificationDeclared;
+          contradictoryRescan = true;
         }
       }
       const postId = String(post.id);
-      if (!complete) truncated.push(postId);
-      const declaredCount = finalEndpointCount ?? Number(post.reply_count);
-      if (observedIds.size > declaredCount
-        || (observedIds.size < declaredCount && !explicitTermination)) {
+      if (!scan.complete) truncated.push(postId);
+      if (contradictoryRescan
+        || (scan.observedIds.size > declaredCount && !stableSurplus)
+        || (scan.observedIds.size < declaredCount && !scan.explicitTermination)) {
         unverified.push(postId);
-      } else if (observedIds.size < declaredCount) {
+      } else if (stableSurplus) {
+        countSurpluses.push(stableSurplus);
+      } else if (scan.observedIds.size < declaredCount) {
         visibilityGaps.push({
           post_id: postId,
           declared_count: declaredCount,
-          visible_count: observedIds.size,
-          unavailable_count: declaredCount - observedIds.size,
-          count_source: finalEndpointCount === null
+          visible_count: scan.observedIds.size,
+          unavailable_count: declaredCount - scan.observedIds.size,
+          count_source: scan.finalEndpointCount === null
             ? "timeline"
             : "comment_endpoint_final_page",
         });
@@ -539,6 +595,7 @@ export async function fetchChangedPostComments(session, userId, posts, previousC
     truncated,
     unverified,
     visibilityGaps,
+    countSurpluses,
     candidates: changed.map((post) => String(post.id)),
   };
 }
@@ -707,6 +764,7 @@ Options:
     let commentCoverage = "not_requested";
     let scannedPostIds = [];
     let commentVisibilityGaps = previousState.comment_visibility_gaps || [];
+    let commentCountSurpluses = previousState.comment_count_surpluses || [];
     if (!args.skipComments) {
       if (args.probeUserComments) {
         try {
@@ -734,12 +792,19 @@ Options:
         fallback.confirmed,
         posts.slice(0, args.initialCommentPosts).map((post) => String(post.id)),
       );
+      commentCountSurpluses = reconcileCommentCountSurpluses(
+        commentCountSurpluses,
+        fallback.countSurpluses,
+        fallback.confirmed,
+        posts.slice(0, args.initialCommentPosts).map((post) => String(post.id)),
+      );
       commentMethod = hadDiagnosticReplies
         ? "user_comments+changed_post_comments"
         : "changed_post_comments";
       commentCoverage = commentCoverageFor({
         ...fallback,
         visibilityGaps: commentVisibilityGaps,
+        countSurpluses: commentCountSurpluses,
       });
       report.comment_candidates = fallback.candidates;
       report.comment_scanned = fallback.scanned;
@@ -747,6 +812,7 @@ Options:
       report.comment_truncated = fallback.truncated;
       report.comment_unverified = fallback.unverified;
       report.comment_visibility_gaps = commentVisibilityGaps;
+      report.comment_count_surpluses = commentCountSurpluses;
       const replies = mergeById(oldReplies, incomingReplies);
       atomicWrite(repliesFile, JSON.stringify(replies, null, 2));
       atomicWrite(repliesMd, renderMarkdown(replies, "self replies"));
@@ -773,6 +839,7 @@ Options:
       scanned_post_ids: report.comment_scanned || scannedPostIds,
       confirmed_post_ids: confirmedPostIds,
       comment_visibility_gaps: commentVisibilityGaps,
+      comment_count_surpluses: commentCountSurpluses,
       nested_reply_coverage: "not_guaranteed_api_10020",
     };
     atomicWrite(stateFile, JSON.stringify(state, null, 2));
@@ -786,6 +853,7 @@ Options:
       comment_method: commentMethod,
       comment_coverage: commentCoverage,
       comment_visibility_gaps: commentVisibilityGaps,
+      comment_count_surpluses: commentCountSurpluses,
       nested_reply_coverage: "not_guaranteed_api_10020",
     });
     process.exitCode = exitCodeForStatus(report.status);

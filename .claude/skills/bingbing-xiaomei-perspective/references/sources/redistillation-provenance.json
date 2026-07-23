@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-17T23:52:46+08:00",
+  "generated_at": "2026-07-23T23:43:37+08:00",
   "skill": "SKILL.md",
-  "skill_sha256": "ef30725996547676d2c0231cf30d23d3f1ebb96432ede99c5a922e3e66acc75f",
+  "skill_sha256": "5972ffb42a2e9ee9fb5ffa40d888e3c3c707187c1fc078456bb8d970cd2cd293",
   "claims": {
     "articles": 118,
     "framework_links": 83,
     "reported_official_podcasts": 2,
-    "timeline_2026": 1645,
+    "timeline_2026": 1699,
     "replies_baseline": 1512,
-    "replies_incremental": 413,
-    "replies_total": 1925,
-    "cutoff_date": "2026-07-17"
+    "replies_incremental": 430,
+    "replies_total": 1942,
+    "cutoff_date": "2026-07-22"
   },
   "evidence": [
     {
       "path": "references/sources/corpus-manifest.json",
       "role": "corpus_manifest",
-      "sha256": "aa451d366ac2b6fdcdbda25bc0782eb790f74d99f5f46613d4c995a431170f52"
+      "sha256": "4398178792a228d72e8bdcae1c08cbae331e5dc28254c2521ca962e00ba7c4af"
     },
     {
       "path": "references/research/01-writings.md",

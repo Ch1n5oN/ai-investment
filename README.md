@@ -252,13 +252,18 @@ Reliability behavior:
   or otherwise unavailable comments on their final page; those counts remain in `comment_visibility_gaps` while the
   checkpoint advances, so the same inaccessible rows are not fetched forever. A
   stream without explicit termination evidence remains eligible on the next run.
+  When a terminated stream returns more unique comments than it declares, the
+  sync repeats the complete scan. It advances when the second declaration catches
+  up exactly, or when both unique-ID sets and the still-lower declarations are
+  identical. Stable discrepancies remain visible in `comment_count_surpluses`;
+  a changing second scan remains unverified.
 - A full final timeline/article page at the configured page limit is recorded as
   truncation and returns `2`; increase the limit or supply a verified date boundary.
 - `xueqiu_<user_id>_edge_sync_report.json` records request counts, elapsed time,
   selected posts, pagination truncation, added items, and one of:
   `complete`, `needs_verification`, or `failed`.
 - `complete` means the selected posts' accessible main comment streams were
-  covered; it does not erase any recorded visibility gaps. Xueqiu's recursive
+  covered; it does not erase recorded visibility gaps or stable count surpluses. Xueqiu's recursive
   child-reply endpoint frequently returns `10020`, so the report keeps
   `nested_reply_coverage: not_guaranteed_api_10020` instead of claiming a full
   recursive tree.
