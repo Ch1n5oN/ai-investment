@@ -1,6 +1,6 @@
 # Optimization Implementation Audit
 
-Audit date: 2026-07-17
+Audit date: 2026-07-18
 
 ## Reproducibility
 
@@ -29,8 +29,10 @@ Audit date: 2026-07-17
 - Full final timeline pages and comment page-limit truncation return `needs_verification`; truncated posts do not advance Edge reply-count checkpoints.
 - Explicitly terminated comment streams distinguish visible coverage from the
   final page's platform-declared count. Quantified visibility gaps remain
-  in state/report while their accessible stream advances its checkpoint; inferred
-  short reads and contradictory counts still remain unverified.
+  in state/report while their accessible stream advances its checkpoint. A
+  visible-count surplus advances only after a second explicitly terminated scan
+  returns the same unique IDs and declared count; stable surpluses remain audited
+  in state/report, while inferred short reads and changing contradictions remain unverified.
 - Incremental timeline scans confirm a `since-date` boundary only after a second
   pageable batch remains entirely older and the non-pinned sequence stays in
   descending timestamp order. A single old item, an old pin, an unknown time,

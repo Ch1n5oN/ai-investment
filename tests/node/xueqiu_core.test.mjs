@@ -28,6 +28,7 @@ import {
   parseIntegerOption,
   parseNumberOption,
   readJsonStrict,
+  reconcileCommentCountSurpluses,
   reconcileCommentVisibilityGaps,
   renderMarkdown,
   selectChangedPosts,
@@ -562,6 +563,14 @@ test("validates reply-count checkpoint state before it can suppress scans", () =
     unavailable_count: 1,
     count_source: "comment_endpoint_final_page",
   };
+  const surplus = {
+    post_id: "123",
+    declared_count: 4,
+    visible_count: 5,
+    surplus_count: 1,
+    count_source: "comment_endpoint_final_page",
+    verification: "stable_double_scan",
+  };
   assert.equal(isValidCheckpointState({
     ...initial,
     comment_visibility_gaps: [gap],
@@ -569,6 +578,14 @@ test("validates reply-count checkpoint state before it can suppress scans", () =
   assert.equal(isValidCheckpointState({
     ...initial,
     comment_visibility_gaps: [{ ...gap, unavailable_count: 2 }],
+  }, userId), false);
+  assert.equal(isValidCheckpointState({
+    ...initial,
+    comment_count_surpluses: [surplus],
+  }, userId), true);
+  assert.equal(isValidCheckpointState({
+    ...initial,
+    comment_count_surpluses: [{ ...surplus, surplus_count: 2 }],
   }, userId), false);
   assert.deepEqual(
     reconcileCommentVisibilityGaps([gap], [], [], ["123"]),
@@ -585,6 +602,18 @@ test("validates reply-count checkpoint state before it can suppress scans", () =
   );
   assert.throws(
     () => reconcileCommentVisibilityGaps([], [gap], [], ["123"]),
+    { code: "INVALID_JSON_SHAPE" },
+  );
+  assert.deepEqual(
+    reconcileCommentCountSurpluses([surplus], [], [], ["123"]),
+    [surplus],
+  );
+  assert.deepEqual(
+    reconcileCommentCountSurpluses([surplus], [], ["123"], ["123"]),
+    [],
+  );
+  assert.throws(
+    () => reconcileCommentCountSurpluses([], [surplus], [], ["123"]),
     { code: "INVALID_JSON_SHAPE" },
   );
   const predecessorState = { ...initial };
@@ -660,6 +689,16 @@ test("selects changed posts and calculates partial coverage deterministically", 
     }),
     "accessible_main_stream_complete_with_known_gaps",
   );
+  assert.equal(
+    commentCoverageFor({
+      scanned: ["1"],
+      candidates: ["1"],
+      truncated: [],
+      visibilityGaps: [{ post_id: "1" }],
+      countSurpluses: [{ post_id: "2" }],
+    }),
+    "accessible_main_stream_complete_with_known_count_discrepancies",
+  );
   assert.deepEqual(confirmedPostIdsFor(["1", "2", "3"], ["2"], ["3"]), ["1"]);
   assert.equal(syncStatusFor({ commentCoverage: "partial_page_limit" }), "needs_verification");
   assert.equal(
@@ -668,6 +707,10 @@ test("selects changed posts and calculates partial coverage deterministically", 
   );
   assert.equal(
     syncStatusFor({ commentCoverage: "accessible_main_stream_complete_with_known_gaps" }),
+    "complete",
+  );
+  assert.equal(
+    syncStatusFor({ commentCoverage: "accessible_main_stream_complete_with_known_count_discrepancies" }),
     "complete",
   );
   assert.equal(

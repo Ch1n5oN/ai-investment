@@ -24,6 +24,9 @@ Thumbs.db
 # Local data files (large scraped data)
 output/
 
+# Assistant working memory (project-local, not for version control)
+.workbuddy/
+
 # Claude local config (except skills)
 .claude/settings.json
 .claude/settings.local.json

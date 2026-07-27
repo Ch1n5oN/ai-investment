@@ -989,14 +989,42 @@ function hasValidCommentVisibilityGaps(value) {
     && new Set(value.map((gap) => gap.post_id)).size === value.length;
 }
 
-export function reconcileCommentVisibilityGaps(
+function isValidCommentCountSurplus(value) {
+  if (!isPlainObject(value)) return false;
+  const expectedKeys = [
+    "count_source",
+    "declared_count",
+    "post_id",
+    "surplus_count",
+    "verification",
+    "visible_count",
+  ];
+  if (JSON.stringify(Object.keys(value).sort()) !== JSON.stringify(expectedKeys)) return false;
+  if (typeof value.post_id !== "string" || !/^\d+$/.test(value.post_id)) return false;
+  if (!Number.isSafeInteger(value.declared_count) || value.declared_count < 0) return false;
+  if (!Number.isSafeInteger(value.visible_count) || value.visible_count < 1) return false;
+  if (!Number.isSafeInteger(value.surplus_count) || value.surplus_count < 1) return false;
+  if (value.declared_count + value.surplus_count !== value.visible_count) return false;
+  return ["comment_endpoint_final_page", "timeline"].includes(value.count_source)
+    && value.verification === "stable_double_scan";
+}
+
+function hasValidCommentCountSurpluses(value) {
+  return Array.isArray(value)
+    && value.every(isValidCommentCountSurplus)
+    && new Set(value.map((surplus) => surplus.post_id)).size === value.length;
+}
+
+function reconcileCommentEvidence(
   previous,
   current,
   checkpointedPostIds,
   activePostIds,
+  validate,
+  label,
 ) {
-  if (!hasValidCommentVisibilityGaps(previous) || !hasValidCommentVisibilityGaps(current)) {
-    throw Object.assign(new Error("Comment visibility gaps have an invalid shape."), {
+  if (!validate(previous) || !validate(current)) {
+    throw Object.assign(new Error(`${label} have an invalid shape.`), {
       code: "INVALID_JSON_SHAPE",
     });
   }
@@ -1014,19 +1042,41 @@ export function reconcileCommentVisibilityGaps(
   }
   const checkpointed = new Set(checkpointedPostIds);
   const active = new Set(activePostIds);
-  if (current.some((gap) => !checkpointed.has(gap.post_id))) {
-    throw Object.assign(new Error("Current visibility gaps must belong to checkpointed posts."), {
+  if (current.some((item) => !checkpointed.has(item.post_id))) {
+    throw Object.assign(new Error(`Current ${label} must belong to checkpointed posts.`), {
       code: "INVALID_JSON_SHAPE",
     });
   }
   const reconciled = new Map();
-  for (const gap of previous) {
-    if (active.has(gap.post_id) && !checkpointed.has(gap.post_id)) {
-      reconciled.set(gap.post_id, gap);
+  for (const item of previous) {
+    if (active.has(item.post_id) && !checkpointed.has(item.post_id)) {
+      reconciled.set(item.post_id, item);
     }
   }
-  for (const gap of current) reconciled.set(gap.post_id, gap);
+  for (const item of current) reconciled.set(item.post_id, item);
   return [...reconciled.values()].sort((left, right) => left.post_id.localeCompare(right.post_id));
+}
+
+export function reconcileCommentVisibilityGaps(previous, current, checkpointedPostIds, activePostIds) {
+  return reconcileCommentEvidence(
+    previous,
+    current,
+    checkpointedPostIds,
+    activePostIds,
+    hasValidCommentVisibilityGaps,
+    "comment visibility gaps",
+  );
+}
+
+export function reconcileCommentCountSurpluses(previous, current, checkpointedPostIds, activePostIds) {
+  return reconcileCommentEvidence(
+    previous,
+    current,
+    checkpointedPostIds,
+    activePostIds,
+    hasValidCommentCountSurpluses,
+    "comment count surpluses",
+  );
 }
 
 function hasValidCheckpointFields(value) {
@@ -1050,6 +1100,8 @@ function hasValidCheckpointFields(value) {
     && (typeof value.updated_at !== "string" || Number.isNaN(Date.parse(value.updated_at)))) return false;
   if (hasOwn(value, "comment_visibility_gaps")
     && !hasValidCommentVisibilityGaps(value.comment_visibility_gaps)) return false;
+  if (hasOwn(value, "comment_count_surpluses")
+    && !hasValidCommentCountSurpluses(value.comment_count_surpluses)) return false;
   return ["comment_method", "comment_coverage", "nested_reply_coverage"]
     .every((field) => typeof value[field] === "string" && value[field].length > 0);
 }
@@ -1090,6 +1142,7 @@ export function initialCheckpointState(userId) {
     scanned_post_ids: [],
     confirmed_post_ids: [],
     comment_visibility_gaps: [],
+    comment_count_surpluses: [],
     nested_reply_coverage: "not_requested",
   };
 }
@@ -1118,10 +1171,12 @@ export function commentCoverageFor({
   truncated,
   unverified = [],
   visibilityGaps = [],
+  countSurpluses = [],
 }) {
   if (scanned.length !== candidates.length) return "partial_waf";
   if (truncated.length) return "partial_page_limit";
   if (unverified.length) return "partial_incomplete_response";
+  if (countSurpluses.length) return "accessible_main_stream_complete_with_known_count_discrepancies";
   if (visibilityGaps.length) return "accessible_main_stream_complete_with_known_gaps";
   return "changed_posts_main_stream_complete";
 }

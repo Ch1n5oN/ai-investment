@@ -112,6 +112,14 @@ const generatedSegments = Object.freeze([
     through: "2026-07-17",
   },
   {
+    path: "references/sources/xueqiu/2026-timeline-2026-07-18-to-2026-07-22.json",
+    origin: "output/bingbing_xiaomei_sync/xueqiu_7143769715_posts.json",
+    kind: "timeline",
+    stage: "incremental",
+    from: "2026-07-18",
+    through: "2026-07-22",
+  },
+  {
     path: "references/sources/xueqiu/2026-self-replies-2026-06-21-to-2026-06-30.json",
     origin: "output/bingbing_xiaomei_2026_06_21_to_2026_07_01_self_replies/xueqiu_7143769715_self_replies.json",
     kind: "replies",
@@ -134,6 +142,14 @@ const generatedSegments = Object.freeze([
     stage: "incremental",
     from: "2026-07-12",
     through: "2026-07-14",
+  },
+  {
+    path: "references/sources/xueqiu/2026-self-replies-2026-07-15-to-2026-07-22.json",
+    origin: "output/bingbing_xiaomei_sync/xueqiu_7143769715_replies_2026.json",
+    kind: "replies",
+    stage: "incremental",
+    from: "2026-07-15",
+    through: "2026-07-22",
   },
 ].map((segment) => Object.freeze(segment)));
 

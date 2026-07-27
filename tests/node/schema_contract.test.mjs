@@ -152,6 +152,26 @@ test("sync report schema is executable in CI", () => {
     ...report,
     comment_visibility_gaps: [{ ...visibilityGap, extra: true }],
   }), false);
+  const countSurplus = {
+    post_id: "400768917",
+    declared_count: 41,
+    visible_count: 43,
+    surplus_count: 2,
+    count_source: "comment_endpoint_final_page",
+    verification: "stable_double_scan",
+  };
+  assert.equal(validateReport({
+    ...report,
+    comment_count_surpluses: [countSurplus],
+  }), true, schemaErrors(validateReport));
+  assert.equal(validateReport({
+    ...report,
+    comment_count_surpluses: [{ ...countSurplus, verification: "single_scan" }],
+  }), false);
+  assert.equal(validateReport({
+    ...report,
+    comment_count_surpluses: [{ ...countSurplus, surplus_count: 0 }],
+  }), false);
   assert.equal(validateReport({ ...report, user_id: "" }), false);
   const unfinished = structuredClone(report);
   delete unfinished.finished_at;

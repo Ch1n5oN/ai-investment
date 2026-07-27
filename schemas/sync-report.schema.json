@@ -29,6 +29,23 @@
         "additionalProperties": false
       }
     },
+    "comment_count_surpluses": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": ["post_id", "declared_count", "visible_count", "surplus_count", "count_source", "verification"],
+        "properties": {
+          "post_id": { "type": "string", "pattern": "^[0-9]+$" },
+          "declared_count": { "type": "integer", "minimum": 0 },
+          "visible_count": { "type": "integer", "minimum": 1 },
+          "surplus_count": { "type": "integer", "minimum": 1 },
+          "count_source": { "enum": ["comment_endpoint_final_page", "timeline"] },
+          "verification": { "const": "stable_double_scan" }
+        },
+        "additionalProperties": false
+      }
+    },
     "nested_reply_coverage": { "type": "string" },
     "interface_drift": {
       "type": "object",
